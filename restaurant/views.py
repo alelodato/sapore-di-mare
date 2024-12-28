@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import Home 
 # Create your views here.
 
-def my_restaurant(request):
-    return HttpResponse("Hello, Welcome To Sapore Di Mare Restaurant!")
