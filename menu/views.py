@@ -3,5 +3,6 @@ from django.views import generic
 from .models import Menu
 # Create your views here.
 
-class PostList(generic.ListView):
-    model = Menu
+class MenuList(generic.ListView):
+    queryset = Menu.objects.all()
+    template_name = "menu/menu.html"

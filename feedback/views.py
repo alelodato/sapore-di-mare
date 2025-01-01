@@ -3,5 +3,6 @@ from django.views import generic
 from .models import Review
 # Create your views here.
 
-class PostList(generic.ListView):
-    model = Review
+class Reviews(generic.ListView):
+    queryset = Review.objects.all()
+    template_name = "feedback/feedback.html"

@@ -2,5 +2,5 @@ from . import views
 from django.urls import path
 
 urlpatterns = [
-    path('', views.PostList.as_view(), name='feedback'),
+    path('', views.Reviews.as_view(), name='feedback'),
 ]
