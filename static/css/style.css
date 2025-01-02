@@ -6,6 +6,39 @@
     font-style: normal;
 }
 
-.navbar {
-    background-color: #fff;
+nav {
+    box-shadow:0 2px 2px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/*Navbar styles with dropdown toggle*/
+nav ul {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    display: none;
+    top: 100%;
+    color: #ffffff;
+}
+
+#nav-toggle:checked~#menu {
+    display: block;
+    background-color: #ffffff;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
+.nav-toggle-label i {
+    color: #1a1919;
 }
