@@ -2,10 +2,14 @@
 
 .logo {
     font-family: "Italiana", serif;
-    font-weight: 400;
+    font-size: 4rem;
     font-style: normal;
 }
 
+.bg-light {
+    --bs-bg-opacity: 1;
+    background-color: rgb(190 217 243) !important;
+}
 nav {
     box-shadow:0 2px 2px;
 }
@@ -23,12 +27,16 @@ nav ul {
     padding: 0 1rem;
     display: none;
     top: 100%;
-    color: #ffffff;
+    list-style-type: none;
+}
+
+.nav-toggle-label{
+    margin-right: 15px;
 }
 
 #nav-toggle:checked~#menu {
     display: block;
-    background-color: #ffffff;
+    background-color: rgb(190 217 243);
 }
 
 #nav-toggle {
@@ -40,5 +48,9 @@ nav ul {
 }
 
 .nav-toggle-label i {
-    color: #1a1919;
+    color: #393636;
+}
+
+footer {
+    background-color: rgb(190 217 243);
 }
