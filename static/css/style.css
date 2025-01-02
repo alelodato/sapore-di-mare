@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Kaushan+Script&family=Shadows+Into+Light&display=swap');
 
 .logo {
     font-family: "Italiana", serif;
-    font-size: 4rem;
+    font-size: 2.7rem;
     font-style: normal;
 }
 
@@ -12,6 +11,12 @@
 }
 nav {
     box-shadow:0 2px 2px;
+}
+
+nav li {
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 a{
@@ -25,9 +30,13 @@ nav ul {
     width: 100%;
     left: 0;
     padding: 0 1rem;
+    margin-bottom: 2px;
     display: none;
     top: 100%;
     list-style-type: none;
+    text-align: center;
+    font-size: 1.2rem;
+    text-decoration: underline;
 }
 
 .nav-toggle-label{
