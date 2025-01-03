@@ -14,6 +14,11 @@ nav {
     box-shadow:0 2px 2px;
 }
 
+main {
+
+    min-height: 80vh;
+}
+
 body {
     font-family: "Raleway", serif;
     font-optical-sizing: auto;
