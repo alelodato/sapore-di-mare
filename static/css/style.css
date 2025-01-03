@@ -3,6 +3,7 @@
     font-family: "Italiana", serif;
     font-size: 2.7rem;
     font-style: normal;
+    padding-left: 10px;
 }
 
 .bg-light {
@@ -62,4 +63,8 @@ nav ul {
 
 footer {
     background-color: rgb(190 217 243);
+}
+
+.menu-page-title {
+    display: none;
 }
