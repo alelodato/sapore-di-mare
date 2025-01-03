@@ -6,7 +6,7 @@ from .models import Menu
 class MenuList(generic.ListView):
     queryset = Menu.objects.all()
     template_name = "menu/menu.html"
-    paginate_by = 2
+    paginate_by = 3
 
 def menu_detail(request, slug):
     """

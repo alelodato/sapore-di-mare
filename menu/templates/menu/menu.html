@@ -2,22 +2,14 @@
 {% load static %}
 {% block menupreview %}
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menus</title>
-</head>
-
-<body>
+<div>
     {% for menu in menu_list %}
     <a href="{% url 'menu_detail' menu.slug %}" class="menu-link">
-        <h2 class="menu-title">{{% menu.title %}}</h2>
-        <p class="menu-ex">{{% menu.excerpt %}}</p></a>
+        <h2 class="menu-title">{{ menu.title }}</h2>
+        <p class="menu-ex">{{ menu.excerpt }}</p>
+    </a>
     {% endfor %}
-</body>
+</div>
 
 </html>
 
