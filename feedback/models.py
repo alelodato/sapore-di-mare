@@ -4,5 +4,5 @@ from django.contrib.auth.models import User
 
 class Review(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
-    body = models.TextField()
+    content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
