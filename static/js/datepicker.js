@@ -13,16 +13,6 @@ let selectedDate = new Date();
 let year = selectedDate.getFullYear();
 let month = selectedDate.getMonth();
 
-// show datepicker
-dateInput.addEventListener("click", () => {
-  datepicker.hidden = false;
-});
-
-// hide datepicker
-cancelBtn.addEventListener("click", () => {
-  datepicker.hidden = true;
-});
-
 // handle apply button click event
 applyBtn.addEventListener("click", () => {
   // set the selected date to date input
