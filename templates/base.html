@@ -2,6 +2,7 @@
 {% url 'home' as home_url %}
 {% url 'menu' as menu_url%}
 {% url 'feedback' as feedback_url %}
+{% url 'booking' as booking_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -32,6 +33,9 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Javascript App -->
+    <script type="module" src="script.js"></script>
 </head>
 
 <body>
@@ -42,7 +46,7 @@
             <label for="nav-toggle" class="nav-toggle-label"><i class="fa-solid fa-caret-down"></i></label>
             <ul id="menu">
                 <li><a href="{% url 'menu' %}" class="active">Our Menus</a></li>
-                <li><a href="">Reserve A Table</a></li>
+                <li><a href="{% url 'booking' %}">Reserve A Table</a></li>
                 <li><a href="{% url 'feedback' %}">Leave Us A Feedback</a></li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
