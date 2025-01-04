@@ -33,9 +33,6 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-    <!-- Javascript App -->
-    <script type="module" src="script.js"></script>
 </head>
 
 <body>
@@ -86,6 +83,8 @@
 
     <!--Font Awesome Kit-->
     <script src="https://kit.fontawesome.com/d2f8b724df.js" crossorigin="anonymous"></script>
+    {% block extras %}
+    {% endblock %}
 
 </body>
 
