@@ -3,13 +3,13 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-    <!-- Creating New Comments -->
+    <!-- Creating New Feedback -->
     <div class="col-md-4 card mb-4 mt-3">
         <div class="card-body">
           {% if user.is_authenticated %}
           <h3>Leave a feedback:</h3>
           <p>Posting as: {{ user.username }}</p>
-          <form id="commentForm" method="post"
+          <form id="feedback-form" method="post"
             style="margin-top: 1.3em;">
             {{ feedback_form | crispy }}
             {% csrf_token %}
