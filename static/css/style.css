@@ -1,22 +1,42 @@
 
+a {
+  text-decoration: none !important;
+  color: #b97309;
+}
+
 .logo {
     font-family: "Italiana", serif;
     font-size: 2.7rem;
     font-style: normal;
     padding-left: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.intro {
+  color: #b97309;
 }
 
 .bg-light {
     --bs-bg-opacity: 1;
-    background-color: rgb(190 217 243) !important;
+    background-color: rgb(6, 41, 74) !important;
 }
+
 nav {
     box-shadow:0 2px 2px;
+}
+
+hr {
+  margin: 2px 0;
+  color: #b97309;
 }
 
 main {
 
     min-height: 80vh;
+    background-color: #050822;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 body {
@@ -25,24 +45,20 @@ body {
     font-style: normal;
 }
 
-a{
-    text-decoration: none;
-    color: black;
-}
-
 /*Navbar styles with dropdown toggle*/
-nav ul {
+#menu {
     position: absolute;
     width: 100%;
     left: 0;
     padding: 0 1rem;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     display: none;
     top: 100%;
     list-style-type: none;
     text-align: center;
     font-size: 1.2rem;
-    text-decoration: underline;
+    text-decoration: none;
+    color: #b97309;
 }
 
 .nav-toggle-label{
@@ -51,7 +67,7 @@ nav ul {
 
 #nav-toggle:checked~#menu {
     display: block;
-    background-color: rgb(190 217 243);
+    background-color: rgb(6, 41, 74);
 }
 
 #nav-toggle {
@@ -63,15 +79,50 @@ nav ul {
 }
 
 .nav-toggle-label i {
-    color: #393636;
+    color: #b97309;
+}
+
+#auth {
+  font-size: 0.8rem;
+  color: #b97309;
+  text-align: end;
+  margin-right: 10px;
+  padding-top: 5px;
 }
 
 footer {
-    background-color: rgb(190 217 243);
+    background-color: rgb(6, 41, 74);
 }
 
 .menu-page-title {
     display: none;
+}
+
+footer {
+  color: #b97309;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer p{
+  font-size: 1.2rem;
+  padding: 2px 5px 0 5px;
+  margin-bottom: 2px;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.socials i {
+  padding-left: 1px;
+  padding-top: 2px;
+}
+
+.phone-num i {
+  padding-right: 2px;
 }
 
 /* Datepicker styles*/

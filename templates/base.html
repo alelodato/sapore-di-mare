@@ -43,8 +43,11 @@
             <label for="nav-toggle" class="nav-toggle-label"><i class="fa-solid fa-caret-down"></i></label>
             <ul id="menu">
                 <li><a href="{% url 'menu' %}" class="active">Our Menus</a></li>
+                <hr>
                 <li><a href="{% url 'booking' %}">Reserve A Table</a></li>
+                <hr>
                 <li><a href="{% url 'feedback' %}">Leave Us A Feedback</a></li>
+                <hr>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
@@ -66,9 +69,9 @@
 
     <main>
         {% if user.is_authenticated %}
-        <p class="text-end m-3">You are logged in as {{ user }}</p>
+        <p id="auth"><i class="fa-regular fa-user"></i> {{ user }}</p>
         {% else %}
-        <p class="text-end m-3">You are not logged in</p>
+        <p id="auth">You are not logged in</p>
         {% endif %}
         {% block content %}
         <!-- Content Goes here -->
@@ -76,9 +79,17 @@
     </main>
 
     <footer>
-        <h3>Follow Us:</h3>
-        <a href="https://en-gb.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        <div class="socials">
+            <p class="follow">Follow Us:
+                <a href="https://en-gb.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            </p>
+        </div>
+        <div class="phone-num">
+            <p>
+                <i class="fa-solid fa-phone"></i> : 07435205407
+            </p>
+        </div>
     </footer>
 
     <!--Font Awesome Kit-->

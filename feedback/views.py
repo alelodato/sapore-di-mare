@@ -10,12 +10,13 @@ class Reviews(generic.ListView):
     paginate_by = 10
     
 
-def feedback_detail(request, slug):
+def feedback_detail(request):
     """
     Display an individual :model:`feedback.Review`.
     """
 
-    feedback = get_object_or_404(queryset, slug=slug)
+    queryset = Review.objects.all()
+    feedback = get_object_or_404(queryset,)
     reviews = feedback.all().order_by("-created_on")
     feedback_form = FeedbackForm()
     return render(
