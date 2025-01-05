@@ -2,8 +2,9 @@
 {% block content %}
 {% load static %}
 
-<div>
+<div class="menu">
     <h1 class="menu-page-title">{{ menu.title }}</h1>
+    <hr>
     <p class="menu-text">{{ menu.content | safe }}</p>
 </div>
 

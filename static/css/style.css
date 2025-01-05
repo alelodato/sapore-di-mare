@@ -59,6 +59,7 @@ body {
     font-size: 1.2rem;
     text-decoration: none;
     color: #b97309;
+    z-index: 100;
 }
 
 .nav-toggle-label{
@@ -94,20 +95,16 @@ footer {
     background-color: rgb(6, 41, 74);
 }
 
-.menu-page-title {
-    display: none;
-}
-
 footer {
   color: #b97309;
   display: flex;
   justify-content: space-between;
+  min-height: 8vh;
 }
 
 footer p{
   font-size: 1.2rem;
-  padding: 2px 5px 0 5px;
-  margin-bottom: 2px;
+  padding: 10px 5px 0 5px;
 }
 
 .socials {
@@ -123,6 +120,35 @@ footer p{
 
 .phone-num i {
   padding-right: 2px;
+}
+
+/* Menu List Page Styles*/
+
+.menu-list hr {
+  padding-bottom: 10px;
+}
+
+/* Menu Page Styles*/
+
+.menu {
+  color: #b97309;
+}
+
+
+.menu-page-title {
+  text-align: center;
+}
+
+.menu hr {
+  padding-top: 2px;
+}
+
+.menu p {
+  margin-bottom: 0;
+}
+
+.menu ul {
+  color: #b97309 !important;
 }
 
 /* Datepicker styles*/
@@ -148,7 +174,7 @@ border: 1px solid #eee;
 .datepicker {
   position: absolute;
   top: 100%;
-  z-index: 100;
+  z-index: 99;
   margin-top: 2px;
   background: #fff;
   padding: 10px;

@@ -2,12 +2,13 @@
 {% load static %}
 {% block content %}
 
-<div>
+<div class="menu-list">
     {% for menu in menu_list %}
     <a href="{% url 'menu_detail' menu.slug %}" class="menu-link">
         <h2 class="menu-title">{{ menu.title }}</h2>
         <p class="menu-ex">{{ menu.excerpt }}</p>
     </a>
+    <hr>
     {% endfor %}
 </div>
 
