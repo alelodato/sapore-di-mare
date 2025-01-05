@@ -4,7 +4,8 @@ from django.contrib.auth.models import User
 
 class Review(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
-    body = models.TextField()
+    description = models.TextField(blank=True, null=True)
+    rating = models.PositiveIntegerField(choices=((1, '1 star'),(2, '2 star'),(3,'3 star'),(4,'4 star'),(5,'5 star')))
     created_on = models.DateTimeField(auto_now_add=True)
     class Meta:
         ordering = ["created_on"]
