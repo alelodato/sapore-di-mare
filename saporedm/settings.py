@@ -26,7 +26,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-alelodato-saporedimare-sv7515qd9kz.ws-eu117.gitpod.io',
@@ -50,11 +50,9 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'django_summernote',
-    'rest_framework',
     'restaurant',
     'menu',
     'booking',
-    'feedback',
 ]
 
 SITE_ID = 1

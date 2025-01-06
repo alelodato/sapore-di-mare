@@ -46,8 +46,6 @@
                 <hr>
                 <li><a href="{% url 'booking' %}">Reserve A Table</a></li>
                 <hr>
-                <li><a href="{% url 'feedback' %}">Leave Us A Feedback</a></li>
-                <hr>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
