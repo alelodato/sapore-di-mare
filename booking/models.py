@@ -4,4 +4,4 @@ from django.contrib.auth.models import User
 
 class Table(models.Model):
      seats = models.IntegerField()
-     time = models.TimeField(auto_now_add=True)
+     time = models.DateField()
