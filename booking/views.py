@@ -9,7 +9,7 @@ class Bookings(generic.ListView):
 
 def booking_detail(request):
 
-    queryset = Review.objects.all()
+    booking = Table.objects.all()
     booking = get_object_or_404(queryset,)
 
     return render(

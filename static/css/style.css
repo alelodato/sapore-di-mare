@@ -165,6 +165,12 @@ footer p{
   color: #b97309 !important;
 }
 
+/*Booking Page Styles*/
+
+.picker-table {
+  display: flex;
+}
+
 /* Datepicker styles*/
   
 .date-input {
