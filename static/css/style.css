@@ -296,3 +296,7 @@ border: 1px solid #eee;
   background: rgb(112, 155, 216);
   color: #fff;
 }  
+
+.hide {
+  display: none;
+}
