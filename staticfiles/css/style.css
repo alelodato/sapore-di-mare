@@ -199,21 +199,22 @@ footer p{
 
 .cover-menu {
   height: 100%;
+  background: radial-gradient(black, #0000008a);
 }
 
 .wine-menu {
   background: url(/static/winemenu.webp) no-repeat center center/cover;
-  height: 100vh;
+  height: 100%;
 }
 
 .carte-menu {
   background: url(/static/cartemenu.webp) no-repeat center center/cover;
-  height: 100vh;
+  height: 100%;
 }
 
 .dessert-menu {
   background: url(/static/dessertmenu.webp) no-repeat center center/cover;
-  height: 100vh;
+  height: 100%;
 }
 
 .menu span {

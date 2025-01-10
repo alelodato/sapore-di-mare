@@ -199,6 +199,7 @@ footer p{
 
 .cover-menu {
   height: 100%;
+  background: radial-gradient(black, #0000008a);
 }
 
 .wine-menu {
