@@ -100,8 +100,13 @@ img {
   width: 100%;
 }
 
+.address {
+  padding: 15px 0 15px 0;
+}
+
 .address p {
   margin-bottom: 0;
+  padding:5px 0 5px 0;
 }
 
 .open-times p {
@@ -152,6 +157,13 @@ footer p{
   color: #b97309;
 }
 
+.menu span {
+  color: #b97309;
+}
+
+.menu div {
+  color: #b97309;
+}
 
 .menu-page-title {
   text-align: center;
@@ -170,6 +182,11 @@ footer p{
 
 /*Booking Page Styles*/
 
+.booking-backg {
+  background: url("/static/table.webp") no-repeat center center/cover;
+  height: 100vh;
+}
+
 .picker-table {
   display: flex;
 }
@@ -187,7 +204,8 @@ border: 1px solid #eee;
   
 .booking-h {
   color: #b97309;
-  font-size: 1rem;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .datepicker-container {
