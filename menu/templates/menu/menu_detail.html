@@ -3,14 +3,26 @@
 {% load static %}
 
 {% if user.is_authenticated %}
-<p id="auth"><i class="fa-regular fa-user"></i> {{ user }}</p>
-{% else %}
-<p id="auth">You are not logged in</p>
-{% endif %}
-<div class="menu">
-    <h1 class="menu-page-title">{{ menu.title }}</h1>
-    <hr>
-    <p class="menu-text">{{ menu.content | safe }}</p>
-</div>
+{% if menu.slug == 'wine-list' %}
+<div class="wine-menu">
+    {% elif menu.slug == 'a-la-carte-menu' %}
+    <div class="carte-menu">
+        {% else %}
+        <div class="dessert-menu">
+            {% endif %}
+            <div class="cover-menu">
+                <p id="auth"><i class="fa-regular fa-user"></i> {{ user }}</p>
+                {% else %}
+                <p id="auth">You are not logged in</p>
+                {% endif %}
+                <div class="menu">
+                    <h1 class="menu-page-title">{{ menu.title }}</h1>
+                    <hr>
+                    <p class="menu-text">{{ menu.content | safe }}</p>
+                </div>
 
-{% endblock %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</div>    

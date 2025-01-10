@@ -197,6 +197,25 @@ footer p{
   color: #b97309;
 }
 
+.cover-menu {
+  height: 100%;
+}
+
+.wine-menu {
+  background: url(/static/winemenu.webp) no-repeat center center/cover;
+  height: 100vh;
+}
+
+.carte-menu {
+  background: url(/static/cartemenu.webp) no-repeat center center/cover;
+  height: 100vh;
+}
+
+.dessert-menu {
+  background: url(/static/dessertmenu.webp) no-repeat center center/cover;
+  height: 100vh;
+}
+
 .menu span {
   color: #b97309;
 }
