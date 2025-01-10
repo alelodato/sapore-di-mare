@@ -3,17 +3,25 @@
 {% block content %}
 
 <div class="menu-list">
-    {% if user.is_authenticated %}
-    <p id="auth"><i class="fa-regular fa-user"></i> {{ user }}</p>
-    {% else %}
-    <p id="auth">You are not logged in</p>
-    {% endif %}
     {% for menu in menu_list %}
     <a href="{% url 'menu_detail' menu.slug %}" class="menu-link">
-        <h2 class="menu-title">{{ menu.title }}</h2>
-        <p class="menu-ex">{{ menu.excerpt }}</p>
+        {% if menu.slug == 'wine-list' %}
+        <div class="wine-list">
+            {% elif menu.slug == 'a-la-carte-menu' %}
+            <div class="carte-list">
+                {% else %}
+                <div class="dessert-list">
+                    {% endif %}
+                    <div class="cover-text">
+                        <div class="menu-description">
+                            <h2 class="menu-title">{{ menu.title }}</h2>
+                            <p class="menu-ex">{{ menu.excerpt }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </a>
-    <hr>
     {% endfor %}
 </div>
 

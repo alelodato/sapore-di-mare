@@ -35,8 +35,6 @@ main {
 
     min-height: 80vh;
     background-color: #050822;
-    padding-left: 5px;
-    padding-right: 5px;
     color: #b97309;
 }
 
@@ -147,13 +145,51 @@ footer p{
 
 /* Menu List Page Styles*/
 
-.menu-list {
+/*.menu-list {
   background: url(/static/menu.webp) no-repeat center center/cover;
   height: 100vh;
+}*/
+
+.cover-text {
+  background: radial-gradient(#000, #000000b8) center / cover;
+  height: 30vh;
 }
 
-.menu-list hr {
-  padding-bottom: 10px;
+.menu-list h2 {
+  margin-bottom: 0;
+  font-size: 1.7rem;
+}
+
+.wine-list {
+  background: url(/static/winelist.webp) no-repeat center center/cover;
+  height: 30vh;
+
+}
+
+.carte-list {
+  background: url(/static/cartelist.webp) no-repeat center center/cover;
+  height: 30vh;
+}
+
+.dessert-list {
+  background: url(/static/dessertlist.webp) no-repeat center center/cover;
+  height: 30vh;
+
+}
+
+.menu-description {
+  padding: 30px 5px 5px 0;
+  text-align: center;
+
+}
+
+.menu-list p {
+  margin-bottom: 0;
+}
+
+.menu-ex {
+  margin-bottom: 0;
+  font-size: 1.5rem;
 }
 
 /* Menu Page Styles*/
