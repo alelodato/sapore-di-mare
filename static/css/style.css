@@ -128,16 +128,16 @@ footer {
 
 footer p {
   font-size: 1.2rem;
-  padding: 15px 8px 0 8px;
+  padding: 15px 8px 15px 8px;
   margin-bottom: 0;
 }
 
 .socials {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .socials i {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding-left: 5px;
   padding-top: 2px;
 }
@@ -480,6 +480,16 @@ border: 1px solid #eee;
     font-size: 1.5rem;
     margin-top: auto;
     margin-bottom: auto;
+  }
+
+  .socials {
+    font-size: 1.5rem;
+  }
+  
+  .socials i {
+    font-size: 1.5rem;
+    padding-left: 5px;
+    padding-top: 2px;
   }
 
   footer p {
