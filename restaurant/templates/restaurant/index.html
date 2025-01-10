@@ -4,6 +4,11 @@
 
 
 <main>
+    {% if user.is_authenticated %}
+    <p id="auth"><i class="fa-regular fa-user"></i> {{ user }}</p>
+    {% else %}
+    <p id="auth">You are not logged in</p>
+    {% endif %}
     <div class="intro">
         <h1>The Mediterranean In The Heart Of London</h1>
         <hr>

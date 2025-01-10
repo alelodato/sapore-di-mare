@@ -4,6 +4,7 @@
 
 <div class="booking-backg">
   {% if user.is_authenticated %}
+  <p id="auth"><i class="fa-regular fa-user"></i> {{ user }}</p>
   <h3 class="booking-h">Reserve your table at Sapore Di Mare</h3>
   <div class="picker-table">
     <div class="datepicker-container">
@@ -74,14 +75,15 @@
   </div>
   {% endif %}
   {% endfor %}
-  </div>
-  </div>
+</div>
+</div>
 
-  {% else %}
-  <p>Log in to reserve a table</p>
-  {% endif %}
+{% else %}
+<p id="auth">You are not logged in</p>
+<p>Log in to reserve a table</p>
+{% endif %}
 
-  {% endblock %}
+{% endblock %}
 </div>
 
 {% block extras %}

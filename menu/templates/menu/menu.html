@@ -3,6 +3,11 @@
 {% block content %}
 
 <div class="menu-list">
+    {% if user.is_authenticated %}
+    <p id="auth"><i class="fa-regular fa-user"></i> {{ user }}</p>
+    {% else %}
+    <p id="auth">You are not logged in</p>
+    {% endif %}
     {% for menu in menu_list %}
     <a href="{% url 'menu_detail' menu.slug %}" class="menu-link">
         <h2 class="menu-title">{{ menu.title }}</h2>
