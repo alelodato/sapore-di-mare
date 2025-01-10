@@ -111,7 +111,7 @@ img {
 
 .address p {
   margin-bottom: 0;
-  padding:5px 0 5px 0;
+  padding-top: 5px;
 }
 
 .open-times p {
@@ -121,25 +121,23 @@ img {
 
 footer {
   color: #b97309;
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
   min-height: 8vh;
   background-color: rgb(6, 41, 74);
 }
 
 footer p{
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding: 15px 8px 0 8px;
 }
 
 .socials {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  font-size: 1.5rem;
 }
 
 .socials i {
-  padding-left: 1px;
+  font-size: 1.5rem;
+  padding-left: 5px;
   padding-top: 2px;
 }
 
@@ -462,9 +460,9 @@ border: 1px solid #eee;
 
   .address {
     font-size: 1.5rem;
-    padding-left: 10px;
-    padding-top: 0px;
-    width: 50%;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
   }
 
   .open-map {
