@@ -84,6 +84,10 @@ body {
     color: #b97309;
 }
 
+img {
+  max-width: 100%;
+}
+
 #auth {
   font-size: 0.8rem;
   color: #b97309;
@@ -159,10 +163,9 @@ footer p{
 
 .menu p {
   margin-bottom: 0;
-}
-
-.menu ul {
   color: #b97309 !important;
+  font-family: "Raleway",serif !important;
+  text-align: center;
 }
 
 /*Booking Page Styles*/

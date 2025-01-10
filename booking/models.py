@@ -5,6 +5,6 @@ from django.contrib.auth.models import User
 
 class Table(models.Model):
      customer = models.ForeignKey(User, on_delete=models.CASCADE,related_name="customer")
-     seats = models.IntegerField()
+     seats = models.CharField(max_length=10, default="2")
      date = models.DateField(default=datetime.now)
-     time = models.TimeField(default=datetime.now)
+     time = models.CharField(max_length=10, default="12PM")
