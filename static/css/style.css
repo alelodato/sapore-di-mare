@@ -249,12 +249,18 @@ border: 1px solid #eee;
   text-align: center;
 }
 
+.book-cover-text {
+  background: radial-gradient(#000, #000000b8) center / cover;
+  height: 100vh;
+}
+
 .datepicker-container {
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }  
   
 .datepicker {
-  position: absolute;
   top: 100%;
   z-index: 99;
   margin-top: 2px;
@@ -361,4 +367,17 @@ border: 1px solid #eee;
 
 .hide {
   display: none;
+}
+
+#table {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+}
+
+.back {
+  background: #050822;
+  color: #b97309;
+  font-family: "Raleway",serif !important;
+  border-radius: 5px
 }
