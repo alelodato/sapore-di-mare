@@ -8,6 +8,9 @@ const applyBtn = datepicker.querySelector(".apply");
 const nextBtn = datepicker.querySelector(".next");
 const prevBtn = datepicker.querySelector(".prev");
 const dates = datepicker.querySelector(".dates");
+const selectedSeats = document.getElementById("seats");
+const table = document.getElementById("table");
+const backBtn = table.querySelector(".back");
 
 let selectedDate = new Date();
 let year = selectedDate.getFullYear();
@@ -135,5 +138,24 @@ const createButton = (text, isDisabled = false, type = 0) => {
   button.classList.toggle("selected", selected);
   return button;
 };
+
+applyBtn.style.pointerEvents = "none"
+dates.addEventListener('click', enableApply)
+
+function enableApply() {
+  applyBtn.style.pointerEvents = "";
+  applyBtn.addEventListener('click', showTable)
+}
+
+function showTable() {
+  datepicker.classList.add('hide')
+  table.classList.remove('hide')
+  backBtn.addEventListener('click', goBack);
+}
+
+function goBack() {
+  datepicker.classList.remove('hide');
+  table.classList.add('hide')
+}
 
 displayDates();
