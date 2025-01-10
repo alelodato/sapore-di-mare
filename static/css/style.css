@@ -1,4 +1,8 @@
 
+header {
+  width: 100%;
+}
+
 a {
   text-decoration: none !important;
   color: #b97309;
@@ -84,6 +88,7 @@ body {
 
 img {
   max-width: 100%;
+  width: 100%;
 }
 
 #auth {
@@ -183,7 +188,7 @@ footer p{
 
 .menu-ex {
   margin-bottom: 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 /* Menu Page Styles*/
