@@ -147,6 +147,11 @@ footer p{
 
 /* Menu List Page Styles*/
 
+.menu-list {
+  background: url(/static/menu.webp) no-repeat center center/cover;
+  height: 100vh;
+}
+
 .menu-list hr {
   padding-bottom: 10px;
 }
