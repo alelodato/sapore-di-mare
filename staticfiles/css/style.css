@@ -1,4 +1,8 @@
 
+header {
+  width: 100%;
+}
+
 a {
   text-decoration: none !important;
   color: #b97309;
@@ -35,8 +39,6 @@ main {
 
     min-height: 80vh;
     background-color: #050822;
-    padding-left: 5px;
-    padding-right: 5px;
     color: #b97309;
 }
 
@@ -86,6 +88,7 @@ body {
 
 img {
   max-width: 100%;
+  width: 100%;
 }
 
 #auth {
@@ -94,6 +97,10 @@ img {
   text-align: end;
   margin-right: 10px;
   padding-top: 5px;
+}
+
+.introp2 a {
+  text-decoration: underline !important;
 }
 
 .map iframe {
@@ -115,14 +122,11 @@ img {
 }
 
 footer {
-    background-color: rgb(6, 41, 74);
-}
-
-footer {
   color: #b97309;
   display: flex;
   justify-content: space-between;
   min-height: 8vh;
+  background-color: rgb(6, 41, 74);
 }
 
 footer p{
@@ -145,15 +149,46 @@ footer p{
   padding-right: 2px;
 }
 
-/* Menu List Page Styles*/
-
-.menu-list {
-  background: url(/static/menu.webp) no-repeat center center/cover;
-  height: 100vh;
+.cover-text {
+  background: radial-gradient(#000, #000000b8) center / cover;
+  height: 30vh;
 }
 
-.menu-list hr {
-  padding-bottom: 10px;
+.menu-list h2 {
+  margin-bottom: 0;
+  font-size: 1.7rem;
+}
+
+.wine-list {
+  background: url(/static/winelist.webp) no-repeat center center/cover;
+  height: 30vh;
+
+}
+
+.carte-list {
+  background: url(/static/cartelist.webp) no-repeat center center/cover;
+  height: 30vh;
+}
+
+.dessert-list {
+  background: url(/static/dessertlist.webp) no-repeat center center/cover;
+  height: 30vh;
+
+}
+
+.menu-description {
+  padding: 30px 5px 5px 0;
+  text-align: center;
+
+}
+
+.menu-list p {
+  margin-bottom: 0;
+}
+
+.menu-ex {
+  margin-bottom: 0;
+  font-size: 1.2rem;
 }
 
 /* Menu Page Styles*/
@@ -213,12 +248,18 @@ border: 1px solid #eee;
   text-align: center;
 }
 
+.book-cover-text {
+  background: radial-gradient(#000, #000000b8) center / cover;
+  height: 100vh;
+}
+
 .datepicker-container {
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }  
   
 .datepicker {
-  position: absolute;
   top: 100%;
   z-index: 99;
   margin-top: 2px;
@@ -325,4 +366,101 @@ border: 1px solid #eee;
 
 .hide {
   display: none;
+}
+
+#table {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+}
+
+.back {
+  background: #050822;
+  color: #b97309;
+  font-family: "Raleway",serif !important;
+  border-radius: 5px
+}
+
+/*Media query for laptops and larger screens (992px and up)*/
+@media screen and (min-width:992px) {
+
+  .home-backg {
+    background: url(/static/homepage-backg.webp) no-repeat center center/cover;
+    height: 100%;
+  }
+
+  .home-cover {
+    background: radial-gradient(#000, #000000b8) center / cover;
+    height: 100%;
+  }
+
+  .intro {
+    text-align: center;
+  }
+
+  .intro1 {
+    display: flex;
+  }
+  
+  .intro2 {
+    display: flex;
+  }
+
+  .introp1 {
+    width: 50%;
+    font-size: 1.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0 10px 0 10px;
+  }
+
+  .intro-img1 {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .intro1 img {
+    width: 100%;
+  }
+
+  .introp2 {
+    width: 50%;
+    font-size: 1.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0 10px 0 10px;
+  }
+
+  .intro-img2 {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .intro2 img {
+    width: 100%;
+  }
+
+  .address {
+    font-size: 1.5rem;
+    padding-left: 10px;
+  }
+
+  .open-map {
+    display: flex;
+  }
+
+  .map {
+    width: 50%;
+  }
+
+  .open-times {
+    text-align: center;
+    width: 50%;
+    font-size: 1.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
 }
