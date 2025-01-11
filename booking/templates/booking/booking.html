@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+{% load crispy_forms_tags %}
 
 <div class="booking-backg">
   <div class="book-cover-text">
@@ -61,9 +62,15 @@
         </div>
       </div>
       <div id="table" class="hide">
-        <input type="text" placeholder="Enter your full name">
-        <input type="number" id="seats" placeholder="Number of people" max="10">
-        <input type="time" id="times">
+        <form id="make-reservation-form" method="post" class="make-reservation-form">
+          {{ reservation_form | crispy }}
+          {% csrf_token %}
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <button id="submitButton" type="submit" class="btn make-reservation-btn">Submit</button>
+            </div>
+          </div>
+        </form>
         <button class="back">Back to date selection</button>
       </div>
     </div>
