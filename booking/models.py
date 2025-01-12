@@ -1,7 +1,14 @@
+
 from django.db import models
 from datetime import datetime
 from django.contrib.auth.models import User
+
+
 # Create your models here.
+# reservation_time and number_of_guests code inspired by
+# https://blog.devgenius.io/django-tutorial-on-how-to-create
+# -a-booking-system-for-a-health-clinic-9b1920fc2b78
+
 
 RESERVATION_TIME = (
     ('12:00', '12:00'),
@@ -16,6 +23,7 @@ RESERVATION_TIME = (
     ('20:30', '20:30'),
     ('21:00', '21:00'),
     ('21:30', '21:30'),
+
 )
 
 NUMBER_OF_GUESTS = (
@@ -28,8 +36,8 @@ NUMBER_OF_GUESTS = (
     ('7', '7'),
     ('8', '8'),
     ('9', '9'),
-    ('10','10'),
 )
+
 
 class Reservation(models.Model):
     """

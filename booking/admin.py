@@ -1,5 +1,15 @@
 from django.contrib import admin
 from .models import Reservation
-# Register your models here.
+from django_summernote.admin import SummernoteModelAdmin
 
-admin.site.register(Reservation)
+
+# Register your models here.
+@admin.register(Reservation)
+class ReservationAdmin(SummernoteModelAdmin):
+
+    list_display = ('reservation_name',
+                    'reservation_date',
+                    'reservation_time',
+                    'number_of_guests')
+    search_fields = ['reservation_name']
+    list_filter = ('reservation_date', 'reservation_time')

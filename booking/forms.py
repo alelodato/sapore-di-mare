@@ -1,3 +1,4 @@
+
 from .models import Reservation
 from django import forms
 from django.forms import DateInput
@@ -7,7 +8,13 @@ date_time_now = datetime.now()
 
 
 class DateInput(forms.DateInput):
+    """
+    This class was taken from
+    "https://stackoverflow.com/questions/3367091/whats-the-cleanest-simplest-to-get-running-datepick
+    -in-django"
+    """
     input_type = 'date'
+
 
 class ReservationForm(forms.ModelForm):
     class Meta:

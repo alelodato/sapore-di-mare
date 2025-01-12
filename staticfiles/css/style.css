@@ -35,6 +35,11 @@ hr {
   color: #b97309;
 }
 
+.home-backg {
+  background: url(/static/homepage-backg.webp) no-repeat center center/cover;
+  height: 100%;
+}
+
 main {
     background-color: #050822;
     color: #b97309;
@@ -427,11 +432,6 @@ border: 1px solid #eee;
 
 /*Media query for laptops and larger screens (992px and up)*/
 @media screen and (min-width:992px) {
-
-  .home-backg {
-    background: url(/static/homepage-backg.webp) no-repeat center center/cover;
-    height: 100%;
-  }
 
   .home-cover {
     background: radial-gradient(#000, #000000b8) center / cover;
