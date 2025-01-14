@@ -1,40 +1,43 @@
 {% extends "base.html" %}
 {% block content %}
 {% if user.is_authenticated %}
-<div class="container-fluid gx-5">
-    <div class=".container-fluid">
-        <div class="row">
-            <div class="col">
-                <h1>Are you sure you want to delete this reservation?</h1>
+<div class="container-fluid gx-5" id="bkn-img">
+    <div class="book-cover-text">
+        <div class=".container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h1>Are you sure you want to delete this reservation?</h1>
+                </div>
             </div>
-        </div>
-        <!--Reproduces the card for the reservation. Asks if they want to delete reservation. -->
-        <div class="row gy-5">
-            <div class="col-md-4 gx-5">
-                <div class="card row">
-                    <div class="card-body reservation-card">
-                        <ul class="row list-unstyled">
-                            <li class="col-sm-6 text-start">{{reservation.reservation_date}}</li>
-                            <li class="col-sm-6 text-sm-end">{{reservation.reservation_time}}</li>
-                            <li class="col-sm-6 text-start">Name: {{reservation.reservation_name}}</li>
-                            <li class="col-sm-6 text-sm-end">Seats: {{reservation.number_of_guests}}</li>
-                        </ul>
-                        <div class="row">
-                            <a href="../confirmdelete/{{reservation.id}}"
-                                class="btn btn-lg col-md-6 reservation-card-btn">Yes</a>
-                            <a href="{% url 'reservations-urls' %}"
-                                class="btn btn-lg col-md-6 reservation-card-btn">No</a>
+            <!--Reproduces the card for the reservation. Asks if they want to delete reservation. -->
+            <div class="row gy-5">
+                <div class="col-md-4 gx-5">
+                    <div class="card row">
+                        <div class="card-body reservation-card">
+                            <ul class="row list-unstyled">
+                                <li class="col-sm-6 text-start">{{reservation.reservation_date}}</li>
+                                <li class="col-sm-6 text-sm-end">{{reservation.reservation_time}}</li>
+                                <li class="col-sm-6 text-start">Name: {{reservation.reservation_name}}</li>
+                                <li class="col-sm-6 text-sm-end">Seats: {{reservation.number_of_guests}}</li>
+                            </ul>
+                            <div class="row">
+                                <a href="../confirmdelete/{{reservation.id}}"
+                                    class="btn btn-lg col-md-6 reservation-card-btn">Yes</a>
+                                <a href="{% url 'reservations-urls' %}"
+                                    class="btn btn-lg col-md-6 reservation-card-btn">No</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    {% else %}
-    <!--This message is displayed if the user isn't logged in -->
-    <div>
-        <p>Please log in to make a reservation</p>
-    </div>
-    {% endif %}
 
-    {% endblock %}
+        {% else %}
+        <!--This message is displayed if the user isn't logged in -->
+        <div>
+            <p>Please log in to make a reservation</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -2,24 +2,26 @@
 {% block content %}
 {% load crispy_forms_tags %}
 <!-- Making or editing a reservation -->
-<div class="container-fluid">
-    <div class="row justify-content-evenly">
-        <div class="col-md-8">
-            {% if user.is_authenticated %}
-            <!-- If the user is logged in, the form to make or edit a reservation is displayed here. -->
-            <form id="make-reservation-form" method="post" class="make-reservation-form">
-                {{ reservation_form | crispy }}
-                {% csrf_token %}
-                <div class="row">
-                    <div class="col d-flex justify-content-center">
-                        <button id="submitButton" type="submit" class="btn make-reservation-btn">Submit</button>
+<div class="container-fluid" id="bkn-img">
+    <div class="book-cover-text">
+        <div class="row justify-content-evenly" id="bkn-form">
+            <div class="col-md-8">
+                {% if user.is_authenticated %}
+                <!-- If the user is logged in, the form to make or edit a reservation is displayed here. -->
+                <form id="make-reservation-form" method="post" class="make-reservation-form">
+                    {{ reservation_form | crispy }}
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col d-flex justify-content-center">
+                            <button id="submitButton" type="submit" class="btn make-reservation-btn">Submit</button>
+                        </div>
                     </div>
-                </div>
-            </form>
-            {% else %}
-            <!--This message is displayed if the user isn't logged in -->
-            <p>Please log in to make a reservation</p>
-            {% endif %}
+                </form>
+                {% else %}
+                <!--This message is displayed if the user isn't logged in -->
+                <p>Please log in to make a reservation</p>
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>
