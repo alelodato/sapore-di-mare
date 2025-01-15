@@ -324,6 +324,13 @@ footer p {
   color: #b97309;
 }
 
+/*Messages*/
+
+.text-start {
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+}
 /*Media query for laptops and larger screens (992px and up)*/
 @media screen and (min-width:992px) {
 
