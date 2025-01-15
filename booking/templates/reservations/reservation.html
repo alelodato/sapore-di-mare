@@ -7,7 +7,7 @@
         <div class="row gy-5">
             {% if user.is_authenticated %}
             <!-- Checks user is logged in-->
-            {% for reservation in user.reservation_list %}
+            {% for reservation in user.reservation_list.all %}
             {% if user == reservation.reservation_booked_by %}
             <!-- Displays all reservations the user has made. -->
             <div class=".container-fluid">
