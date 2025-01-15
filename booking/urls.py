@@ -3,7 +3,7 @@ from django.urls import path
 
 urlpatterns = [
     path('reservations/', views.ReservationList.as_view(),
-         name='reservations-urls'),
+         name='reservations'),
     path('add/', views.add_reservation, name='add-reservation'),
     path('delete/<int:id>/', views.delete_reservation,
          name='delete-reservation'),

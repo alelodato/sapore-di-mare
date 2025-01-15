@@ -17,6 +17,7 @@ class ReservationList(generic.ListView):
     """
     queryset = Reservation.objects.all()
     template_name = "reservations/reservation.html"
+    paginate_by = 3
 
 
 def check_time(date_choice, time_choice, timezone):
@@ -55,7 +56,7 @@ def add_reservation(request):
                 reservation.save()
                 messages.add_message(request, messages.SUCCESS,
                                      'Your reservation was successfully made!')
-                return HttpResponseRedirect(reverse('reservations-urls'))
+                return HttpResponseRedirect(reverse('reservations'))
 
             else:
                 messages.add_message(
@@ -96,7 +97,7 @@ def confirm_delete_reservation(request, id):
     reservation.delete()
     messages.add_message(request, messages.SUCCESS,
                          'Your reservation has been deleted.')
-    return HttpResponseRedirect(reverse('reservations-urls'))
+    return HttpResponseRedirect(reverse('reservations'))
 
 
 def edit_reservation(request, id):
@@ -122,7 +123,7 @@ def edit_reservation(request, id):
                 reservation.save()
                 messages.add_message(request, messages.SUCCESS,
                                      'Your reservation has been updated!')
-                return HttpResponseRedirect(reverse('reservations-urls'))
+                return HttpResponseRedirect(reverse('reservations'))
 
             else:
                 messages.add_message(request, messages.SUCCESS,
