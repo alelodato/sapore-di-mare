@@ -195,6 +195,10 @@ footer p {
   height: 30vh;
 }
 
+.menu-list {
+  margin-top: 70px;
+}
+
 .menu-list h2 {
   margin-bottom: 0;
   font-size: 1.7rem;
