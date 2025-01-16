@@ -172,20 +172,67 @@ footer p {
   text-align: center;
 }
 
-.container-lgn {
-  text-align: center;
-  font-size: 1.5rem;
+#sign-out {
+  padding-top: 200px;
 }
+
+.container-lgn {
+  background: url(/static/login.webp) no-repeat center center/cover;
+  text-align: center;
+  font-size: 1.3rem;
+  height: 100vh;
+}
+
+#login-cover {
+  padding-top: 100px;
+}
+
+#login-cover p {
+  padding: 0 5px
+}
+
 
 .container-snp {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 0.8rem;
+  background: url(/static/register.webp) no-repeat center center/cover;
+}
+
+.container-snp p {
+  padding: 0 15px;
+}
+
+.container-snp ul {
+  list-style-type: none;
+}
+
+#signup-block {
+  padding-top: 120px;
+  height: 100vh;
 }
 
 .btn-signup {
   background: #050822;
   color: #b97309;
   margin-bottom: 10px;
+}
+
+#reset-container {
+  height: 100vh;
+  background: url(/static/reset.webp) no-repeat center center/cover;
+  padding: 0;
+  overflow: hidden;
+}
+
+.reset-cover {
+  background: radial-gradient(#000, #000000b8) center / cover;
+  height: 100%;
+  padding-top: 150px;
+  text-align:center;
+}
+
+.reset-cover p {
+  padding: 5px;
 }
 
 /*Menu List Page*/
@@ -303,12 +350,14 @@ footer p {
   align-content: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 150px;
 }
 
 .reserve-btn {
   color: #b97309;
   background: #050822;
-  margin-top: 10px;
+  margin: 10px 0 0 15px;
+
 }
 
 .book-cover-text {
@@ -385,6 +434,35 @@ footer p {
   margin: auto;
 }
 
+/*Media query for tablet screens (768px and up)*/
+@media screen and (min-width:768px) {
+
+  .container-snp {
+    height: 92vh;
+    font-size: 1.2rem;
+  }
+
+  #signup-block {
+    overflow: hidden;
+    padding-top: 150px;
+  }
+
+  .container-lgn {
+    font-size: 1.5rem;
+  }
+  
+  #login-cover {
+    padding-top: 200px;
+  }
+
+  .reset-cover {
+    font-size: 1.5rem;
+    padding-top: 200px;
+  }
+
+
+}
+
 /*Media query for laptops and larger screens (992px and up)*/
 @media screen and (min-width:992px) {
 
@@ -399,7 +477,7 @@ footer p {
   }
   
   #menu {
-    width: 35%;
+    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -504,4 +582,38 @@ footer p {
     font-size: 1.5rem;
   }
 
+  .no-reserve {
+    margin-top: 150px;
+  }
+
+  .container-snp {
+    height: 92vh;
+    font-size: 0.9rem;
+  }
+
+  #signup-block {
+    overflow: hidden;
+    padding-top: 70px;
+  }
+
+  .container-lgn {
+    font-size: 1.3rem;
+  }
+  
+  #login-cover {
+    padding-top: 150px;
+    overflow: hidden;
+  }
+
+}
+/*Media query for large devices (992px and up)*/
+@media screen and (min-width:1200px) {
+  #menu {
+    width: 50%;
+  }
+
+  #signup-block {
+    overflow: hidden;
+    padding-top: 85px;
+  }
 }
