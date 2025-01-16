@@ -4,28 +4,29 @@
 <div class="container-fluid gx-5" id="bkn-img">
     <div class="book-cover-text">
         <!--Reservations displayed here-->
-        <div class="row gy-5">
+        <div class="row gy-5" id="outer-active">
             {% if user.is_authenticated %}
             <!-- Checks user is logged in-->
             {% for reservation in user.reservation_list.all %}
             {% if user == reservation.reservation_booked_by %}
             <!-- Displays all reservations the user has made. -->
             <div class=".container-fluid">
-                <div class="row">
+                <div class="row" id="active-r">
                     <div class="col">
                         <h1>Your active reservations:</h1>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 gx-5">
+            <div class="col-md-4 gx-5" id="res-box">
                 <div class="card row">
                     <div class="card-body reservation-card">
                         <ul class="row list-unstyled">
-                            <li class="col-sm-6 text-start">{{reservation.reservation_date}}</li>
-                            <li class="col-sm-6 text-sm-end">{{reservation.reservation_time}}</li>
-                            <li class="col-sm-6 text-start">Name: {{reservation.reservation_name}}</li>
-                            <li class="col-sm-6 text-sm-end">Seats: {{reservation.number_of_guests}}</li>
+                            <li class="col-sm-6 text">{{reservation.reservation_date}}</li>
+                            <li class="col-sm-6 text">{{reservation.reservation_time}}</li>
+                            <li class="col-sm-6 text">Name: {{reservation.reservation_name}}</li>
+                            <li class="col-sm-6 text">Seats: {{reservation.number_of_guests}}</li>
                         </ul>
+                        <hr>
                         <div class="row">
                             <a href="../delete/{{reservation.id}}"
                                 class="btn btn-lg col-md-6 reservation-card-btn">Delete
@@ -35,10 +36,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col text-end">
-                <a href="{% url 'add-reservation' %}" class="btn btn-lg col-md-6 make-a-reservation-btn">Reserve Another
-                    Table</a>
             </div>
             {% endif %}
             {% empty %}

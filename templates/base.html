@@ -65,6 +65,11 @@
     </header>
 
     <main>
+
+        </div>
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock %}
         {% for message in messages %}
         <div class="alert {{ message.tags }} alert-dismissible ">
             <div class="row d-flex justify-content-center">
@@ -76,10 +81,6 @@
                 </div>
             </div>
             {% endfor %}
-        </div>
-        {% block content %}
-        <!-- Content Goes here -->
-        {% endblock %}
     </main>
 
     <footer>
