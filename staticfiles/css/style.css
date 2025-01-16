@@ -1,6 +1,7 @@
-
 header {
   width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 a {
@@ -9,25 +10,26 @@ a {
 }
 
 .logo {
-    font-family: "Italiana", serif;
-    font-size: 2.7rem;
-    font-style: normal;
-    padding-left: 10px;
-    color: #fff;
-    text-decoration: none;
+  font-family: "Italiana", serif;
+  font-size: 2.7rem;
+  font-style: normal;
+  padding-left: 10px;
+  color: #fff;
+  text-decoration: none;
 }
 
 .intro {
   color: #b97309;
+  margin-top: 70px;
 }
 
 .bg-light {
-    --bs-bg-opacity: 1;
-    background-color: rgb(6, 41, 74) !important;
+  --bs-bg-opacity: 1;
+  background-color: rgb(6, 41, 74) !important;
 }
 
 nav {
-    box-shadow:0 2px 2px;
+  box-shadow: 0 2px 2px;
 }
 
 hr {
@@ -35,63 +37,53 @@ hr {
   color: #b97309;
 }
 
-.home-backg {
-  background: url(/static/homepage-backg.webp) no-repeat center center/cover;
-  height: 100%;
-}
-
-.home-cover {
-  background: radial-gradient(#000, #000000b8) center / cover;
-  height: 100%;
-}
-
 main {
-    background-color: #050822;
-    color: #b97309;
+  background-color: #050822;
+  color: #b97309;
 }
 
 body {
-    font-family: "Raleway", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 /*Navbar styles with dropdown toggle*/
 #menu {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    padding: 0 1rem;
-    margin-bottom: 5px;
-    display: none;
-    top: 100%;
-    list-style-type: none;
-    text-align: center;
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: #b97309;
-    z-index: 100;
-}
-
-.nav-toggle-label{
-    margin-right: 15px;
-}
-
-#nav-toggle:checked~#menu {
-    display: block;
-    background-color: rgb(6, 41, 74);
-}
-
-#nav-toggle {
-    display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding: 0 1rem;
+  margin-bottom: 5px;
+  display: none;
+  top: 100%;
+  list-style-type: none;
+  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #b97309;
+  z-index: 100;
 }
 
 .nav-toggle-label {
-    font-size: 2rem;
+  margin-right: 15px;
+}
+
+#nav-toggle:checked~#menu {
+  display: block;
+  background-color: rgb(6, 41, 74);
+}
+
+#nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  font-size: 2rem;
 }
 
 .nav-toggle-label i {
-    color: #b97309;
+  color: #b97309;
 }
 
 img {
@@ -105,6 +97,10 @@ img {
   text-align: end;
   margin-right: 10px;
   padding-top: 5px;
+}
+
+.intro {
+  text-align: center;
 }
 
 .introp2 a {
@@ -178,7 +174,7 @@ footer p {
 
 .container-lgn {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .container-snp {
@@ -189,6 +185,7 @@ footer p {
 .btn-signup {
   background: #050822;
   color: #b97309;
+  margin-bottom: 10px;
 }
 
 /*Menu List Page*/
@@ -280,7 +277,7 @@ footer p {
 .menu p {
   margin-bottom: 0;
   color: #b97309 !important;
-  font-family: "Raleway",serif !important;
+  font-family: "Raleway", serif !important;
   text-align: center;
 }
 
@@ -288,17 +285,80 @@ footer p {
 
 #bkn-img {
   background: url("/static/table.webp") no-repeat center center/cover;
-  height: 100vh;
+  height: 90vh;
   padding: 0;
+  overflow: hidden;
+}
+
+.no-reserve {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.reserve-btn {
+  color: #b97309;
+  background: #050822;
+  margin-top: 10px;
 }
 
 .book-cover-text {
   background: radial-gradient(#000, #000000b8);
   height: 100vh;
+  overflow: hidden;
 }
 
 #bkn-form {
+  margin-top: 150px;
+  padding: 0 10px;
+}
+
+.card {
+  margin: 0 5px 0 5px;
+  background: #050822;
+  color: #b97309;
+  border: #b97309;
+  border-style: groove;
+  text-align: center;
+}
+
+.col h1 {
+  text-align: center;
+}
+
+#active-r {
+  margin-top: 100px;
+}
+
+#res-box {
   margin: auto;
+}
+
+#res-box a {
+  color: #b97309;
+  width: 60%;
+  margin: auto;
+}
+
+#res-box ul {
+  margin-bottom: 0;
+}
+
+#outer-active{
+  margin: auto;
+}
+
+#delete-card {
+  margin: 100px 10px;
+}
+
+#delete-card a {
+  color: #b97309;
 }
 
 #submitButton {
@@ -306,8 +366,54 @@ footer p {
   color: #b97309;
 }
 
+/*Messages*/
+
+.text {
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.btn-close {
+  color: #b97309;
+}
+
+.alert-dismissible {
+  margin: auto;
+}
+
 /*Media query for laptops and larger screens (992px and up)*/
 @media screen and (min-width:992px) {
+
+  .home-backg {
+    background: url(/static/homepage-backg.webp) no-repeat center center/cover;
+    height: 100%;
+  }
+
+  .home-cover {
+    background: radial-gradient(#000, #000000b8) center / cover;
+    height: 100%;
+  }
+  
+  #menu {
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    top: 100%;
+    list-style-type: none;
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #b97309;
+    z-index: 100;
+    position: relative;
+    padding-top: 24px;
+    margin-bottom: 0;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
 
   .intro {
     text-align: center;
@@ -316,7 +422,7 @@ footer p {
   .intro1 {
     display: flex;
   }
-  
+
   .intro2 {
     display: flex;
   }
@@ -383,7 +489,7 @@ footer p {
   .socials {
     font-size: 1.5rem;
   }
-  
+
   .socials i {
     font-size: 1.5rem;
     padding-left: 5px;
