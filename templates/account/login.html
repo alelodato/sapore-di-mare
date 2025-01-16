@@ -12,9 +12,8 @@
     <div class="row">
       <div class="col-md-8 mt-3 offset-md-2">
         <h3>{% trans "Sign In" %}</h3>
-
-        <p>{% blocktrans %}Welcome back to Sapore Di Mare. To leave a feedback or reserve a table, please log in. If
-          you
+        <p>{% blocktrans %}Welcome back to Sapore Di Mare. To reserve a table or manage an existing reservation, please
+          log in. If you
           have not created an account yet, then <a class="link" href="{{ signup_url }}">Sign Up</a>
           first.{% endblocktrans %}</p>
       </div>
@@ -27,6 +26,7 @@
           {% if redirect_field_value %}
           <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
           {% endif %}
+          <a class="btn validation-button" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
           <button class="btn btn-signup right" type="submit">{% trans "Sign In" %}</button>
         </form>
       </div>

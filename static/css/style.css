@@ -217,6 +217,24 @@ footer p {
   margin-bottom: 10px;
 }
 
+#reset-container {
+  height: 100vh;
+  background: url(/static/reset.webp) no-repeat center center/cover;
+  padding: 0;
+  overflow: hidden;
+}
+
+.reset-cover {
+  background: radial-gradient(#000, #000000b8) center / cover;
+  height: 100%;
+  padding-top: 150px;
+  text-align:center;
+}
+
+.reset-cover p {
+  padding: 5px;
+}
+
 /*Menu List Page*/
 
 .cover-text {
@@ -437,6 +455,11 @@ footer p {
     padding-top: 200px;
   }
 
+  .reset-cover {
+    font-size: 1.5rem;
+    padding-top: 200px;
+  }
+
 
 }
 
@@ -586,7 +609,7 @@ footer p {
 /*Media query for large devices (992px and up)*/
 @media screen and (min-width:1200px) {
   #menu {
-    width: 40%;
+    width: 50%;
   }
 
   #signup-block {
