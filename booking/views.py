@@ -142,3 +142,4 @@ def edit_reservation(request, id):
         "reservations/make_reservation.html",
         context
     )
+
