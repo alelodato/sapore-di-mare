@@ -7,3 +7,9 @@ class Menu(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     content = models.TextField()
     excerpt = models.TextField(blank=True)
+
+    class Meta:
+        """
+        Orders menus."
+        """
+        ordering = ["title", "slug"]
