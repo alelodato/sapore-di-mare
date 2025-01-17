@@ -315,6 +315,13 @@ footer p {
 }
 
 .menu div {
+  margin-bottom: 0;
+  color: #b97309 !important;
+  font-family: "Raleway", serif !important;
+  text-align: center;
+}
+
+.menu i {
   color: #b97309;
 }
 
