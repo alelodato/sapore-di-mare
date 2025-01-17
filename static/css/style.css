@@ -628,6 +628,10 @@ footer p {
     overflow: hidden;
   }
 
+  .alert-dismissible {
+    color: #000;
+  }
+
 }
 /*Media query for large devices (992px and up)*/
 @media screen and (min-width:1200px) {
