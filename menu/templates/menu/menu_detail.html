@@ -2,7 +2,6 @@
 {% block content %}
 {% load static %}
 
-{% if user.is_authenticated %}
 {% if menu.slug == 'wine-list' %}
 <div class="wine-menu">
     {% elif menu.slug == 'a-la-carte-menu' %}
@@ -11,6 +10,7 @@
         <div class="dessert-menu">
             {% endif %}
             <div class="cover-menu">
+                {% if user.is_authenticated %}
                 <p id="auth"><i class="fa-regular fa-user"></i> {{ user }}</p>
                 {% else %}
                 <p id="auth">You are not logged in</p>
@@ -25,4 +25,4 @@
             </div>
         </div>
     </div>
-</div>    
+</div>

@@ -9,89 +9,151 @@ In this project i created the website for a fictional restaurant called Sapore D
 
 Link to live site - [https://sapore-di-mare-0503ed908911.herokuapp.com/](https://sapore-di-mare-0503ed908911.herokuapp.com/)
 
-## CONTENTS
+### Strategy
+The overall approach was to build a full stack application using the Django framework linked to a PostgreSQL database. PostgreSQL is a popular and adaptable relational database management system and Django is a flexible framework which easily integrates API's, allowing for a streamlined development cycle. Both are open source and well supported allowing for easy maintenance, future development and customisation. Bootstrap 5 was to be used at the front end to speed up the design process.
 
-  - [Site Objectives](#site-objectives)
-- [User Experience/UX](#user-experienceux)
-  - [Target Audience](#target-audience)
-  - [User Stories](#user-stories)
-    - [New Visitor Goals](#new-visitor-goals)
-    - [Existing Visitor Goals](#existing-visitor-goals)
-- [Design Choices](#design-choices)
-  - [Colour Scheme](#colour-scheme)
-  - [Typography](#typography)
-  - [Logo and Favicon](#logo-and-favicon)
-  - [Wireframes](#wireframes)
-  - [Flow Diagram](#flow-diagram)
-  - [Database Plan](#database-plan)
-- [Features](#features)
-  - [Registration](#registration)
-  - [Future Features](#future-features)
-  - [Features Not Included](#features-not-included)
-- [Technologies Used](#technologies-used)
-- [Programming Languages, Frameworks and Libraries Used](#programming-languages-frameworks-and-libraries-used)
-- [Agile](#agile)
-- [Testing](#testing)
-  - [Manual Testing](#manual-testing)
-  - [User](#user)
-  - [Bugs](#bugs)
-  - [Lighthouse](#lighthouse)
-  - [Validation Testing](#validation-testing)
-    - [HTML \& CSS](#html--css)
-  - [Python Testing](#python-testing)
-  - [Deployment](#deployment)
-    - [Github Deployment](#github-deployment)
-    - [Creating a Fork or Copying](#creating-a-fork-or-copying)
-    - [Clone](#clone)
-    - [Repository deployment via Heroku](#repository-deployment-via-heroku)
-    - [Deployment of the app](#deployment-of-the-app)
-  - [Credits](#credits)
-  - [Media](#media)
-  - [Acknowledgments and Thanks](#acknowledgments-and-thanks)
+The site was designed using an Agile approach. Epics and user stories were collected, added to a [kanban board](https://github.com/users/ewradcliffe/projects/5/views/1) in the project [Githib repository](https://github.com/ewradcliffe/restaurant-booking-system) and prioritised according to the MOSCOW system. MOSCOW organises stories and features into 'Must have', 'Should have', 'Could have', 'Won't have' categories. This allows Agile developers to prioritise which parts of the programme to create first. After a fixed period of time the development cycle ends and the project is reviewed. features may be recategorised and additional user stories added throughout based on testing and feedback received.
 
-___
+### Scope
+The below epics and user stories were collected. Epics were broken down into user stories, added to the project [kanban board](https://github.com/users/ewradcliffe/projects/5/views/1). Additional user stories were added based on feedback.
 
-## Site Objectives
+#### Epics
+- Creation of a full stack web application to manage restaurant reservations using Django.
+- Staff should have full CRUD control over all reservations via the Admin panel.
+- Customers should have full CRUD control over their reservations via the front end of the site.
+- The site should display a menu.
+- The site front end should support the overall marketing strategy of the business.
+- Development of comprehensive documentation to support maintenance and development of the site.
 
-Design and create a Restaurant website with a booking system, to demonstrate understanding of the libraries and frameworks available to developers.
-In particular, for this project, the Django framework was used.
+#### Must have
+Must have features are features without which the project will not work.
+- [Staff can make reservations on behalf of customers](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=73488282)
+- [Staff can edit reservations on behalf of customers](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=74915945)
+- [Staff can delete reservations on behalf of customers](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=74916026)
+- [Staff should have accounts with enhanced access so they have CRUD access to reservation, user and menu databases. These accounts should be password protected for reasons of data security and to prevent malicious use.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=73488956)
+- [Customers should be able to create an account so their data is protected with a password](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=73488956)
+- [Customers can make reservations online.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=73488791)
+- [Customers can edit reservations online.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=74915566)
+- [Customers can delete reservations online.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=74915437)
+- [Automated tests should be created to ensure users have full CRUD control over reservations once logged in.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=74916186)
+- [Automated tests should be created to ensure the reservation database works correctly.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=78005401)
+- [Automated tests should be created to ensure the menu database works correctly.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=78005720)
 
-My three main objectives were:
+#### Should have
+Features not essential to the functioning of the project, but will add significant value to the project.
+- [The site should tell users if they are logged in. The message advising them they are not should link to the login page.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=77004143)
+- [The site should be able to display the restaurant menu.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=73489183)
+- [The site should prevent users making reservations in the past.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=74917161)
+- [The front end of the programme should be designed to allow for intuitive use.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=74917009)
+- [Menu should be visible to customers without a login.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=73489292)
+- [The website should support the marketing objectives of the business.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=73489644)
+- [Pop up messages should stand out more from the background](https://github.com/ewradcliffe/restaurant-booking-system/issues/21)
 
-- ### Create a readable, clean and responsive front end
+#### Could have
+Features which may be useful, but will not add as much value to the site. Due to time constraints these have not been added to the project so have been marked as won't have on the kanban board.
 
-  I wanted to make the site easily accessible and intuitively navigated for the users. Django and Bootstrap were used to create and style the front end.
+- [Customers can submit special queries via the website.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=73489518)
+- [Website displays additional information to the customer.](https://github.com/ewradcliffe/restaurant-booking-system/issues/8)
 
-- ### Make use of available backend functionality
+#### Won't have
+Features which will not be part of the iteration of development. These have been added to the kanban board for consideration in future development cycles.
 
-  The use of the backend framework allows users to create an account, that can be used to make edit or cancel a booking, and also to leave a review to share their experience at the restaurant.
+- [Restaurant staff can add pictures to the menu.](https://github.com/ewradcliffe/restaurant-booking-system/issues/22)
+- [A system for matching reservations with tables.](https://github.com/ewradcliffe/restaurant-booking-system/issues/23)
+- [A system for capping reservation numbers at any given point in time.](https://github.com/ewradcliffe/restaurant-booking-system/issues/24)
+- [Filter reservations in reservation view.](https://github.com/ewradcliffe/restaurant-booking-system/issues/25)
 
-- ### Store data on an external cloud database
+In accordance with Agile development principles, development would begin with the 'must have' features. Together these would form a 'minimal viable product' (MVP). 'Should have' features would be added, prioritising (in order) making a reservation, user experience, restaurant marketing and displaying a menu. In that way a product could be developed as soon as possible and continually developed and improved while maintaining utility.
 
-  I used the Code Institute postgres Database Server, to store the data from the website.
+### Structure
+Once the scope of the project for the initial cycle of Agile development had been decided it was clear how the project could be structured. An overall project (titled 'restaurant') was created and to it linked an app (titled 'reservations'). Data would be stored in a PostgreSQL database. If time was permitted in the development cycle a second app (titled 'menu') could be added. Models, Views and Templates for both apps were planned in accordance with Django's Model View Template (MVT) paradigm.
 
-___
+##### Authentication
+The Django allauth package was installed to manage the user authentication process. A superuser created with access to the admin page. The documentation can be found [here](https://docs.allauth.org/en/latest/).
 
-# User Experience/UX
+Summernote, meta and string methods were used to add meta data to database entries, to add functionality and improve user experience in the admin page.
 
-## Target Audience
+###### base.HTML
+Not linked to a view, the base.html template consists of the header and footer with the content of other templates rendered in the main section depending on user selection. It also contains the HTML do display pop up messages to users.
 
-Users that are interested in dining at the restaurant.
+#### Reservations app
+##### Model
+Django has a built in User Model so it was only necessary to plan a model for the table handling reservations made by the user ('Reservations'). The below Entity Relationship Diagram (ERD) shows the table fields.
 
-## User Stories
+![Reservation model ERD](static/images/reservationerd.png "Reservation model ERD")
 
-- ### Website Navigation
+The model allows for a number of fields essential or useful for managing a reservation. Note that Django adds an ID field to each model by default, adding a unique identification to each database entry.
 
-As a User I can navigate through the website so that i can read infos about the restaurant, see the menu page, and reserve a table after registration and log in
+**reservation_name** allows the creator of the entry a reference separate from their username. It allows staff to add reservations on behalf of others and for customers to give guests a reference separate to the username they created the account with.
 
-Acceptance Criteria:
-- "Users can see the homepage correctly where the logo, navbar, a brief introduction and location of the restaurant is shown"
+**reservation_date, reservation_time** and **number_of_guests** are all essential information for a restaurant.The reservation_time and number_of_guests fields are set to choices (providing users with a fixed number of input choices) rather than TimeField or NumField inputs. This was the most straightforward way of presenting the user with limited inputs preventing them booking outside opening hours or booking for too many guests.
 
-- "Users can access the reservation and leave a feedback page correctly through the navbar"
+**email_field** was added as the project scope required staff to be able to make reservations on behalf of customers unable (or unwilling) to book online and it was useful for staff to take some customer contact details. It was set to null and not linked to the User model as it isn't a mandatory field when users create an account.
 
-- "Users are unable to access reservation and leave a feedback page if not logged in"
+**reservation_booked_by** field allows tracking of the person entering the reservation into the database, either via the site front as a customer who has created an account, or by staff through the admin panel. This supports display of that customer's reservations to a logged in customer, while preventing them viewing other reservations. This has been set to ondelete=null as where reservations made by staff need to remain in the database even after deletion of the profile. Staff turnover can be high in the hospitality sector!
 
-- "All navigation links work correctly redirecting to the correct page"
+**reservation_created_on** and **reservation_updated_on** are set to automatically add the date and time of any database entries and modifications to the database entry. This could prove useful in managing large sets of data.
+
+The Reservation Model is converted to a form in forms.py. The fields reservation_name, reservation_date, reservation_time and number_of_guests are extracted to be displayed to the user as input fields. Django's DateInput widget is added to the reservation_date field to display a datepicker, which is set to only allow users to select same day or future reservations.
+
+##### View
+The below views were created to filter data.
+
+###### index
+As the only role of the index was to render the front page content no complex programming was required.
+
+##### ReservationList
+This renders a list of reservations already created. Note that reservations not made by the user are filtered out by the template not the view. This has no impact on the performance of a small app, but could impact performance of a larger app. It is a point of consideration for future phases of  development and has been added as a user story to the kanban board.
+
+##### check_time
+This function compares the time and date of a reservation against the datetime module to check if a reservation is in the past. Note that the project has been left with the default time zone settings of UTC unchanged and the function derives its time from the server running the application using the datetime.now() method.
+
+##### add_reservation
+This view renders the reservation form derived from the model to the screen. If the data entered is valid (as per the parameters of the model) it checks if the entry is not in the past using the check_time function. If this is valid it saves the data in the database and provides a validation message to the user. If not it advises the user of the error.
+
+##### delete_reservation
+This view is triggered when a user clicks on the 'delete' button of a reservation. It uses the ID of the entry the user selects to get the corresponding data from the database and display it to the user. The user is asked to confirm they want to delete the reservation. If not they are returned to the reservations page, if they select yes the confirm_delete_reservation page view is triggered.
+       
+##### confirm_delete_reservation
+If the user confirms they want to delete the reservation this function is triggered. It deletes the entry from the database, returns the user to the reservation page and displays a message confirming the reservation has been deleted.
+
+##### edit_reservation
+This view is triggered if the user selects the edit reservation button on an existing reservation. It uses the ID of the entry the user selects to get the corresponding data from the database, and renders it to the make_reservation template as context. This allows users to update database entries in a way familiar from when they made the entry. It performs the same validation checks as the add_reservation view. Users are presented with an error message if they enter invalid data, and a success message once the update has been a success.
+
+##### Templates
+###### index.html
+Displays as the front page to a user. The user sees photographs and text which support the marketing objectives of the business. There is a button linking to the page where they can make a reservation as a call to action.
+
+###### reservation.html
+If a user is not logged in they are presented with a message advising them as such and linked to the page where they can sign in. Once they are logged in they can see a list of reservations they have made displayed as cards. They can edit or delete these reservations by clicking the appropriately titled buttons. They can also make new reservations by clicking the 'make reservations' button.
+
+##### delete_reservation.html
+This template renders the detail of a reservation to the page if the user selects the 'delete' button on a reservation. It asks the user if they are sure they want to delete the reservation.
+
+###### make_reservation.html
+This is used by both the add_reservation and edit_reservation views to render the reservation form using crispy forms.
+
+#### Menu app
+As displaying a menu was a 'should have' rather than 'must have' feature this was planned and added after development of the Reservations app. Note that only users with access to the Admin page have full CRUD control over the database. Other users can only read the data as it is displayed on the front end of the site.
+
+#####  Menu model
+The Entity Relationship Diagram (ERD) below was prepared prior to development.
+
+![Menu model ERD](static/images/menuerd.png "Menu model ERD")
+
+**menu_entry_type** provides the user with a choice between Starter, Main, Dessert or Drinks for their entry, corresponding with a section on the menu page on the site. This allows for logical display of data on the front end of the site.
+
+**menu_entry_name** Allows the user to provide a suitable name for the dish while **menu_entry_description** allows them to add a longer description. Both have character limits to support conservation of space on the front end display.
+
+**menu_entry_price** allows users to enter a price for the entry. It is currency agnostic and use of max digits and decimal places allows for entries between 000.00 and 999.99.
+
+**menu_entry_by** Automatically adds the user who added the entry to the database as a foreign key. As with the reservations model, on_delete is set to null so that user accounts could be deleted without deleting database entries they had made. Note however that any user with admin access has full CRUD access to this database.
+
+##### View
+The menu app only needs a single view. This extracts data from the database and adds it as context to the menu template. It also sets out the categories in a tuple so they can be added as context to the menu template
+
+##### Template
+The menu.html template displays the categories for menu items to the screen. It then uses a for loop to iterate through the database entries and display the selected fields under the appropriate category heading.
 
 ___
 

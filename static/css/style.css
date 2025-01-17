@@ -292,6 +292,7 @@ footer p {
 .cover-menu {
   height: 100%;
   background: radial-gradient(black, #000000a6);
+  padding-top: 80px;
 }
 
 .wine-menu {
@@ -402,8 +403,14 @@ footer p {
   margin-bottom: 0;
 }
 
-#outer-active{
+#outer-active {
   margin: auto;
+}
+
+#outer-active p {
+  padding-top: 150px;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 #delete-card {
@@ -416,6 +423,10 @@ footer p {
 
 #submitButton {
   background: #050822;
+  color: #b97309;
+}
+
+#validation-btn {
   color: #b97309;
 }
 
@@ -474,6 +485,11 @@ footer p {
   .home-cover {
     background: radial-gradient(#000, #000000b8) center / cover;
     height: 100%;
+  }
+
+  #auth {
+    padding-top: 90px;
+    margin-bottom: 0px;
   }
   
   #menu {
