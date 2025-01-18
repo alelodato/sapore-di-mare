@@ -96,11 +96,12 @@ img {
   color: #b97309;
   text-align: end;
   margin-right: 10px;
-  padding-top: 5px;
+  padding-top: 90px;
 }
 
 .intro {
   text-align: center;
+  margin-top: 30px;
 }
 
 .introp2 a {
@@ -307,7 +308,7 @@ footer p {
 
 .dessert-menu {
   background: url(/static/dessertmenu.webp) no-repeat center center/cover;
-  height: 80vh;
+  height: 100vh;
 }
 
 .menu span {
@@ -344,7 +345,7 @@ footer p {
 
 #bkn-img {
   background: url("/static/table.webp") no-repeat center center/cover;
-  height: 90vh;
+  height: 100vh;
   padding: 0;
   overflow: hidden;
 }
@@ -420,6 +421,10 @@ footer p {
   font-size: 1.5rem;
 }
 
+#outer-active a {
+  color: #b97309;
+}
+
 #delete-card {
   margin: 100px 10px;
 }
@@ -449,7 +454,9 @@ footer p {
 }
 
 .alert-dismissible {
-  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 0;
+  background: radial-gradient(#000, #000000b8);
 }
 
 /*Media query for tablet screens (768px and up)*/
@@ -522,6 +529,7 @@ footer p {
 
   .intro {
     text-align: center;
+    margin-top: 15px;
   }
 
   .intro1 {
@@ -626,10 +634,6 @@ footer p {
   #login-cover {
     padding-top: 150px;
     overflow: hidden;
-  }
-
-  .alert-dismissible {
-    color: #000;
   }
 
 }
