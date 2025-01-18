@@ -421,6 +421,10 @@ footer p {
   font-size: 1.5rem;
 }
 
+#outer-active a {
+  color: #b97309;
+}
+
 #delete-card {
   margin: 100px 10px;
 }
@@ -450,7 +454,8 @@ footer p {
 }
 
 .alert-dismissible {
-  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 0;
   background: radial-gradient(#000, #000000b8);
 }
 
@@ -629,10 +634,6 @@ footer p {
   #login-cover {
     padding-top: 150px;
     overflow: hidden;
-  }
-
-  .alert-dismissible {
-    color: #000;
   }
 
 }

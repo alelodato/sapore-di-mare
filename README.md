@@ -15,66 +15,141 @@ The overall approach was to build a full stack application using the Django fram
 The site was designed using an Agile approach. Epics and user stories were collected, added to a [kanban board](https://github.com/users/ewradcliffe/projects/5/views/1) in the project [Githib repository](https://github.com/ewradcliffe/restaurant-booking-system) and prioritised according to the MOSCOW system. MOSCOW organises stories and features into 'Must have', 'Should have', 'Could have', 'Won't have' categories. This allows Agile developers to prioritise which parts of the programme to create first. After a fixed period of time the development cycle ends and the project is reviewed. features may be recategorised and additional user stories added throughout based on testing and feedback received.
 
 ### Scope
-The below epics and user stories were collected. Epics were broken down into user stories, added to the project [kanban board](https://github.com/users/ewradcliffe/projects/5/views/1). Additional user stories were added based on feedback.
+
+The below epics and user stories were collected. Epics were broken down into user stories, added to the project [kanban board]().
+
+
 
 #### Epics
+
 - Creation of a full stack web application to manage restaurant reservations using Django.
+
 - Staff should have full CRUD control over all reservations via the Admin panel.
+
 - Customers should have full CRUD control over their reservations via the front end of the site.
+
 - The site should display a menu.
-- The site front end should support the overall marketing strategy of the business.
-- Development of comprehensive documentation to support maintenance and development of the site.
+
+- The site front end should support the overall marketing strategy of the business, being appealing and easy to navigate.
+
+
 
 #### Must have
+
 Must have features are features without which the project will not work.
-- [Staff can make reservations on behalf of customers](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=73488282)
-- [Staff can edit reservations on behalf of customers](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=74915945)
-- [Staff can delete reservations on behalf of customers](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=74916026)
-- [Staff should have accounts with enhanced access so they have CRUD access to reservation, user and menu databases. These accounts should be password protected for reasons of data security and to prevent malicious use.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=73488956)
-- [Customers should be able to create an account so their data is protected with a password](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=73488956)
-- [Customers can make reservations online.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=73488791)
-- [Customers can edit reservations online.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=74915566)
-- [Customers can delete reservations online.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=74915437)
-- [Automated tests should be created to ensure users have full CRUD control over reservations once logged in.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=74916186)
-- [Automated tests should be created to ensure the reservation database works correctly.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=78005401)
-- [Automated tests should be created to ensure the menu database works correctly.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=78005720)
+
+- [Staff can make reservations on behalf of customers]()
+
+- [Staff can edit reservations on behalf of customers]()
+
+- [Staff can delete reservations on behalf of customers]()
+
+- [Staff should have accounts with enhanced access so they have CRUD access to reservation, user and menu databases. These accounts should be password protected for reasons of data security and to prevent malicious use.]()
+
+- [Customers should be able to create an account so their data is protected with a password]()
+
+- [Customers can make reservations online.]()
+
+- [Customers can edit reservations online.]()
+
+- [Customers can delete reservations online.]()
+
+- [The site should prevent users making reservations in the past.]()
+
+- [The front end of the programme should be designed to allow for intuitive use.]()
+
+- [Automated tests should be created to ensure users have full CRUD control over reservations once logged in.]()
+
+- [Automated tests should be created to ensure the reservation database works correctly.]()
+
+- [Automated tests should be created to ensure the menu database works correctly.]()
+
+
 
 #### Should have
+
 Features not essential to the functioning of the project, but will add significant value to the project.
-- [The site should tell users if they are logged in. The message advising them they are not should link to the login page.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=77004143)
-- [The site should be able to display the restaurant menu.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=73489183)
-- [The site should prevent users making reservations in the past.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=74917161)
-- [The front end of the programme should be designed to allow for intuitive use.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=74917009)
-- [Menu should be visible to customers without a login.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=73489292)
-- [The website should support the marketing objectives of the business.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=73489644)
-- [Pop up messages should stand out more from the background](https://github.com/ewradcliffe/restaurant-booking-system/issues/21)
+
+-[Restaurant staff can create, edit and delete restaurant menus.]()
+
+- [The site should tell users if they are logged in. The message advising them they are not should link to the login page.]()
+
+- [The site should be able to display the restaurant menu.]()
+
+- [Menu should be visible to customers without a login.]()
+
+-[The site should have pop up messages for the user to confirm if they logged in logged out or reserve, edit and cancel a reservation successfully]()
+
+- [Pop up messages should stand out more from the background]()
+
+
 
 #### Could have
+
 Features which may be useful, but will not add as much value to the site. Due to time constraints these have not been added to the project so have been marked as won't have on the kanban board.
 
-- [Customers can submit special queries via the website.](https://github.com/users/ewradcliffe/projects/5/views/1?pane=issue&itemId=73489518)
-- [Website displays additional information to the customer.](https://github.com/ewradcliffe/restaurant-booking-system/issues/8)
+
+
+- [Customers can submit special queries and feedbacks via the website.]()
+
+- [A system for matching reservations with tables.]()
+
+- [Restaurant staff can add pictures to the menu and homepage.]()
+
+-[Restaurant staff can add edit and delete content from the homepage.]()
+
+
+
+
 
 #### Won't have
+
 Features which will not be part of the iteration of development. These have been added to the kanban board for consideration in future development cycles.
 
-- [Restaurant staff can add pictures to the menu.](https://github.com/ewradcliffe/restaurant-booking-system/issues/22)
-- [A system for matching reservations with tables.](https://github.com/ewradcliffe/restaurant-booking-system/issues/23)
-- [A system for capping reservation numbers at any given point in time.](https://github.com/ewradcliffe/restaurant-booking-system/issues/24)
-- [Filter reservations in reservation view.](https://github.com/ewradcliffe/restaurant-booking-system/issues/25)
+
+
+- [A system for capping reservation numbers at any given point in time.]()
+
+- [Filter reservations in reservation view.]()
+
+
 
 In accordance with Agile development principles, development would begin with the 'must have' features. Together these would form a 'minimal viable product' (MVP). 'Should have' features would be added, prioritising (in order) making a reservation, user experience, restaurant marketing and displaying a menu. In that way a product could be developed as soon as possible and continually developed and improved while maintaining utility.
 
+
+
 ### Structure
-Once the scope of the project for the initial cycle of Agile development had been decided it was clear how the project could be structured. An overall project (titled 'restaurant') was created and to it linked an app (titled 'reservations'). Data would be stored in a PostgreSQL database. If time was permitted in the development cycle a second app (titled 'menu') could be added. Models, Views and Templates for both apps were planned in accordance with Django's Model View Template (MVT) paradigm.
+
+Once the scope of the project for the initial cycle of Agile development had been decided it was clear how the project could be structured. An overall project (titled 'saporedm') was created and to it linked three apps (titled ‘restaurant’, ‘menu’ and 'reservations'). Data would be stored in a PostgreSQL database. Models, Views and Templates for all apps were planned in accordance with Django's Model View Template (MVT) paradigm.
+
+
 
 ##### Authentication
-The Django allauth package was installed to manage the user authentication process. A superuser created with access to the admin page. The documentation can be found [here](https://docs.allauth.org/en/latest/).
+
+The Django allauth package was installed to manage the user authentication process. A superuser created with access to the admin page. 
+
+
 
 Summernote, meta and string methods were used to add meta data to database entries, to add functionality and improve user experience in the admin page.
 
+
+
 ###### base.HTML
-Not linked to a view, the base.html template consists of the header and footer with the content of other templates rendered in the main section depending on user selection. It also contains the HTML do display pop up messages to users.
+
+Not linked to a view, the base.html template consists of the header and footer with the content of other templates rendered in the main section depending on user selection. It also contains the HTML to display pop up messages to user.
+
+#### Restaurant app
+
+The restaurant app features the homepage of the website, I initially wanted to add to it models and views to allow the restaurant staff to be able to manipulate the page, this feature was not implemented due to limited time availability.
+
+#### Menu app
+
+The menu app contains the content related to the restaurant menus.From the navigation bar users will be able to access a menu list, where the full menu can be accessed and viewed once clicked.
+##### Model
+The Menu model has been created to allow the restaurant staff to be able to edit cancel and add new menus.
+The concept is similar to a blog post model, with the menu that features a title, slug, excerpt shown in the menu list, and of course the content, containing all the items in the restaurant menus. The below Entity Relationship Diagram (ERD) shows the table fields.
+
+![Menu model ERD]()
 
 #### Reservations app
 ##### Model
