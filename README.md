@@ -135,27 +135,57 @@ Summernote, meta and string methods were used to add meta data to database entri
 
 
 ###### base.HTML
-
 Not linked to a view, the base.html template consists of the header and footer with the content of other templates rendered in the main section depending on user selection. It also contains the HTML to display pop up messages to user.
 
 #### Restaurant app
 
-The restaurant app features the homepage of the website, I initially wanted to add to it models and views to allow the restaurant staff to be able to manipulate the page, this feature was not implemented due to limited time availability.
+The restaurant app features the homepage of the website, I initially wanted to add to it models and views to allow the restaurant staff to be able to manipulate the page, this feature was not implemented due to limited time availability.The homepage features the restaurant logo, a navbar, a main section with an introduction to the restaurant with some pictures, a section showing location (featuring an iframe map) and opening times of the restaurant, contacts and social networks below and a footer with a copyright message.
+
+![homepage picture 1](static/homep1.png "Homepage Top Picture")
+![homepage picture 2](static/homep2.png "Homepage Bottom Picture")
+
+##### Templates
+
+###### index.html
+Displays as the front page to a user. The user sees the logo and navbar, photographs and text which support the marketing objectives of the business.
 
 #### Menu app
 
-The menu app contains the content related to the restaurant menus.From the navigation bar users will be able to access a menu list, where the full menu can be accessed and viewed once clicked.
+The menu app contains the content related to the restaurant menus.From the navigation bar users will be able to access a menu list, where the full menu can be accessed and viewed once clicked.In future developments, the member of the staff might be able to add pictures of the respective dishes to the menus.
+
+![Menu List](static/list.png "Menu List")
+![A La Carte Menu](static/readmecart.png "A La Carte Menu")
+![Dessert Menu](static/readmedess.png "Dessert Menu")
+![Wine Menu](static/readmewine.png "Wine Menu")
+
 ##### Model
 The Menu model has been created to allow the restaurant staff to be able to edit cancel and add new menus.
-The concept is similar to a blog post model, with the menu that features a title, slug, excerpt shown in the menu list, and of course the content, containing all the items in the restaurant menus. The below Entity Relationship Diagram (ERD) shows the table fields.
+The concept is similar to a blog post model, with the menu that features a title, slug, excerpt shown in the menu list, and of course the content, containing all the items in the restaurant menus. Django summernote was used to allow menu text customization in the admin panel.
+The below Entity Relationship Diagram (ERD) shows the table fields.
 
-![Menu model ERD]()
+![Menu model ERD](static/menu-erd.png "Menu model ERD")
 
-#### Reservations app
+##### Views
+
+The below views were created to render the menus created by the restaurant staff on the website.
+
+The "Menu List" is a class based view that displays the preview of the 3 menus in a list, and are connected to the respective html template.
+
+The "Menu detail" view is function based, and displays an individual model of a menu, rendering the respective html template.
+
+##### Templates
+
+The menu app features two templates: 
+- The menu_list template, which shows to the user a list of the three different menus available, with all three linked to the respective menu page;
+- The menu_detail template, display a full individual menu and features a background image with a radial gradient background to improve user experience and accessibility.
+
+#### Booking app
+
+The Reservations app contains the restaurant reservation system, and it's thought to allow users to be able to make,edit and delete a reservation.The model has been built to allow restaurant staff to have the same functions, so that they can amend, delete or make reservations on behalf of the customers.The system allows users to book one table at a time, but in future developments this might be changed adding a table number cap and also creating a table plan to associate the restaurant tables with the respective bookings. 
 ##### Model
-Django has a built in User Model so it was only necessary to plan a model for the table handling reservations made by the user ('Reservations'). The below Entity Relationship Diagram (ERD) shows the table fields.
+ The below Entity Relationship Diagram (ERD) shows the table fields.
 
-![Reservation model ERD](static/images/reservationerd.png "Reservation model ERD")
+![Reservation model ERD](static/images/reserv-erd.png "Reservation model ERD")
 
 The model allows for a number of fields essential or useful for managing a reservation. Note that Django adds an ID field to each model by default, adding a unique identification to each database entry.
 
@@ -174,11 +204,8 @@ The Reservation Model is converted to a form in forms.py. The fields reservation
 ##### View
 The below views were created to filter data.
 
-###### index
-As the only role of the index was to render the front page content no complex programming was required.
-
 ##### ReservationList
-This renders a list of reservations already created. Note that reservations not made by the user are filtered out by the template not the view. This has no impact on the performance of a small app, but could impact performance of a larger app. It is a point of consideration for future phases of  development and has been added as a user story to the kanban board.
+This renders a list of reservations already created. Note that reservations not made by the user are filtered out by the template not the view. This has no impact on the performance of a small app, but could impact performance of a larger app. It is a point of consideration for future phases of  development.
 
 ##### check_time
 This function compares the time and date of a reservation against the datetime module to check if a reservation is in the past. Note that the project has been left with the default time zone settings of UTC unchanged and the function derives its time from the server running the application using the datetime.now() method.
@@ -196,73 +223,47 @@ If the user confirms they want to delete the reservation this function is trigge
 This view is triggered if the user selects the edit reservation button on an existing reservation. It uses the ID of the entry the user selects to get the corresponding data from the database, and renders it to the make_reservation template as context. This allows users to update database entries in a way familiar from when they made the entry. It performs the same validation checks as the add_reservation view. Users are presented with an error message if they enter invalid data, and a success message once the update has been a success.
 
 ##### Templates
-###### index.html
-Displays as the front page to a user. The user sees photographs and text which support the marketing objectives of the business. There is a button linking to the page where they can make a reservation as a call to action.
 
 ###### reservation.html
-If a user is not logged in they are presented with a message advising them as such and linked to the page where they can sign in. Once they are logged in they can see a list of reservations they have made displayed as cards. They can edit or delete these reservations by clicking the appropriately titled buttons. They can also make new reservations by clicking the 'make reservations' button.
+If a user is not logged in they are presented with a message advising them as such and linked to the page where they can sign in. Once they are logged in they can see an active reservation in case they made one, or a message redirecting them to the reservation form. Users can edit or delete an active reservation by clicking the appropriately titled buttons, but they are only allowed to do one reservation as a time, as the system doesn't have a table number cap and i thought this would be more appopriate to avoid overbooking. In future developments both this features might be implemented.
 
 ##### delete_reservation.html
 This template renders the detail of a reservation to the page if the user selects the 'delete' button on a reservation. It asks the user if they are sure they want to delete the reservation.
 
 ###### make_reservation.html
 This is used by both the add_reservation and edit_reservation views to render the reservation form using crispy forms.
-
-#### Menu app
-As displaying a menu was a 'should have' rather than 'must have' feature this was planned and added after development of the Reservations app. Note that only users with access to the Admin page have full CRUD control over the database. Other users can only read the data as it is displayed on the front end of the site.
-
-#####  Menu model
-The Entity Relationship Diagram (ERD) below was prepared prior to development.
-
-![Menu model ERD](static/images/menuerd.png "Menu model ERD")
-
-**menu_entry_type** provides the user with a choice between Starter, Main, Dessert or Drinks for their entry, corresponding with a section on the menu page on the site. This allows for logical display of data on the front end of the site.
-
-**menu_entry_name** Allows the user to provide a suitable name for the dish while **menu_entry_description** allows them to add a longer description. Both have character limits to support conservation of space on the front end display.
-
-**menu_entry_price** allows users to enter a price for the entry. It is currency agnostic and use of max digits and decimal places allows for entries between 000.00 and 999.99.
-
-**menu_entry_by** Automatically adds the user who added the entry to the database as a foreign key. As with the reservations model, on_delete is set to null so that user accounts could be deleted without deleting database entries they had made. Note however that any user with admin access has full CRUD access to this database.
-
-##### View
-The menu app only needs a single view. This extracts data from the database and adds it as context to the menu template. It also sets out the categories in a tuple so they can be added as context to the menu template
-
-##### Template
-The menu.html template displays the categories for menu items to the screen. It then uses a for loop to iterate through the database entries and display the selected fields under the appropriate category heading.
-
 ___
 
 # Design Choices
 
 ## Colour Scheme
 
-The colour scheme used for this project was white for the logo of the restaurant, dark blue,that was chosen as recalls the color of the sea, as the website is for a fish and seafood restaurant, and also gold for the content of the website pages, to give it an elegant touch.
+The colour scheme used for this project was white for the logo of the restaurant, dark blue,that was chosen because recalls the color of the sea, as the website is for a fish and seafood restaurant, and also gold for the content of the website pages, to give it an elegant touch.
+
+
+
 ## Typography
 
 The font used for the logo is "Italiana" serif, that is nice and elegant, appropriate in my opinion for a fine dining restaurant logo.
 For the rest of the content the font used is "Raleway" serif, a bit simpler, but that i still find quite elegant and easy to read.
-  
-## Logo and Favicon
-
-The logo was created using an online logo creator - [Brandcrowd](https://www.brandcrowd.com/)
 
 ## Wireframes
 
 - Mobile Homepage Wireframe
 
-![Mobile Homepage Wireframe](documentation/wireframes/mobile_homepage_wireframe.png)
+![Mobile Homepage Wireframe]()
 
 - Mobile Post Detail Wireframe
 
-![Mobile Post Detail Wireframe](documentation/wireframes/mobile_post_detail_wireframe.png)
+![Mobile Post Detail Wireframe]()
 
 - Desktop Homepage Wireframe
 
-![Desktop Homepage Wireframe](documentation/wireframes/desktop_homepage_wireframe.png)
+![Desktop Homepage Wireframe]()
 
 - Desktop Post Detail Wireframe
 
-![Desktop Post Detail Wireframe](documentation/wireframes/desktop_postdetail_wireframe.png)
+![Desktop Post Detail Wireframe]()
 
 ## Flow Diagram
 
