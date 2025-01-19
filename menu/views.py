@@ -3,10 +3,12 @@ from django.views import generic
 from .models import Menu
 # Create your views here.
 
+
 class MenuList(generic.ListView):
     queryset = Menu.objects.all()
     template_name = "menu/menu.html"
     paginate_by = 3
+
 
 def menu_detail(request, slug):
     """

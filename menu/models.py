@@ -8,6 +8,7 @@ class Menu(models.Model):
     content = models.TextField()
     excerpt = models.TextField(blank=True)
 
+
     class Meta:
         """
         Orders menus."

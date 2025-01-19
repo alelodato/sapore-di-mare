@@ -218,6 +218,11 @@ ___
 
 The colour scheme used for this project was white for the logo of the restaurant, dark blue,that was chosen because recalls the color of the sea, as the website is for a fish and seafood restaurant, and also gold for the content of the website pages, to give it an elegant touch. Below a list of all the colour used in this project:
 
+#b97309 is the color used for all the text of the website apart from the logo;
+#fff have been used for the restaurant logo;
+rgb(6, 41, 74) have been used for navbar, toggle menu and footer;
+ #050822 is the colour used for the background on mobile and tablet screens;
+#000, #000000b8 are the colours used with a radial gradient as background cover text to make the website content more readable and improve accessibility;
 
 
 ## Typography
@@ -247,87 +252,17 @@ For the rest of the content the font used is "Raleway" serif, a bit simpler, but
 
 Here is a diagram showing the possible flow through the site. There are 2 sections shown here. On the left it shows the Admin and the right shows a site user.
 
-![Site Flow Diagram](documentation/diagrams/site_flow_diagram.png)
-
-# Features
-
-
-
-## Registration
-
-
-
-The user can create an account
-
-
-
-![Create an Account](documentation/images/create_account.png)
-
-
-
-View Blog Posts on Home Page
-
-
-
-![View Blog Posts on Home Page](documentation/images/home.png)
-
-
-
-Browse by Post Category
-
-
-
-![Browse by Post Category](documentation/images/browse_by_category.png)
-
-
-
-Comment on Blog Posts.
-
-
-
-*Also shown here is the trashcan which allows users to delete their own comments should they wish.*
-
-
-
-![Comment on Blog Posts](documentation/images/commenting.png)
-
-
-
-## Future Features
-
-
-
-- Add an option for users to edit comments
-
-- Add profile page for users to add profile image and edit personal details
-
-
-
-## Features Not Included
-
-
-
-- Add an option for users to upload photos into the comments
-
-
-
+![Site Flow Diagram](documentation/diagrams/flow_diagram.png)
 ___
 
-
-
 # Technologies Used
-
-
 
 Here are the technologies used to build this project:
 
 
-
-- [CodeAnywhere](https://codeanywhere.com/) To build and create this project
-
 - [Github](https://github.com) To host and store the data for the site.
 
-- [CodeAnywhere](https://www.codeanywhere.com) the IDE where the site was built.
+- [Gitpod](https://www.gitpod.io/) the IDE where the site was built.
 
 - [PEP8 Validator](https://pep8ci.herokuapp.com/) Used to check python code for errors
 
@@ -336,9 +271,7 @@ Here are the technologies used to build this project:
 - [Heroku](https://id.heroku.com/) Used to deploy the project
 
 
-
 # Programming Languages, Frameworks and Libraries Used
-
 
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
