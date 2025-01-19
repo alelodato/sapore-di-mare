@@ -1,6 +1,6 @@
 # Sapore Di Mare
 
-![Sapore Di Mare](img)
+![Sapore Di Mare](/static/responsive.jpg "Website responsive design mockup")
 
 Portfolio 4 project as part of the Diploma in Full Stack Software Development by Code Institute.
 ___
@@ -12,12 +12,11 @@ Link to live site - [https://sapore-di-mare-0503ed908911.herokuapp.com/](https:/
 ### Strategy
 The overall approach was to build a full stack application using the Django framework linked to a PostgreSQL database. PostgreSQL is a popular and adaptable relational database management system and Django is a flexible framework which easily integrates API's, allowing for a streamlined development cycle. Both are open source and well supported allowing for easy maintenance, future development and customisation. Bootstrap 5 was to be used at the front end to speed up the design process.
 
-The site was designed using an Agile approach. Epics and user stories were collected, added to a [kanban board](https://github.com/users/ewradcliffe/projects/5/views/1) in the project [Githib repository](https://github.com/ewradcliffe/restaurant-booking-system) and prioritised according to the MOSCOW system. MOSCOW organises stories and features into 'Must have', 'Should have', 'Could have', 'Won't have' categories. This allows Agile developers to prioritise which parts of the programme to create first. After a fixed period of time the development cycle ends and the project is reviewed. features may be recategorised and additional user stories added throughout based on testing and feedback received.
+The site was designed using an Agile approach. Epics and user stories were collected, added to a [kanban board](https://github.com/users/alelodato/projects/4/views/1) in the project [Githib repository](https://github.com/alelodato/sapore-di-mare) and prioritised according to the MOSCOW system. MOSCOW organises stories and features into 'Must have', 'Should have', 'Could have', 'Won't have' categories. This allows Agile developers to prioritise which parts of the programme to create first. After a fixed period of time the development cycle ends and the project is reviewed. features may be recategorised and additional user stories added throughout based on testing and feedback received.
 
 ### Scope
 
-The below epics and user stories were collected. Epics were broken down into user stories, added to the project [kanban board]().
-
+The below epics and user stories were collected. Epics were broken down into user stories, added to the project [kanban board](https://github.com/users/alelodato/projects/4/views/1).
 
 
 #### Epics
@@ -33,55 +32,45 @@ The below epics and user stories were collected. Epics were broken down into use
 - The site front end should support the overall marketing strategy of the business, being appealing and easy to navigate.
 
 
-
 #### Must have
 
 Must have features are features without which the project will not work.
 
-- [Staff can make reservations on behalf of customers]()
+- [Staff can make reservations on behalf of customers](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92067107&issue=alelodato%7Csapore-di-mare%7C4)
 
-- [Staff can edit reservations on behalf of customers]()
+- [Staff can edit reservations on behalf of customers](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92067107&issue=alelodato%7Csapore-di-mare%7C4)
 
-- [Staff can delete reservations on behalf of customers]()
+- [Staff can delete reservations on behalf of customers](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92067107&issue=alelodato%7Csapore-di-mare%7C4)
 
-- [Staff should have accounts with enhanced access so they have CRUD access to reservation, user and menu databases. These accounts should be password protected for reasons of data security and to prevent malicious use.]()
+- [Staff should have accounts with enhanced access so they have CRUD access to reservation, user and menu databases. These accounts should be password protected for reasons of data security and to prevent malicious use.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92068608&issue=alelodato%7Csapore-di-mare%7C7)
 
-- [Customers should be able to create an account so their data is protected with a password]()
+- [Customers should be able to create an account so their data is protected with a password](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066280&issue=alelodato%7Csapore-di-mare%7C2)
 
-- [Customers can make reservations online.]()
+- [Customers can make reservations online.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066751&issue=alelodato%7Csapore-di-mare%7C3)
 
-- [Customers can edit reservations online.]()
+- [Customers can edit reservations online.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066751&issue=alelodato%7Csapore-di-mare%7C3)
 
-- [Customers can delete reservations online.]()
+- [Customers can delete reservations online.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066751&issue=alelodato%7Csapore-di-mare%7C3)
 
-- [The site should prevent users making reservations in the past.]()
+- [The site should prevent users making reservations in the past.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066751&issue=alelodato%7Csapore-di-mare%7C3)
 
-- [The front end of the programme should be designed to allow for intuitive use.]()
-
-- [Automated tests should be created to ensure users have full CRUD control over reservations once logged in.]()
-
-- [Automated tests should be created to ensure the reservation database works correctly.]()
-
-- [Automated tests should be created to ensure the menu database works correctly.]()
-
-
+- [The front end of the programme should be designed to allow for intuitive use.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92067977&issue=alelodato%7Csapore-di-mare%7C6)
 
 #### Should have
 
 Features not essential to the functioning of the project, but will add significant value to the project.
 
--[Restaurant staff can create, edit and delete restaurant menus.]()
+-[Restaurant staff can create, edit and delete restaurant menus.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=94316099&issue=alelodato%7Csapore-di-mare%7C11)
 
-- [The site should tell users if they are logged in. The message advising them they are not should link to the login page.]()
+- [The site should tell users if they are logged in. The message advising them they are not should link to the login page.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066280&issue=alelodato%7Csapore-di-mare%7C2)
 
-- [The site should be able to display the restaurant menu.]()
+- [The site should be able to display the restaurant menu.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92067977&issue=alelodato%7Csapore-di-mare%7C6)
 
-- [Menu should be visible to customers without a login.]()
+- [Menu should be visible to customers without a login.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92067977&issue=alelodato%7Csapore-di-mare%7C6)
 
--[The site should have pop up messages for the user to confirm if they logged in logged out or reserve, edit and cancel a reservation successfully]()
+-[The site should have pop up messages for the user to confirm if they logged in logged out or reserve, edit and cancel a reservation successfully](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066751&issue=alelodato%7Csapore-di-mare%7C3)
 
-- [Pop up messages should stand out more from the background]()
-
+- [Pop up messages should stand out more from the background](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066751&issue=alelodato%7Csapore-di-mare%7C3)
 
 
 #### Could have
@@ -89,17 +78,15 @@ Features not essential to the functioning of the project, but will add significa
 Features which may be useful, but will not add as much value to the site. Due to time constraints these have not been added to the project so have been marked as won't have on the kanban board.
 
 
+- [Customers can submit special queries and feedbacks via the website.](https://github.com/users/alelodato/projects/4?pane=issue&itemId=94316096&issue=alelodato%7Csapore-di-mare%7C5)
 
-- [Customers can submit special queries and feedbacks via the website.]()
+- [A system for matching reservations with tables.](https://github.com/users/alelodato/projects/4?pane=issue&itemId=94317069&issue=alelodato%7Csapore-di-mare%7C12)
 
-- [A system for matching reservations with tables.]()
+- [Restaurant staff can add pictures to the menu and homepage.](https://github.com/users/alelodato/projects/4?pane=issue&itemId=92068971&issue=alelodato%7Csapore-di-mare%7C8)
 
-- [Restaurant staff can add pictures to the menu and homepage.]()
+- [Restaurant staff can add edit and delete content from the homepage.](https://github.com/users/alelodato/projects/4?pane=issue&itemId=92068971&issue=alelodato%7Csapore-di-mare%7C8)
 
--[Restaurant staff can add edit and delete content from the homepage.]()
-
-
-
+- [Users can recover their account password if they have forgotten it through a form and an email with a link.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=94317050&issue=alelodato%7Csapore-di-mare%7C13)
 
 
 #### Won't have
@@ -107,35 +94,25 @@ Features which may be useful, but will not add as much value to the site. Due to
 Features which will not be part of the iteration of development. These have been added to the kanban board for consideration in future development cycles.
 
 
-
-- [A system for capping reservation numbers at any given point in time.]()
-
-- [Filter reservations in reservation view.]()
-
+- [A system for capping reservation numbers at any given point in time.](https://github.com/users/alelodato/projects/4?pane=issue&itemId=94317392&issue=alelodato%7Csapore-di-mare%7C14)
 
 
 In accordance with Agile development principles, development would begin with the 'must have' features. Together these would form a 'minimal viable product' (MVP). 'Should have' features would be added, prioritising (in order) making a reservation, user experience, restaurant marketing and displaying a menu. In that way a product could be developed as soon as possible and continually developed and improved while maintaining utility.
-
 
 
 ### Structure
 
 Once the scope of the project for the initial cycle of Agile development had been decided it was clear how the project could be structured. An overall project (titled 'saporedm') was created and to it linked three apps (titled ‘restaurant’, ‘menu’ and 'reservations'). Data would be stored in a PostgreSQL database. Models, Views and Templates for all apps were planned in accordance with Django's Model View Template (MVT) paradigm.
 
-
+###### base.HTML
+Not linked to a view, the base.html template consists of the header and footer with the content of other templates rendered in the main section depending on user selection. It also contains the HTML to display pop up messages to user.
 
 ##### Authentication
 
 The Django allauth package was installed to manage the user authentication process. A superuser created with access to the admin page. 
 
-
-
 Summernote, meta and string methods were used to add meta data to database entries, to add functionality and improve user experience in the admin page.
 
-
-
-###### base.HTML
-Not linked to a view, the base.html template consists of the header and footer with the content of other templates rendered in the main section depending on user selection. It also contains the HTML to display pop up messages to user.
 
 #### Restaurant app
 
@@ -182,6 +159,7 @@ The menu app features two templates:
 #### Booking app
 
 The Reservations app contains the restaurant reservation system, and it's thought to allow users to be able to make,edit and delete a reservation.The model has been built to allow restaurant staff to have the same functions, so that they can amend, delete or make reservations on behalf of the customers.The system allows users to book one table at a time, but in future developments this might be changed adding a table number cap and also creating a table plan to associate the restaurant tables with the respective bookings. 
+
 ##### Model
  The below Entity Relationship Diagram (ERD) shows the table fields.
 
@@ -238,7 +216,7 @@ ___
 
 ## Colour Scheme
 
-The colour scheme used for this project was white for the logo of the restaurant, dark blue,that was chosen because recalls the color of the sea, as the website is for a fish and seafood restaurant, and also gold for the content of the website pages, to give it an elegant touch.
+The colour scheme used for this project was white for the logo of the restaurant, dark blue,that was chosen because recalls the color of the sea, as the website is for a fish and seafood restaurant, and also gold for the content of the website pages, to give it an elegant touch. Below a list of all the colour used in this project:
 
 
 
@@ -271,249 +249,396 @@ Here is a diagram showing the possible flow through the site. There are 2 sectio
 
 ![Site Flow Diagram](documentation/diagrams/site_flow_diagram.png)
 
-## Database Plan
-
-The database plan is fairly simple, but it shows the information that is stored within the database, the type of data and if it is logged as a Primary or Foreign key where applicable.
-
-![Database plan](documentation/diagrams/database_plan.png)
-
 # Features
+
+
 
 ## Registration
 
+
+
 The user can create an account
+
+
 
 ![Create an Account](documentation/images/create_account.png)
 
+
+
 View Blog Posts on Home Page
+
+
 
 ![View Blog Posts on Home Page](documentation/images/home.png)
 
+
+
 Browse by Post Category
+
+
 
 ![Browse by Post Category](documentation/images/browse_by_category.png)
 
+
+
 Comment on Blog Posts.
+
+
 
 *Also shown here is the trashcan which allows users to delete their own comments should they wish.*
 
+
+
 ![Comment on Blog Posts](documentation/images/commenting.png)
+
+
 
 ## Future Features
 
+
+
 - Add an option for users to edit comments
+
 - Add profile page for users to add profile image and edit personal details
+
+
 
 ## Features Not Included
 
+
+
 - Add an option for users to upload photos into the comments
 
+
+
 ___
+
+
 
 # Technologies Used
 
+
+
 Here are the technologies used to build this project:
 
+
+
 - [CodeAnywhere](https://codeanywhere.com/) To build and create this project
+
 - [Github](https://github.com) To host and store the data for the site.
+
 - [CodeAnywhere](https://www.codeanywhere.com) the IDE where the site was built.
+
 - [PEP8 Validator](https://pep8ci.herokuapp.com/) Used to check python code for errors
-- [ElephandSQL](https://www.elephantsql.com/) Used to store PostgreSQL database.
-- [Cloudinary](https://cloudinary.com/) Used as cloud storage for images uploaded as part of the blog posts
+
+- [CodeInstituteSQL](https://www..com/) Used to store PostgreSQL database.
+
 - [Heroku](https://id.heroku.com/) Used to deploy the project
+
+
 
 # Programming Languages, Frameworks and Libraries Used
 
+
+
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
 - [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
+
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
 - [Django](https://www.djangoproject.com/)
+
 - [Bootstrap](https://getbootstrap.com/)
 
-# Agile
 
-This project was designed using Agile methodology, utilising the Project Board and Issues sections in GitHub
-
-- [Project Board](https://github.com/users/markdaniel1982/projects/4/views/1)
 
 # Testing
 
+
+
 As each section or Function/Model was built during this project, I was testing for functionality and styling issues that may have arisen (see table below), which were corrected or fixed before continuing. I also had friends test the site by signing up, adding and deleting comments using various devices on varying platforms (IOS, Android, Mobile, Tablet etc) and reporting back any issues they encountered with functionality or styling.
+
+
 
 ## Manual Testing
 
+
+
 *For any Fails, there is a more detailed description below the table*
 
-ADMIN
-| TEST | OUTCOME | PASS/FAIL|
-|:---:|:---:|:---:|
-| Create Blog Post | Post successfully created and displayed | Pass |
-| Edit Blog Post | Error thrown when editing post title & slug (*) | FAIL |
-| Edit Blog Post (after fix) | Post content and category updated successfully | Pass |
-| Delete User Comments | Comment deleted successfully | Pass |
-| Delete Blog Post | Post deleted successfully | Pass |
-| Create 7 Test Posts to check Pagination | Next/Previous Page Appears at bottom of screen | Pass |
 
-(*) - While testing the ability to edit posts (Limited to Admin only), I had a problem when editing the title and slug of the post. This was due to the URL not being able to find the original slug of the post (because it had been changed during the edit) to route it after the editing was complete. At this stage, I felt the easiest fix was to remove the ability to edit the post title and slug in the browser, but this functionality is still available via the django admin panel.
 
-## User
+### Testing
 
-| TEST | OUTCOME | PASS/FAIL|
-|:---:|:---:|:---:|
-| Create Account | Created successfully | Pass |
-| Error Check - Error page when signing up with email address | Unable to replicate(*) | Closed |
-| Login | Login Successful | Pass |
-| Logout | Logout Successful | Pass |
-| Read Full Blog Post | PostDetail page loaded successfully | Pass |
-| Add Comment under Blogpost | Comment Added Successfully | Pass |
-| Delete Comment | Comment Deleted | Pass |
-| Filter Posts by category | Posts marked as selected category displayed successfully | Pass |
-| Create User Account to check access to restricted pages (add_post, add_category)| Page displayed correct error message, with no access to restricted content | Pass |
+Both manual and automated tests were used in the testing of the programme.
+
+
+
+#### Manual tests
+
+
+
+| Function | Test | Pass |
+
+| :------: | ----: |  ----: |
+
+| General | Index page fully renders with all content visible | ✓ |
+
+| General | All links routed to correct pages | ✓ |
+
+| General | Menu page fully renders with all content visible | ✓ |
+
+| General | Navbar menu collapses to dropdown on small screens | ✓ |
+
+| General | latest version deployed to Heroku | ✓ |
+
+| Access | Users able to login with username and email | ✓ |
+
+| Access | User given feedback as to if they are logged in or not | ✓ |
+
+| Access | Log in feedback links to register and log in pages | ✓ |
+
+| Access | Users unable to access admin page without proper permissions | ✓ |
+
+| Reservations | Reservations only visible when logged in | ✓ |
+
+| Reservations | User can only view reservations they have made | ✓ |
+
+| Reservations | Logged in user can make a reservation | ✓ |
+
+| Reservations | Logged in user can edit a reservation | ✓ |
+
+| Reservations | Logged in user can delete a reservation | ✓ |
+
+| Reservations | Logged in staff/superuser can make a reservation | ✓ |
+
+| Reservations | Logged in staff/superuser can edit a reservation | ✓ |
+
+| Reservations | Logged in staff/superuser can delete a reservation | ✓ |
+
+| Reservations | Datepicker prevents user booking date prior to current date| ✓ |
+
+| Reservations | Reservation form cannot be submitted without all fields being completed | ✓ |
+
+| Menu | Menu list page fully renders all content to correct sections | ✓ |
+
+| Menu | Menu page fully renders all content to correct sections | ✓ |
+
+| Menu | Logged in staff/superuser can add menu items | ✓ |
+
+| Menu | Logged in staff/superuser can edit menu items | ✓ |
+
+| Menu | Logged in staff/superuser can delete menu items | ✓ |
+
+| Menu | Menu items can only be created, edited and deleted through admin panel | ✓ |
+
+
 
 (*) See Bugs below
 
+
+
 ## Bugs
 
-One of my users reported that they were unable to sign up when including an email address (although the inclusion of an email address is not required), but myself and others were unable to replicate this issue so the bug was marked as closed.
 
-At different points throughout this project, I encountered various bugs involving the styling. These usually appeared after adding a new section or template page. These were all fixed using Bootstrap classes or custom CSS to override any issues caused by Bootstrap itself.
-
-Towards the end of completion, I had an issue with the database, where I had made a change to the Post Model, but hadn't migrated the changes after undoing the changes in the code relating to that change. This required me to reset the database, which was done with help from Rebecca via the Code Institute's Tutor Support. The changes related to the Category Model and the choices available when creating an account.
-
-To enable me to reset the database, I first had to comment out the code (related to "choices" in the model) to stop the code being run and causing an error. Once this was done, the database was reset, seemingly without issue.
-
-Then I had a problem with the "Create a Post" page. When adding a new blog post via the browser, the images were not being sent to cloudinary for cloud storage, and the ElephantSQL cloud database was also not recieving any data. This was a very simple fix as I needed to add ```enctype="multipart/form-data"``` into the form element.
 
 ## Lighthouse
 
-The performance scores appear to be low, and I believe this is due to the images uploaded for each blog post being hosted on a third-party cloud-based platform.
+
 
 Mobile
 
+
+
 ![Lighthouse Mobile Score](documentation/images/lighthouse_mobile.png)
+
+
 
 Desktop
 
+
+
 ![Lighthouse Desktop Score](documentation/images/lighthouse_desktop.png)
+
+
 
 ## Validation Testing
 
+
+
 ### HTML & CSS
+
+
 
 HTML & CSS testing was completed using [W3 Validator](https://validator.w3.org/)
 
+
+
 When validating the code, I had the error shown below. this was fixed by removing the button and using Bootstrap styles to display the link as a button instead
+
+
 
 ![HTML Validation - Descendant Error](documentation/testing_documentation/validation/base.html_button_descendant.png)
 
+
+
 Fixed:
+
+
 
 ![HTML Validation Complete- base.html](documentation/testing_documentation/validation/index.html_validation_complete.png)
 
+
+
 ## Python Testing
+
+
 
 Python pep8 validation was done via [Code Institute's Python Linter](https://pep8ci.herokuapp.com/)
 
+
+
 The only errors recieved here were where some lines of text exceeded the limit of 79 characters, but these have now been rectified.
+
+
 
 Python Files Tested:
 
+
+
 - models
+
 - forms
+
 - views
+
 - urls
 
+
+
 ___
+
+
 
 ## Deployment
 
+
+
 ### Github Deployment
+
+
 
 The website was stored using GitHub for storage of data and version control. To do this I did the following;
 
+
+
 After each addition, change or removal of code, in the terminal within your IDE (I used codeanywhere for this project) type:
 
+
+
 - git add .
+
 - git commit -m "meaningful commit message"
+
 - git push
+
+
 
 The files are now available to view within your github repository.
 
+
+
 ### Creating a Fork or Copying
+
+
 
 To clone/fork/copy the repository you click on the fork tab which is situated next to unwatch tab in the top right corner of the page
 
+
+
 ### Clone
+
+
 
 To create a clone you do the following;
 
+
+
 1. Click on the code tab, left of the Gitpod tab
+
 2. To the right of the repository name, click the clipboard icon
+
 3. In the IED open GitBash
+
 4. Change the working directory to the location you prefer
+
 5. Add Git Clone with the copy of the repository name
+
 6. Clone has been created
+
+
 
 ### Repository deployment via Heroku
 
+
+
 - On the [Heroku Dashboard](https://dashboard.heroku.com) page, click New and then select Create New App from the drop-down menu.
+
 - When the next page loads insert the App name and Choose a region. Then click 'Create app'
+
 - In the settings tab click on Reveal Config Vars and add the key Port and the value 8000. The credentials for this app were:
 
-1. Cloudinary URL
-2. Postgres Database URL
-3. Port (8000)
+
+
+Postgres Database URL
+Port (8000)
+
 
 - Below this click Add buildpack and choose python and nodejs in that order.
 
+
+
 ### Deployment of the app
 
+
+
 - Click on the Deploy tab and select Github-Connect to Github.
+
 - Enter the repository name and click Search.
+
 - Choose the repository that holds the correct files and click Connect.
+
 - A choice is offered between manual or automatic deployment whereby the app is updated when changes are pushed to GitHub.
+
 - Once the deployment method has been chosen the app will be built and can be launched by clicking the Open app button which should appear below the build information window, alternatively, there is another button located in the top right of the page.
 
+
+
 ___
+
+
 
 ## Credits
 
-This project was based on the Code Institute's - I think therefore I blog walkthrough module which provided a standard blog 'base'. From this base I customised a lot of the layout and styling with Bootstrap and custom CSS. I also added a custom model for Category. This allowed me to create a functionality within the site for users to filter the blog posts by a selected category.
+
+
+This project was based on the Code Institute's - I think therefore I blog walkthrough module which provided a standard setup of a django project and helped me understand how models and views work. The menu model was inspired by the blog model in the walkthrough project as they both have a similar structure. For the reservation app instead i want to credit
+
+
 
 I also added several custom Views and Forms to the site, as well as ensuring that all links and desired functionality was working as intended with no errors.
 
-For inspiration and fine-tuning of my code, I referred to John Elder's youtube channel [Codemy](https://www.youtube.com/@Codemycom) where I was able to get a better understanding of how to correctly create this type of product using Django and Bootstrap.
 
-The Readme layout was based on the example by [Kera Cudmore - Readme Examples](https://github.com/kera-cudmore/readme-examples/blob/main/README.md?plain=1) and [Sdalsosa - Readme](https://github.com/Sdalsosa/ComposerHub/blob/main/README.md)
 
 The wireframe mockups were created using [Figma](https://https://www.figma.com/)
 
-Once complete, the readme file was passed through a spelling and grammar check via [Grammarly](https://www.grammarly.com/)
-
 ___
 
-## Media
 
-For placeholder images when no image is uploaded to blog post, I have used [picsum](https://picsum.photos/) which provides a library of stock images that display as a placeholder.
-
-All other content and images are my own.
-
-___
 
 ## Acknowledgments and Thanks
 
-Sean & Oisin at Code Institute's tutor support for the help and guidance with my code-related brain melts.
 
-Rebecca at Code Institute's tutor support for the database reset guidance.
 
-John Elder on the [Codemy](https://www.youtube.com/@Codemycom) youtube channel
-
-For help with manual testing:
-
-- Liz Mayhew
-- Tom Mayhew
-- Nush
-- Marie Daniel
-- Hannah Cook
-- Thomas Spåre
-- Shubham Sinha
+I want to thank the code institute tutors team for helping me every time i encounter an issue i couldn’t resolve in my project, providing fast response and support and patiently making sure i understood what was wrong and the issue was solved.
