@@ -1,3 +1,13 @@
+.home-backg {
+  background: url(/static/mobile-home.webp) no-repeat center center/cover;
+  height: 100%;
+}
+
+.home-cover {
+  background: radial-gradient(#000, #000000c3) center / cover;
+  height: 100%;
+}
+
 header {
   width: 100%;
   position: fixed;
@@ -20,7 +30,8 @@ a {
 
 .intro {
   color: #b97309;
-  margin-top: 70px;
+  text-align: center;
+  margin-top: 0;
 }
 
 .bg-light {
@@ -35,6 +46,7 @@ nav {
 hr {
   margin: 2px 0;
   color: #b97309;
+  opacity: initial;
 }
 
 main {
@@ -97,11 +109,6 @@ img {
   text-align: end;
   margin-right: 10px;
   padding-top: 90px;
-}
-
-.intro {
-  text-align: center;
-  margin-top: 30px;
 }
 
 .introp2 a {
