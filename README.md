@@ -255,8 +255,8 @@ For the rest of the content the font used is "Raleway" serif, a bit simpler, but
 ## Flow Diagram
 
 Here is a diagram showing the possible flow through the site. There are 2 sections shown here. On the left it shows the Admin and the right shows a site user.
-![Admin Panel Flow Diagram]()
-![Site Flow Diagram]()
+![Admin Panel Flow Diagram](static/img/readme/testing/adminflow.jpg)
+![Site Flow Diagram](static/img/readme/testing/userflow.jpg)
 ___
 
 # Technologies Used
@@ -270,9 +270,13 @@ Here are the technologies used to build this project:
 
 - [PEP8 Validator](https://pep8ci.herokuapp.com/) Used to check python code for errors
 
-- [CodeInstituteSQL] Used to store PostgreSQL database.
+- CodeInstituteSQL Used to store PostgreSQL database.
 
 - [Heroku](https://id.heroku.com/) Used to deploy the project
+
+- [Image Resizer](https://imageresizer.com/) Used for resize project images
+
+- [Adobe Stock](https://stock.adobe.com/uk/) Used to get all website pictures and background images
 
 
 # Programming Languages, Frameworks and Libraries Used
@@ -296,65 +300,40 @@ As each section or Function/Model was built during this project, I was testing f
 
 ## Manual Testing
 
-| Function | Test | Pass |
-
-| :------: | ----: |  ----: |
-
-| General | Index page fully renders with all content visible | ✓ |
-
-| General | All links routed to correct pages | ✓ |
-
-| General | Menu page fully renders with all content visible | ✓ |
-
-| General | Navbar menu collapses to dropdown on small screens | ✓ |
-
-| General | latest version deployed to Heroku | ✓ |
-
-| Access | Users able to login with username and email | ✓ |
-
-| Access | User given feedback as to if they are logged in or not | ✓ |
-
-| Access | Log in feedback links to register and log in pages | ✓ |
-
-| Access | Users unable to access admin page without proper permissions | ✓ |
-
-| Reservations | Reservations only visible when logged in | ✓ |
-
-| Reservations | User can only view reservations they have made | ✓ |
-
-| Reservations | Logged in user can make a reservation | ✓ |
-
-| Reservations | Logged in user can edit a reservation | ✓ |
-
-| Reservations | Logged in user can delete a reservation | ✓ |
-
-| Reservations | Logged in staff/superuser can make a reservation | ✓ |
-
-| Reservations | Logged in staff/superuser can edit a reservation | ✓ |
-
-| Reservations | Logged in staff/superuser can delete a reservation | ✓ |
-
-| Reservations | Datepicker prevents user booking date prior to current date| ✓ |
-
-| Reservations | Reservation form cannot be submitted without all fields being completed | ✓ |
-
-| Menu | Menu list page fully renders all content to correct sections | ✓ |
-
-| Menu | Menu page fully renders all content to correct sections | ✓ |
-
-| Menu | Logged in staff/superuser can add menu items | ✓ |
-
-| Menu | Logged in staff/superuser can edit menu items | ✓ |
-
-| Menu | Logged in staff/superuser can delete menu items | ✓ |
-
-| Menu | Menu items can only be created, edited and deleted through admin panel | ✓ |
+| TEST | OUTCOME | PASS/FAIL|
+|:---:|:---:|:---:|
+| General | Index page fully renders with all content visible | Pass |
+| General | All links routed to correct pages | Pass |
+| General | Menu page fully renders with all content visible | Pass |
+| General | Navbar menu collapses to dropdown on small screens | Pass |
+| General | latest version deployed to Heroku | Pass |
+| Access | Users able to login with username and email | Pass |
+| Access | User given feedback as to if they are logged in or not | Pass |
+| Access | Log in feedback links to register and log in pages | Pass |
+| Access | Users unable to access admin page without proper permissions | Pass |
+| Reservations | Reservations only visible when logged in | Pass |
+| Reservations | User can only view reservations they have made | Pass |
+| Reservations | Logged in user can make a reservation | Pass |
+| Reservations | Logged in user can edit a reservation | Pass |
+| Reservations | Logged in user can delete a reservation | Pass |
+| Reservations | Logged in staff/superuser can make a reservation | Pass |
+| Reservations | Logged in staff/superuser can edit a reservation | Pass |
+| Reservations | Logged in staff/superuser can delete a reservation | Pass |
+| Reservations | Datepicker prevents user booking date prior to current date| Pass |
+| Reservations | Reservation form cannot be submitted without all fields being completed | Pass |
+| Menu | Menu list page fully renders all content to correct sections | Pass |
+| Menu | Menu page fully renders all content to correct sections | Pass |
+| Menu | Logged in staff/superuser can add menu items | Pass |
+| Menu | Logged in staff/superuser can edit menu items | Pass |
+| Menu | Logged in staff/superuser can delete menu items | Pass | 
+| Menu | Menu items can only be created, edited and deleted through admin panel | Pass |
 
 
 ## Lighthouse
 
+Website was tested in dev tools using Lightouse:
 
-![Lighthouse Score]()
+![Lighthouse Score](static/img/readme/testing/lighthouse.png)
 
 
 ## Validation Testing
@@ -365,11 +344,13 @@ As each section or Function/Model was built during this project, I was testing f
 
 HTML & CSS testing was completed using [W3 Validator](https://validator.w3.org/)
 
+HTML validation showed some errors, only related to the validator not recognising Django template language as in the picture below:
 
-Fixed:
+![HTML Validation](static/img/readme/testing/htmltest.png)
 
+CSS was validated with no errors:
 
-![HTML Validation]()
+![CSS Validation](static/img/readme/testing/csstest.png)
 
 
 ## Python Testing
@@ -378,15 +359,9 @@ Fixed:
 Python pep8 validation was done via [Code Institute's Python Linter](https://pep8ci.herokuapp.com/)
 
 
-Python Files Tested:
+Python files validated are, models, views, urls and form.
 
-- models
-
-- forms
-
-- views
-
-- urls
+![Python Validation](static/img/readme/testing/pythontest.png)
 
 ___
 
@@ -394,18 +369,12 @@ ___
 ## Deployment
 
 
-
 ### Github Deployment
-
 
 
 The website was stored using GitHub for storage of data and version control. To do this I did the following;
 
-
-
 After each addition, change or removal of code, in the terminal within your IDE (I used codeanywhere for this project) type:
-
-
 
 - git add .
 
@@ -413,26 +382,17 @@ After each addition, change or removal of code, in the terminal within your IDE 
 
 - git push
 
-
-
 The files are now available to view within your github repository.
-
 
 
 ### Creating a Fork or Copying
 
-
-
 To clone/fork/copy the repository you click on the fork tab which is situated next to unwatch tab in the top right corner of the page
-
 
 
 ### Clone
 
-
-
 To create a clone you do the following;
-
 
 
 1. Click on the code tab, left of the Gitpod tab
@@ -448,9 +408,7 @@ To create a clone you do the following;
 6. Clone has been created
 
 
-
 ### Repository deployment via Heroku
-
 
 
 - On the [Heroku Dashboard](https://dashboard.heroku.com) page, click New and then select Create New App from the drop-down menu.
@@ -459,18 +417,13 @@ To create a clone you do the following;
 
 - In the settings tab click on Reveal Config Vars and add the key Port and the value 8000. The credentials for this app were:
 
-
-
 Postgres Database URL
 Port (8000)
-
 
 - Below this click Add buildpack and choose python and nodejs in that order.
 
 
-
 ### Deployment of the app
-
 
 
 - Click on the Deploy tab and select Github-Connect to Github.
@@ -483,32 +436,21 @@ Port (8000)
 
 - Once the deployment method has been chosen the app will be built and can be launched by clicking the Open app button which should appear below the build information window, alternatively, there is another button located in the top right of the page.
 
-
-
 ___
-
 
 
 ## Credits
 
+This project was based on the Code Institute's - I think therefore I blog walkthrough module which provided a standard setup of a django project and helped me understand how models and views work. The menu model was inspired by the blog model in the walkthrough project as they both have a similar structure. For the booking app instead i want to credit DevGenius and his tutorial on [How to create a booking system with django for a health clinic](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78), from which i took inspiration on how to build a model, with selected time slots and seats choices, and to create the views to make the reservation form display and work correctly.
 
 
-This project was based on the Code Institute's - I think therefore I blog walkthrough module which provided a standard setup of a django project and helped me understand how models and views work. The menu model was inspired by the blog model in the walkthrough project as they both have a similar structure. For the reservation app instead i want to credit
-
-
-
-I also added several custom Views and Forms to the site, as well as ensuring that all links and desired functionality was working as intended with no errors.
-
-
-
-The wireframe mockups were created using [Figma](https://https://www.figma.com/)
+The wireframe mockups were created using [Mockapp](https://www.mockapp.com/en/)
 
 ___
-
 
 
 ## Acknowledgments and Thanks
 
 
-
-I want to thank the code institute tutors team for helping me every time i encounter an issue i couldn’t resolve in my project, providing fast response and support and patiently making sure i understood what was wrong and the issue was solved.
+I want to thank the code institute tutors team for helping me every time i encountered an issue that i couldn’t resolve myself in the project, providing fast response and support and patiently making sure i understood what was wrong and the issue was solved.
+Also want to thank my mentor Jubril, for providing advices and feedbacks to help me improve my project and making sure my work complied with assignment.
