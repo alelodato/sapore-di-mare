@@ -38,7 +38,7 @@ NUMBER_OF_GUESTS = (
     ('7', '7'),
     ('8', '8'),
     ('9', '9'),
-    ('10','10'),
+    ('10', '10'),
 )
 
 
@@ -54,7 +54,8 @@ class Reservation(models.Model):
     number_of_guests = models.CharField(
         max_length=10, choices=NUMBER_OF_GUESTS)
     reservation_booked_by = models.ForeignKey(
-        User, null=True, on_delete=models.SET_NULL, related_name="reservation_list")
+        User, null=True,
+        on_delete=models.SET_NULL, related_name="reservation_list")
     reservation_created_on = models.DateTimeField(auto_now_add=True)
     reservation_updated_on = models.DateTimeField(auto_now=True)
 
