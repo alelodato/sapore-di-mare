@@ -156,8 +156,8 @@ footer p {
 }
 
 .socials i {
-  font-size: 1.2rem;
-  padding-left: 5px;
+  font-size: 1.5rem;
+  padding-left: 25px;
   padding-top: 2px;
   text-align: center;
 }
@@ -611,9 +611,9 @@ footer p {
   }
 
   .socials i {
-    font-size: 1.5rem;
-    padding-left: 5px;
-    padding-top: 2px;
+    font-size: 2rem;
+    padding-left: 10px;
+    padding-top: 10px;
   }
 
   footer p {
