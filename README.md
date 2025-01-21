@@ -1,6 +1,6 @@
 # Sapore Di Mare
 
-![Sapore Di Mare](/static/responsive.jpg "Website responsive design mockup")
+![Sapore Di Mare](/static/responsive.png "Website responsive design mockup")
 
 Portfolio 4 project as part of the Diploma in Full Stack Software Development by Code Institute.
 ___
@@ -12,7 +12,7 @@ Link to live site - [https://sapore-di-mare-0503ed908911.herokuapp.com/](https:/
 ### Strategy
 The overall approach was to build a full stack application using the Django framework linked to a PostgreSQL database. PostgreSQL is a popular and adaptable relational database management system and Django is a flexible framework which easily integrates API's, allowing for a streamlined development cycle. Both are open source and well supported allowing for easy maintenance, future development and customisation. Bootstrap 5 was to be used at the front end to speed up the design process.
 
-The site was designed using an Agile approach. Epics and user stories were collected, added to a [kanban board](https://github.com/users/alelodato/projects/4/views/1) in the project [Githib repository](https://github.com/alelodato/sapore-di-mare) and prioritised according to the MOSCOW system. MOSCOW organises stories and features into 'Must have', 'Should have', 'Could have', 'Won't have' categories. This allows Agile developers to prioritise which parts of the programme to create first. After a fixed period of time the development cycle ends and the project is reviewed. features may be recategorised and additional user stories added throughout based on testing and feedback received.
+The site was designed using an Agile approach. Epics and user stories were collected, added to a [kanban board](https://github.com/users/alelodato/projects/4/views/1) in the project [Github repository](https://github.com/alelodato/sapore-di-mare) and prioritised according to the MOSCOW system. MOSCOW organises stories and features into 'Must have', 'Should have', 'Could have', 'Won't have' categories. This allows Agile developers to prioritise which parts of the programme to create first. After a fixed period of time the development cycle ends and the project is reviewed. features may be recategorised and additional user stories added throughout based on testing and feedback received.
 
 ### Scope
 
@@ -60,7 +60,7 @@ Must have features are features without which the project will not work.
 
 Features not essential to the functioning of the project, but will add significant value to the project.
 
--[Restaurant staff can create, edit and delete restaurant menus.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=94316099&issue=alelodato%7Csapore-di-mare%7C11)
+- [Restaurant staff can create, edit and delete restaurant menus.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=94316099&issue=alelodato%7Csapore-di-mare%7C11)
 
 - [The site should tell users if they are logged in. The message advising them they are not should link to the login page.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066280&issue=alelodato%7Csapore-di-mare%7C2)
 
@@ -68,7 +68,7 @@ Features not essential to the functioning of the project, but will add significa
 
 - [Menu should be visible to customers without a login.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92067977&issue=alelodato%7Csapore-di-mare%7C6)
 
--[The site should have pop up messages for the user to confirm if they logged in logged out or reserve, edit and cancel a reservation successfully](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066751&issue=alelodato%7Csapore-di-mare%7C3)
+- [The site should have pop up messages for the user to confirm if they logged in logged out or reserve, edit and cancel a reservation successfully](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066751&issue=alelodato%7Csapore-di-mare%7C3)
 
 - [Pop up messages should stand out more from the background](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066751&issue=alelodato%7Csapore-di-mare%7C3)
 
@@ -163,7 +163,7 @@ The Reservations app contains the restaurant reservation system, and it's though
 ##### Model
  The below Entity Relationship Diagram (ERD) shows the table fields.
 
-![Reservation model ERD](static/images/reserv-erd.png "Reservation model ERD")
+![Reservation model ERD](static/reserv-erd.png "Reservation model ERD")
 
 The model allows for a number of fields essential or useful for managing a reservation. Note that Django adds an ID field to each model by default, adding a unique identification to each database entry.
 
@@ -218,11 +218,11 @@ ___
 
 The colour scheme used for this project was white for the logo of the restaurant, dark blue,that was chosen because recalls the color of the sea, as the website is for a fish and seafood restaurant, and also gold for the content of the website pages, to give it an elegant touch. Below a list of all the colour used in this project:
 
-#b97309 is the color used for all the text of the website apart from the logo;
-#fff have been used for the restaurant logo;
-rgb(6, 41, 74) have been used for navbar, toggle menu and footer;
- #050822 is the colour used for the background on mobile and tablet screens;
-#000, #000000b8 are the colours used with a radial gradient as background cover text to make the website content more readable and improve accessibility;
+- #b97309 is the color used for all the text of the website apart from the logo;
+- #fff have been used for the restaurant logo;
+- rgb(6, 41, 74) have been used for navbar, toggle menu and footer;
+- #050822 is the colour used for the background on mobile and tablet screens;
+- #000, #000000b8 are the colours used with a radial gradient as background cover text to make the website content more readable and improve accessibility;
 
 
 ## Typography
@@ -232,27 +232,31 @@ For the rest of the content the font used is "Raleway" serif, a bit simpler, but
 
 ## Wireframes
 
-- Mobile Homepage Wireframe
+- Homepage Wireframes
 
-![Mobile Homepage Wireframe]()
+![Mobile Homepage Wireframe](static/img/readme/wireframes/mobile-home-wireframe.jpg) ![Tablet Homepage Wireframe](static/img/readme/wireframes/tablet-home-wireframe.jpg) ![Laptop Homepage Wireframe](static/img/readme/wireframes/laptop-home-wireframe.jpg)
 
-- Mobile Post Detail Wireframe
+- Menu List Wireframes
 
-![Mobile Post Detail Wireframe]()
+![Mobile Menu List Wireframe](static/img/readme/wireframes/mobilelist-wireframe.jpg) ![Tablet Menu List Wireframe](static/img/readme/wireframes/tablet-list-wireframe.jpg) ![Laptop Menu List Wireframe](static/img/readme/wireframes/laptop-list-wireframe.jpg) 
 
-- Desktop Homepage Wireframe
+- Menu Page Wireframe
 
-![Desktop Homepage Wireframe]()
+![Mobile Menu Page Wireframe](static/img/readme/wireframes/mobile-menu-wireframe.jpg) ![Tablet Menu Page Wireframe](static/img/readme/wireframes/tablet-menu-wireframe.jpg) ![Laptop Menu Page Wireframe](static/img/readme/wireframes/laptop-menu-wireframe.jpg)
 
-- Desktop Post Detail Wireframe
+- Reservation Page Wireframe
 
-![Desktop Post Detail Wireframe]()
+![Mobile Reservation Page Wireframe](static/img/readme/wireframes/mobile-reserve-wireframe.jpg) ![Tablet Reservation Page Wireframe](static/img/readme/wireframes/tablet-reserve-wireframe.jpg) ![Laptop Reservation Page Wireframe](static/img/readme/wireframes/laptop-reserv-wireframe.jpg)
+
+- Authentication Forms Wireframe
+
+![Mobile Authentication Forms Wireframe](static/img/readme/wireframes/mobile-auth-wireframe.jpg) ![Tablet Authentication Forms Wireframe](static/img/readme/wireframes/tablet-auth-wireframe.jpg) ![Laptop Authentication Forms Wireframe](static/img/readme/wireframes/laptop-auth-wireframe.jpg)
 
 ## Flow Diagram
 
 Here is a diagram showing the possible flow through the site. There are 2 sections shown here. On the left it shows the Admin and the right shows a site user.
-
-![Site Flow Diagram](documentation/diagrams/flow_diagram.png)
+![Admin Panel Flow Diagram]()
+![Site Flow Diagram]()
 ___
 
 # Technologies Used
@@ -266,7 +270,7 @@ Here are the technologies used to build this project:
 
 - [PEP8 Validator](https://pep8ci.herokuapp.com/) Used to check python code for errors
 
-- [CodeInstituteSQL](https://www..com/) Used to store PostgreSQL database.
+- [CodeInstituteSQL] Used to store PostgreSQL database.
 
 - [Heroku](https://id.heroku.com/) Used to deploy the project
 
@@ -285,32 +289,12 @@ Here are the technologies used to build this project:
 - [Bootstrap](https://getbootstrap.com/)
 
 
-
 # Testing
-
-
 
 As each section or Function/Model was built during this project, I was testing for functionality and styling issues that may have arisen (see table below), which were corrected or fixed before continuing. I also had friends test the site by signing up, adding and deleting comments using various devices on varying platforms (IOS, Android, Mobile, Tablet etc) and reporting back any issues they encountered with functionality or styling.
 
 
-
 ## Manual Testing
-
-
-
-*For any Fails, there is a more detailed description below the table*
-
-
-
-### Testing
-
-Both manual and automated tests were used in the testing of the programme.
-
-
-
-#### Manual tests
-
-
 
 | Function | Test | Pass |
 
@@ -367,78 +351,34 @@ Both manual and automated tests were used in the testing of the programme.
 | Menu | Menu items can only be created, edited and deleted through admin panel | ✓ |
 
 
-
-(*) See Bugs below
-
-
-
-## Bugs
-
-
-
 ## Lighthouse
 
 
-
-Mobile
-
-
-
-![Lighthouse Mobile Score](documentation/images/lighthouse_mobile.png)
-
-
-
-Desktop
-
-
-
-![Lighthouse Desktop Score](documentation/images/lighthouse_desktop.png)
-
+![Lighthouse Score]()
 
 
 ## Validation Testing
 
 
-
 ### HTML & CSS
-
 
 
 HTML & CSS testing was completed using [W3 Validator](https://validator.w3.org/)
 
 
-
-When validating the code, I had the error shown below. this was fixed by removing the button and using Bootstrap styles to display the link as a button instead
-
-
-
-![HTML Validation - Descendant Error](documentation/testing_documentation/validation/base.html_button_descendant.png)
-
-
-
 Fixed:
 
 
-
-![HTML Validation Complete- base.html](documentation/testing_documentation/validation/index.html_validation_complete.png)
-
+![HTML Validation]()
 
 
 ## Python Testing
 
 
-
 Python pep8 validation was done via [Code Institute's Python Linter](https://pep8ci.herokuapp.com/)
 
 
-
-The only errors recieved here were where some lines of text exceeded the limit of 79 characters, but these have now been rectified.
-
-
-
 Python Files Tested:
-
-
 
 - models
 
@@ -448,10 +388,7 @@ Python Files Tested:
 
 - urls
 
-
-
 ___
-
 
 
 ## Deployment
