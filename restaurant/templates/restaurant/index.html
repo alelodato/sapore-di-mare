@@ -2,14 +2,17 @@
 {% block content %}
 {% load static %}
 
-
+<!-- Homepage background image -->
 <div class="home-backg">
+    <!-- Radial gradient background to improve user experience and accessibility -->
     <div class="home-cover">
+        <!-- User authentication message -->
         {% if user.is_authenticated %}
         <p id="auth"><i class="fa-regular fa-user"></i> {{ user }}</p>
         {% else %}
         <p id="auth">You are not logged in</p>
         {% endif %}
+        <!-- Homepage Content -->
         <div class="intro">
             <h1>The Mediterranean In The Heart Of London</h1>
             <hr>
@@ -38,6 +41,7 @@
                 </span>
             </div>
         </div>
+        <!-- Location open times and contact informations -->
         <div class="address">
             <p>Sapore Di Mare Restaurant</p>
             <hr>
@@ -65,14 +69,16 @@
                             <i class="fa-solid fa-envelope"></i> : saporedm.restaurant@gmail.com
                         </p>
                     </div>
-                    <hr>
+                    <!-- Social Media Icons -->
                     <div class="socials">
-                            <a href="https://en-gb.facebook.com/" aria-label="facebook-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/" aria-label="insta-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://en-gb.facebook.com/" aria-label="facebook-icon"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/" aria-label="insta-icon"><i
+                                class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>   
+</div>
 {% endblock %}

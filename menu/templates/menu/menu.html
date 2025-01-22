@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
+<!-- Displays The Menu List -->
 <div class="menu-list">
     {% for menu in menu_list %}
     <a href="{% url 'menu_detail' menu.slug %}" class="menu-link">
+        <!-- Conditional statement to display background image related to respective menu -->
         {% if menu.slug == 'wine-list' %}
         <div class="wine-list">
             {% elif menu.slug == 'a-la-carte-menu' %}
