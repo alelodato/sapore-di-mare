@@ -38,6 +38,11 @@
                 </div>
             </div>
             {% endif %}
+            <div class="limited">
+                <p>Please note that due to high volume of reservation requests
+                    and limited number of seats available, customers are only
+                    allowed to reserve a table at a time.</p>
+            </div>
             {% empty %}
             <div class="no-reserve">
                 <p>You have no reservations yet.<a href="{% url 'add-reservation' %}"
@@ -51,11 +56,11 @@
             <div class="col-md-4 gx-5">
                 {% else %}
                 <!--This message is displayed if the user isn't logged in -->
-                <p>You are not logged in.
-                    Please <a rel="stylesheet" href="{% url 'account_login' %}" class="btn sign-up-btn">
-                        Login</a>or
-                    <a rel="stylesheet" href="{% url 'account_signup' %}" class="btn sign-up-btn">Sign
-                        up</a> to make a reservation or veiw existing reservations.</p>
+                <p>You are not logged in.</p>
+                Please <a rel="stylesheet" href="{% url 'account_login' %}" class="btn sign-up-btn">
+                    Login</a>or
+                <a rel="stylesheet" href="{% url 'account_signup' %}" class="btn sign-up-btn">Sign
+                    up</a> to make a reservation or veiw existing reservations.</p>
                 {% endif %}
             </div>
         </div>
