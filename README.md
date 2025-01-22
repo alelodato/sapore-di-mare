@@ -1,6 +1,6 @@
 # Sapore Di Mare
 
-![Sapore Di Mare](/static/responsive.png "Website responsive design mockup")
+![Sapore Di Mare](/static/img/readme/testing/responsive.png "Website responsive design mockup")
 
 Portfolio 4 project as part of the Diploma in Full Stack Software Development by Code Institute.
 ___
@@ -118,8 +118,8 @@ Summernote, meta and string methods were used to add meta data to database entri
 
 The restaurant app features the homepage of the website, I initially wanted to add to it models and views to allow the restaurant staff to be able to manipulate the page, this feature was not implemented due to limited time availability.The homepage features the restaurant logo, a navbar, a main section with an introduction to the restaurant with some pictures, a section showing location (featuring an iframe map) and opening times of the restaurant, contacts and social networks below and a footer with a copyright message.
 
-![homepage picture 1](static/homep1.png "Homepage Top Picture")
-![homepage picture 2](static/homep2.png "Homepage Bottom Picture")
+![homepage picture 1](static/img/readme/wireframes/homep1.png "Homepage Top Picture")
+![homepage picture 2](static/img/readme/wireframes/homep2.png "Homepage Bottom Picture")
 
 ##### Templates
 
@@ -130,17 +130,17 @@ Displays as the front page to a user. The user sees the logo and navbar, photogr
 
 The menu app contains the content related to the restaurant menus.From the navigation bar users will be able to access a menu list, where the full menu can be accessed and viewed once clicked.In future developments, the member of the staff might be able to add pictures of the respective dishes to the menus.
 
-![Menu List](static/list.png "Menu List")
-![A La Carte Menu](static/readmecart.png "A La Carte Menu")
-![Dessert Menu](static/readmedess.png "Dessert Menu")
-![Wine Menu](static/readmewine.png "Wine Menu")
+![Menu List](static/img/readme/wireframes/list.png "Menu List")
+![A La Carte Menu](static/img/readme/wireframes/readmecart.png "A La Carte Menu")
+![Dessert Menu](static/img/readme/wireframes/readmedess.png "Dessert Menu")
+![Wine Menu](static/img/readme/wireframes/readmewine.png "Wine Menu")
 
 ##### Model
 The Menu model has been created to allow the restaurant staff to be able to edit cancel and add new menus.
 The concept is similar to a blog post model, with the menu that features a title, slug, excerpt shown in the menu list, and of course the content, containing all the items in the restaurant menus. Django summernote was used to allow menu text customization in the admin panel.
 The below Entity Relationship Diagram (ERD) shows the table fields.
 
-![Menu model ERD](static/menu-erd.png "Menu model ERD")
+![Menu model ERD](static/img/readme/testing/menu-erd.png "Menu model ERD")
 
 ##### Views
 
@@ -163,7 +163,7 @@ The Reservations app contains the restaurant reservation system, and it's though
 ##### Model
  The below Entity Relationship Diagram (ERD) shows the table fields.
 
-![Reservation model ERD](static/reserv-erd.png "Reservation model ERD")
+![Reservation model ERD](static/img/readme/testing/reserv-erd.png "Reservation model ERD")
 
 The model allows for a number of fields essential or useful for managing a reservation. Note that Django adds an ID field to each model by default, adding a unique identification to each database entry.
 

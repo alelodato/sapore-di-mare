@@ -1,5 +1,5 @@
 .home-backg {
-  background: url(/static/mobile-home.webp);
+  background: url(/static/img/website/homepage/mobile-home.webp);
   height: 100%;
 }
 
@@ -174,7 +174,7 @@ footer p {
 
 .container-lgt {
   height: 100vh;
-  background: url(/static/logout.webp) no-repeat center center/cover;
+  background: url(/static/img/website/authentication/logout.webp) no-repeat center center/cover;
   padding: 0;
   text-align: center;
 }
@@ -184,7 +184,7 @@ footer p {
 }
 
 .container-lgn {
-  background: url(/static/login.webp) no-repeat center center/cover;
+  background: url(/static/img/website/authentication/login.webp) no-repeat center center/cover;
   text-align: center;
   font-size: 1.3rem;
   height: 100vh;
@@ -202,7 +202,7 @@ footer p {
 .container-snp {
   text-align: center;
   font-size: 0.8rem;
-  background: url(/static/register.webp) no-repeat center center/cover;
+  background: url(/static/img/website/authentication/register.webp) no-repeat center center/cover;
 }
 
 .container-snp p {
@@ -224,24 +224,6 @@ footer p {
   margin-bottom: 10px;
 }
 
-#reset-container {
-  height: 100vh;
-  background: url(/static/reset.webp) no-repeat center center/cover;
-  padding: 0;
-  overflow: hidden;
-}
-
-.reset-cover {
-  background: radial-gradient(#000, #000000b8) center / cover;
-  height: 100%;
-  padding-top: 150px;
-  text-align:center;
-}
-
-.reset-cover p {
-  padding: 5px;
-}
-
 /*Menu List Page*/
 
 .cover-text {
@@ -259,18 +241,18 @@ footer p {
 }
 
 .wine-list {
-  background: url(/static/winelist.webp) no-repeat center center/cover;
+  background: url(/static/img/website/menu/winelist.webp) no-repeat center center/cover;
   height: 30vh;
 
 }
 
 .carte-list {
-  background: url(/static/cartelist.webp) no-repeat center center/cover;
+  background: url(/static/img/website/menu/cartelist.webp) no-repeat center center/cover;
   height: 30vh;
 }
 
 .dessert-list {
-  background: url(/static/dessertlist.webp) no-repeat center center/cover;
+  background: url(/static/img/website/menu/dessertlist.webp) no-repeat center center/cover;
   height: 30vh;
 
 }
@@ -303,17 +285,17 @@ footer p {
 }
 
 .wine-menu {
-  background: url(/static/winemenu.webp) no-repeat center center/cover;
+  background: url(/static/img/website/menu/winemenu.webp) no-repeat center center/cover;
   height: 100%;
 }
 
 .carte-menu {
-  background: url(/static/cartemenu.webp) no-repeat center center/cover;
+  background: url(/static/img/website/menu/cartemenu.webp) no-repeat center center/cover;
   height: 100%;
 }
 
 .dessert-menu {
-  background: url(/static/dessertmenu.webp) no-repeat center center/cover;
+  background: url(/static/img/website/menu/dessertmenu.webp) no-repeat center center/cover;
   height: 100vh;
 }
 
@@ -350,7 +332,7 @@ footer p {
 /*Booking Page Styles*/
 
 #bkn-img {
-  background: url("/static/table.webp") no-repeat center center/cover;
+  background: url(/static/img/website/booking/table.webp) no-repeat center center/cover;
   height: 100vh;
   padding: 0;
   overflow: hidden;
@@ -504,7 +486,7 @@ footer p {
 @media screen and (min-width:992px) {
 
   .home-backg {
-    background: url(/static/homepage-backg.webp) no-repeat center center/cover;
+    background: url(/static/img/website/homepage/homepage-backg.webp) no-repeat center center/cover;
     height: 100%;
   }
 
