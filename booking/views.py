@@ -1,4 +1,3 @@
-
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, reverse
 from django.template import loader
@@ -17,7 +16,6 @@ class ReservationList(generic.ListView):
     """
     queryset = Reservation.objects.all()
     template_name = "reservations/reservation.html"
-    paginate_by = 3
 
 
 def check_time(date_choice, time_choice, timezone):
