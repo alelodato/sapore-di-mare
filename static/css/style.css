@@ -242,7 +242,10 @@ footer p {
 
 .menu-list h2 {
   margin-bottom: 0;
-  font-size: 1.7rem;
+}
+
+.menu-title {
+    margin-top: 40px;
 }
 
 .wine-list {
