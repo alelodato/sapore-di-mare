@@ -34,6 +34,10 @@ a {
   margin-top: 0;
 }
 
+.intro h1 {
+  margin-bottom: 20px;
+}
+
 .bg-light {
   --bs-bg-opacity: 1;
   background-color: rgb(6, 41, 74) !important;
@@ -52,6 +56,7 @@ hr {
 main {
   background-color: #050822;
   color: #b97309;
+  font-family: "Noto Sans Display", serif;
 }
 
 body {
@@ -232,7 +237,7 @@ footer p {
 }
 
 .menu-list {
-  margin-top: 70px;
+  margin-top: 30px;
 }
 
 .menu-list h2 {
@@ -455,6 +460,10 @@ footer p {
 
 /*Media query for tablet screens (768px and up)*/
 @media screen and (min-width:768px) {
+
+  .menu-list {
+  margin-top: 50px;
+}
 
   .container-snp {
     height: 92vh;
