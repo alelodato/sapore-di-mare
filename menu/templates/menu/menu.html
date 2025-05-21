@@ -7,24 +7,29 @@
     <a href="{% url 'menu_detail' menu.slug %}" class="menu-link">
         <!-- Conditional statement to display background image related to respective menu -->
         {% if menu.slug == 'wine-list' %}
-        <div class="wine-list">
-            {% elif menu.slug == 'a-la-carte-menu' %}
-            <div class="carte-list">
-                {% else %}
-                <div class="dessert-list">
-                    {% endif %}
-                    <div class="cover-text">
-                        <div class="menu-description">
-                            <h2 class="menu-title">{{ menu.title }}</h2>
-                            <p class="menu-ex">{{ menu.excerpt }}</p>
-                        </div>
-                    </div>
-                </div>
+        <div id="wine-list"  >
+            <div class="menu-description" id="wine-cover-text">
+                <h2 class="menu-title">{{ menu.title }}</h2>
+                    <p class="menu-ex">{{ menu.excerpt }}</p>
             </div>
         </div>
+        {% elif menu.slug == 'a-la-carte-menu' %}
+        <div id="carte-list" >
+            <div class="menu-description" id="carte-cover-text">
+                <h2 class="menu-title">{{ menu.title }}</h2>
+                <p class="menu-ex">{{ menu.excerpt }}</p>
+            </div>
+        </div>
+        {% else %}
+        <div id="dessert-list" >
+            <div class="menu-description" id="dessert-cover-text">
+                <h2 class="menu-title">{{ menu.title }}</h2>
+                <p class="menu-ex">{{ menu.excerpt }}</p>
+            </div>
+        </div>
+        {% endif %}
     </a>
     {% endfor %}
 </div>
-
-</html>
 {% endblock content %}
+</html>

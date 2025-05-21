@@ -3,9 +3,9 @@
 
 <div class="container-fluid gx-5" id="bkn-img">
     <div class="book-cover-text">
+        {% if user.is_authenticated %}
         <!--Reservations displayed here-->
         <div class="row gy-5" id="outer-active">
-            {% if user.is_authenticated %}
             <!-- Checks user is logged in-->
             {% for reservation in user.reservation_list.all %}
             {% if user == reservation.reservation_booked_by %}
@@ -52,21 +52,18 @@
             </div>
             {% endfor %}
         </div>
-        <div class="row">
-            <div class="col-md-4 gx-5">
-                {% else %}
+        {% else %}
                 <!--This message is displayed if the user isn't logged in -->
-                <div>
+                <div class="res-logged-out">
                     <p>You are not logged in.
                         <br>
-                        Please <a rel="stylesheet" href="{% url 'account_login' %}" class="btn sign-up-btn">
-                            Login</a>or
-                        <a rel="stylesheet" href="{% url 'account_signup' %}" class="btn sign-up-btn">Sign
-                            up</a> to make a reservation or veiw existing reservations.</p>
+                        Please <a rel="stylesheet" href="{% url 'account_login' %}">
+                            Login</a> or
+                        <a rel="stylesheet" href="{% url 'account_signup' %}">Sign
+                            up</a> to make a reservation or veiw existing reservations.
+                    </p>
                 </div>
-                {% endif %}
-            </div>
-        </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

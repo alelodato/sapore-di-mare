@@ -231,7 +231,17 @@ footer p {
 
 /*Menu List Page*/
 
-.cover-text {
+#wine-cover-text {
+  background: radial-gradient(#000, #000000b8) center / cover;
+  height: 30vh;
+}
+
+#carte-cover-text {
+  background: radial-gradient(#000, #000000b8) center / cover;
+  height: 30vh;
+}
+
+#dessert-cover-text {
   background: radial-gradient(#000, #000000b8) center / cover;
   height: 30vh;
 }
@@ -248,18 +258,18 @@ footer p {
     margin-top: 40px;
 }
 
-.wine-list {
+#wine-list {
   background: url(/static/img/website/menu/winelist.webp) no-repeat center center/cover;
   height: 30vh;
 
 }
 
-.carte-list {
+#carte-list {
   background: url(/static/img/website/menu/cartelist.webp) no-repeat center center/cover;
   height: 30vh;
 }
 
-.dessert-list {
+#dessert-list {
   background: url(/static/img/website/menu/dessertlist.webp) no-repeat center center/cover;
   height: 30vh;
 
@@ -344,6 +354,16 @@ footer p {
   height: 100vh;
   padding: 0;
   overflow: hidden;
+}
+
+.res-logged-out {
+  margin-top: 300px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.res-logged-out a {
+  text-decoration: underline !important;
 }
 
 .no-reserve {
@@ -490,6 +510,12 @@ footer p {
     font-size: 1.5rem;
     padding-top: 200px;
   }
+
+  .res-logged-out {
+  margin-top: 300px;
+  font-size: 1.8rem;
+  text-align: center;
+}
 
 
 }
