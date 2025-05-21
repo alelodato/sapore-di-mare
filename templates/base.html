@@ -60,8 +60,12 @@ url 'reservation' as reservation_url %} {% url 'account_login' as login_url %}
           ><i class="fa-solid fa-caret-down"></i
         ></label>
         <ul id="menu">
-          <li><a href="{% url 'menu' %}" class="active">Our Menus</a><hr></li>
-          <li><a href="{% url 'reservations' %}">Reservations</a><hr></li>
+          <li><a href="{% url 'menu' %}" class="active">Our Menus</a>
+            <hr>
+          </li>
+          <li><a href="{% url 'reservations' %}">Reservations</a>
+            <hr>
+          </li>
           {% if user.is_authenticated %}
           <li class="nav-item">
             <a

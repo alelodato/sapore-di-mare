@@ -517,13 +517,26 @@ footer p {
     margin-bottom: 0;
   }
 
+  #menu hr {
+    display: none;
+  }
+
   .nav-toggle-label {
     display: none;
   }
 
+  #nav-toggle:checked~#menu {
+  display: flex;
+  background-color: rgb(6, 41, 74);
+}
+
   .intro {
     text-align: center;
     margin-top: 15px;
+  }
+
+  .intro hr {
+    display: none;
   }
 
   .intro1 {
