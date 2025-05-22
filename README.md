@@ -344,7 +344,7 @@ Website was tested in dev tools using Lightouse:
 
 HTML & CSS testing was completed using [W3 Validator](https://validator.w3.org/)
 
-HTML validation showed some errors, only related to the validator not recognising Django template language as in the picture below:
+HTML validation is done using the website pages source code, and showed no errors when testing:
 
 ![HTML Validation](static/img/readme/testing/htmltest.png)
 
