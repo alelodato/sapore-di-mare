@@ -1,11 +1,12 @@
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.template import loader
 from django.views import generic
 from django.contrib import messages
 from .models import Reservation, User
 from .forms import ReservationForm
 from datetime import datetime
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -70,11 +71,16 @@ def add_reservation(request):
     )
 
 
+@login_required()
 def delete_reservation(request, id):
     """
     Function to check user wants to delete reservation.
     """
     reservation = get_object_or_404(Reservation, id=id)
+    if request.user != reservation.reservation_booked_by:
+            messages.add_message(request, messages.ERROR,
+                                 "You can't access another user's reservation")
+            return redirect('home')
     context = {
         'reservation': reservation,
     }
@@ -97,13 +103,16 @@ def confirm_delete_reservation(request, id):
                          'Your reservation has been deleted.')
     return HttpResponseRedirect(reverse('reservations'))
 
-
+@login_required()
 def edit_reservation(request, id):
     """
     Function to edit reservations.
     """
     reservation = get_object_or_404(Reservation, id=id)
-
+    if request.user != reservation.reservation_booked_by:
+            messages.add_message(request, messages.ERROR,
+                                 "You can't access another user's reservation")
+            return redirect('home')
     if request.method == "POST":
         reservation_form = ReservationForm(
             data=request.POST, instance=reservation)
