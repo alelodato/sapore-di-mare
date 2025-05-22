@@ -220,7 +220,7 @@ The colour scheme used for this project was white for the logo of the restaurant
 
 - #b97309 is the color used for all the text of the website apart from the logo;
 - #fff have been used for the restaurant logo;
-- rgb(6, 41, 74) have been used for navbar, toggle menu and footer;
+- rgb(3 29 53) have been used for navbar, toggle menu and footer;
 - #050822 is the colour used for the background on mobile and tablet screens;
 - #000, #000000b8 are the colours used with a radial gradient as background cover text to make the website content more readable and improve accessibility;
 
