@@ -227,8 +227,9 @@ The colour scheme used for this project was white for the logo of the restaurant
 
 ## Typography
 
-The font used for the logo is "Italiana" serif, that is nice and elegant, appropriate in my opinion for a fine dining restaurant logo.
-For the rest of the content the font used is "Raleway" serif, a bit simpler, but that i still find quite elegant and easy to read.
+- The font used for the logo is "Italiana" serif, that is nice and elegant, appropriate in my opinion for a fine dining restaurant logo.
+- For the navabr and footer the font used is "Raleway" serif, a bit simpler and rounded but that i still find quite elegant and easy to read, to differentiate those elements to the website content.
+- For the pages content i used "Noto Sans Display" serif, still a quite simple font, but a bit havier and less     rounded than the one used for the navbar and footer which in my opinion makes it a little bit more elegant.
 
 ## Wireframes
 
