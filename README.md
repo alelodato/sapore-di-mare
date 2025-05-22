@@ -316,6 +316,8 @@ As each section or Function/Model was built during this project, I was testing f
 | Reservations | User can only view reservations they have made | Pass |
 | Reservations | Logged in user can make a reservation | Pass |
 | Reservations | Logged in user can edit a reservation | Pass |
+| Reservations | Logged in user cannot access other users reservation using the id in the url| Pass |
+| Reservations | Logged in user that tried to access other users reservation using the id in the url, are redirected to the homepage and error message is shown | Pass |
 | Reservations | Logged in user can delete a reservation | Pass |
 | Reservations | Logged in staff/superuser can make a reservation | Pass |
 | Reservations | Logged in staff/superuser can edit a reservation | Pass |
