@@ -218,6 +218,27 @@ footer p {
   list-style-type: none;
 }
 
+/*Signup Form*/
+
+.signup {
+    width: 70%;
+    display: inline-flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.signup div {
+  display: flex;
+  align-items: center;
+}
+
+.signup input {
+  height: 35px;
+  width: 200px;
+  margin-left: 20px;
+}
+
 #signup-block {
   padding-top: 120px;
   height: 100vh;
@@ -227,6 +248,11 @@ footer p {
   background: #050822;
   color: #b97309;
   margin-bottom: 10px;
+  width: 100px;
+}
+
+#hint_id_password1 {
+  display: none;
 }
 
 /*Menu List Page*/
@@ -669,7 +695,6 @@ footer p {
 
   #signup-block {
     overflow: hidden;
-    padding-top: 70px;
   }
 
   .container-lgn {
