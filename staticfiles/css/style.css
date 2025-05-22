@@ -34,9 +34,13 @@ a {
   margin-top: 0;
 }
 
+.intro h1 {
+  margin-bottom: 20px;
+}
+
 .bg-light {
   --bs-bg-opacity: 1;
-  background-color: rgb(6, 41, 74) !important;
+  background-color: rgb(3 29 53) !important;
 }
 
 nav {
@@ -52,6 +56,7 @@ hr {
 main {
   background-color: #050822;
   color: #b97309;
+  font-family: "Noto Sans Display", serif;
 }
 
 body {
@@ -141,7 +146,7 @@ footer {
   color: #b97309;
   text-align: center;
   min-height: 8vh;
-  background-color: rgb(6, 41, 74);
+  background-color: rgb(3 29 53);
 }
 
 footer p {
@@ -213,6 +218,27 @@ footer p {
   list-style-type: none;
 }
 
+/*Signup Form*/
+
+.signup {
+    width: 70%;
+    display: inline-flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.signup div {
+  display: flex;
+  align-items: center;
+}
+
+.signup input {
+  height: 35px;
+  width: 200px;
+  margin-left: 20px;
+}
+
 #signup-block {
   padding-top: 120px;
   height: 100vh;
@@ -222,36 +248,54 @@ footer p {
   background: #050822;
   color: #b97309;
   margin-bottom: 10px;
+  width: 100px;
+}
+
+#hint_id_password1 {
+  display: none;
 }
 
 /*Menu List Page*/
 
-.cover-text {
+#wine-cover-text {
+  background: radial-gradient(#000, #000000b8) center / cover;
+  height: 30vh;
+}
+
+#carte-cover-text {
+  background: radial-gradient(#000, #000000b8) center / cover;
+  height: 30vh;
+}
+
+#dessert-cover-text {
   background: radial-gradient(#000, #000000b8) center / cover;
   height: 30vh;
 }
 
 .menu-list {
-  margin-top: 70px;
+  margin-top: 30px;
 }
 
 .menu-list h2 {
   margin-bottom: 0;
-  font-size: 1.7rem;
 }
 
-.wine-list {
+.menu-title {
+    margin-top: 40px;
+}
+
+#wine-list {
   background: url(/static/img/website/menu/winelist.webp) no-repeat center center/cover;
   height: 30vh;
 
 }
 
-.carte-list {
+#carte-list {
   background: url(/static/img/website/menu/cartelist.webp) no-repeat center center/cover;
   height: 30vh;
 }
 
-.dessert-list {
+#dessert-list {
   background: url(/static/img/website/menu/dessertlist.webp) no-repeat center center/cover;
   height: 30vh;
 
@@ -336,6 +380,16 @@ footer p {
   height: 100vh;
   padding: 0;
   overflow: hidden;
+}
+
+.res-logged-out {
+  margin-top: 300px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.res-logged-out a {
+  text-decoration: underline !important;
 }
 
 .no-reserve {
@@ -456,6 +510,10 @@ footer p {
 /*Media query for tablet screens (768px and up)*/
 @media screen and (min-width:768px) {
 
+  .menu-list {
+  margin-top: 50px;
+}
+
   .container-snp {
     height: 92vh;
     font-size: 1.2rem;
@@ -478,6 +536,12 @@ footer p {
     font-size: 1.5rem;
     padding-top: 200px;
   }
+
+  .res-logged-out {
+  margin-top: 300px;
+  font-size: 1.8rem;
+  text-align: center;
+}
 
 
 }
@@ -517,13 +581,26 @@ footer p {
     margin-bottom: 0;
   }
 
+  #menu hr {
+    display: none;
+  }
+
   .nav-toggle-label {
     display: none;
   }
 
+  #nav-toggle:checked~#menu {
+  display: flex;
+  background-color: rgb(6, 41, 74);
+}
+
   .intro {
     text-align: center;
     margin-top: 15px;
+  }
+
+  .intro hr {
+    display: none;
   }
 
   .intro1 {
@@ -618,7 +695,6 @@ footer p {
 
   #signup-block {
     overflow: hidden;
-    padding-top: 70px;
   }
 
   .container-lgn {
