@@ -59,6 +59,7 @@ main {
   background-color: #050822;
   color: #b97309;
   font-family: "Noto Sans Display", serif;
+  height: 100vh;
 }
 
 body {
