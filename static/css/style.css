@@ -59,7 +59,6 @@ main {
   background-color: #050822;
   color: #b97309;
   font-family: "Noto Sans Display", serif;
-  height: 100vh;
 }
 
 body {
@@ -525,6 +524,14 @@ footer p {
   margin-top: 80px;
   margin-bottom: 0;
   background: radial-gradient(#000, #000000b8);
+}
+
+/*Mission Page */
+
+.mission {
+  background: url(../img/website/mission/brigata.jpeg.jpeg) no-repeat center
+    center/cover;
+  height: 90vh;
 }
 
 /*Media query for tablet screens (768px and up)*/
