@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
-{% load static %} {% url 'home' as home_url %}{% url 'menu' as menu_url%} 
-{% url 'reservation' as reservation_url %}{% url 'account_login' as login_url %}
-{% url 'account_signup' as signup_url %}{% url 'account_logout' as logout_url%}
+{% load static %} {% url 'home' as home_url %}{% url 'menu' as menu_url%} {% url
+'reservation' as reservation_url %}{% url 'account_login' as login_url %} {% url
+'account_signup' as signup_url %}{% url 'account_logout' as logout_url%}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,8 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Italiana&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap" 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
 
@@ -62,11 +62,18 @@
           ><i class="fa-solid fa-caret-down"></i
         ></label>
         <ul id="menu">
-          <li><a href="{% url 'menu' %}" class="active">Our Menus</a>
-            <hr>
+          <li>
+            <a href="{% url 'menu' %}" class="active">Our Menus</a>
+            <hr />
           </li>
-          <li><a href="{% url 'reservations' %}">Reservations</a>
-            <hr>
+          <hr />
+          <li>
+            <a href="" class="active">Our Mission</a>
+          </li>
+          <hr />
+          <li>
+            <a href="{% url 'reservations' %}">Reservations</a>
+            <hr />
           </li>
           {% if user.is_authenticated %}
           <li class="nav-item">

@@ -32,6 +32,7 @@ a {
   color: #b97309;
   text-align: center;
   margin-top: 0;
+  padding: 5px;
 }
 
 .intro h1 {
@@ -48,9 +49,10 @@ nav {
 }
 
 hr {
-  margin: 2px 0;
+  margin: 0 auto;
   color: #b97309;
   opacity: initial;
+  width: 90%;
 }
 
 main {
@@ -85,9 +87,9 @@ body {
   margin-right: 15px;
 }
 
-#nav-toggle:checked~#menu {
+#nav-toggle:checked ~ #menu {
   display: block;
-  background-color: rgb(6, 41, 74);
+  background-color: rgb(3 29 53);
 }
 
 #nav-toggle {
@@ -115,12 +117,23 @@ img {
   padding-top: 90px;
 }
 
+p.introp1 {
+  margin: 0;
+  padding: 10px;
+}
+
+p.introp2 {
+  margin: 0;
+  padding: 10px;
+}
+
 .introp2 a {
   text-decoration: underline !important;
 }
 
 .map iframe {
   width: 100%;
+  padding: 5px;
 }
 
 .address {
@@ -156,7 +169,8 @@ footer p {
 }
 
 .socials {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  padding: 10px;
 }
 
 .socials i {
@@ -179,7 +193,8 @@ footer p {
 
 .container-lgt {
   height: 100vh;
-  background: url(/static/img/website/authentication/logout.webp) no-repeat center center/cover;
+  background: url(/static/img/website/authentication/logout.webp) no-repeat
+    center center/cover;
   padding: 0;
   text-align: center;
 }
@@ -189,7 +204,8 @@ footer p {
 }
 
 .container-lgn {
-  background: url(/static/img/website/authentication/login.webp) no-repeat center center/cover;
+  background: url(/static/img/website/authentication/login.webp) no-repeat
+    center center/cover;
   text-align: center;
   font-size: 1.3rem;
   height: 100vh;
@@ -200,14 +216,14 @@ footer p {
 }
 
 #login-cover p {
-  padding: 0 5px
+  padding: 0 5px;
 }
-
 
 .container-snp {
   text-align: center;
   font-size: 0.8rem;
-  background: url(/static/img/website/authentication/register.webp) no-repeat center center/cover;
+  background: url(/static/img/website/authentication/register.webp) no-repeat
+    center center/cover;
 }
 
 .container-snp p {
@@ -221,11 +237,11 @@ footer p {
 /*Signup Form*/
 
 .signup {
-    width: 70%;
-    display: inline-flex;
-    flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
+  width: 70%;
+  display: inline-flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .signup div {
@@ -281,30 +297,30 @@ footer p {
 }
 
 .menu-title {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 #wine-list {
-  background: url(/static/img/website/menu/winelist.webp) no-repeat center center/cover;
+  background: url(/static/img/website/menu/winelist.webp) no-repeat center
+    center/cover;
   height: 30vh;
-
 }
 
 #carte-list {
-  background: url(/static/img/website/menu/cartelist.webp) no-repeat center center/cover;
+  background: url(/static/img/website/menu/cartelist.webp) no-repeat center
+    center/cover;
   height: 30vh;
 }
 
 #dessert-list {
-  background: url(/static/img/website/menu/dessertlist.webp) no-repeat center center/cover;
+  background: url(/static/img/website/menu/dessertlist.webp) no-repeat center
+    center/cover;
   height: 30vh;
-
 }
 
 .menu-description {
   padding: 30px 5px 5px 0;
   text-align: center;
-
 }
 
 .menu-list p {
@@ -329,17 +345,20 @@ footer p {
 }
 
 .wine-menu {
-  background: url(/static/img/website/menu/winemenu.webp) no-repeat center center/cover;
+  background: url(/static/img/website/menu/winemenu.webp) no-repeat center
+    center/cover;
   height: 100%;
 }
 
 .carte-menu {
-  background: url(/static/img/website/menu/cartemenu.webp) no-repeat center center/cover;
+  background: url(/static/img/website/menu/cartemenu.webp) no-repeat center
+    center/cover;
   height: 100%;
 }
 
 .dessert-menu {
-  background: url(/static/img/website/menu/dessertmenu.webp) no-repeat center center/cover;
+  background: url(/static/img/website/menu/dessertmenu.webp) no-repeat center
+    center/cover;
   height: 100vh;
 }
 
@@ -376,7 +395,8 @@ footer p {
 /*Booking Page Styles*/
 
 #bkn-img {
-  background: url(/static/img/website/booking/table.webp) no-repeat center center/cover;
+  background: url(/static/img/website/booking/table.webp) no-repeat center
+    center/cover;
   height: 100vh;
   padding: 0;
   overflow: hidden;
@@ -408,7 +428,6 @@ footer p {
   color: #b97309;
   background: #050822;
   margin: 10px 0 0 15px;
-
 }
 
 .book-cover-text {
@@ -508,11 +527,10 @@ footer p {
 }
 
 /*Media query for tablet screens (768px and up)*/
-@media screen and (min-width:768px) {
-
+@media screen and (min-width: 768px) {
   .menu-list {
-  margin-top: 50px;
-}
+    margin-top: 50px;
+  }
 
   .container-snp {
     height: 92vh;
@@ -527,7 +545,7 @@ footer p {
   .container-lgn {
     font-size: 1.5rem;
   }
-  
+
   #login-cover {
     padding-top: 200px;
   }
@@ -538,19 +556,17 @@ footer p {
   }
 
   .res-logged-out {
-  margin-top: 300px;
-  font-size: 1.8rem;
-  text-align: center;
-}
-
-
+    margin-top: 300px;
+    font-size: 1.8rem;
+    text-align: center;
+  }
 }
 
 /*Media query for laptops and larger screens (992px and up)*/
-@media screen and (min-width:992px) {
-
+@media screen and (min-width: 992px) {
   .home-backg {
-    background: url(/static/img/website/homepage/homepage-backg.webp) no-repeat center center/cover;
+    background: url(/static/img/website/homepage/homepage-backg.webp) no-repeat
+      center center/cover;
     height: 100%;
   }
 
@@ -563,7 +579,7 @@ footer p {
     padding-top: 90px;
     margin-bottom: 0px;
   }
-  
+
   #menu {
     width: 50%;
     display: flex;
@@ -589,10 +605,10 @@ footer p {
     display: none;
   }
 
-  #nav-toggle:checked~#menu {
-  display: flex;
-  background-color: rgb(6, 41, 74);
-}
+  #nav-toggle:checked ~ #menu {
+    display: flex;
+    background-color: rgb(6, 41, 74);
+  }
 
   .intro {
     text-align: center;
@@ -700,7 +716,7 @@ footer p {
   .container-lgn {
     font-size: 1.3rem;
   }
-  
+
   #login-cover {
     padding-top: 150px;
     overflow: hidden;
@@ -709,10 +725,9 @@ footer p {
   #card-container {
     margin-left: 350px;
   }
-
 }
 /*Media query for large devices (1200px and up)*/
-@media screen and (min-width:1200px) {
+@media screen and (min-width: 1200px) {
   #menu {
     width: 50%;
   }

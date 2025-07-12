@@ -5,4 +5,3 @@ from django.views import generic
 class Homepage(generic.ListView):
     queryset = "index.html"
     template_name = "restaurant/index.html"
-    

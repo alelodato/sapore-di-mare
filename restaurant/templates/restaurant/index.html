@@ -1,84 +1,98 @@
-{% extends "base.html" %}
-{% block content %}
-{% load static %}
+{% extends "base.html" %} {% block content %} {% load static %}
 
 <!-- Homepage background image -->
 <div class="home-backg">
-    <!-- Radial gradient background to improve user experience and accessibility -->
-    <div class="home-cover">
-        <!-- User authentication message -->
-        {% if user.is_authenticated %}
-        <p id="auth"><i class="fa-regular fa-user"></i> {{ user }}</p>
-        {% else %}
-        <p id="auth">You are not logged in</p>
-        {% endif %}
-        <!-- Homepage Content -->
-        <div class="intro">
-            <h1>The Mediterranean In The Heart Of London</h1>
-            <hr>
-            <div class="intro1">
-                <p class="introp1">A typical Italian Riviera restaurant, minutes from Buckingham Palace and Piccadilly
-                    Circus.
-                    Located in the glamourous Mayfair district of London, Sapore di Mare has a long history of
-                    making feel his guests as dining in some of the best fish-based restaurants in the Mediterranean.
-                </p>
-                <span class="intro-img1">
-                    <img src="{% static 'img/website/homepage/restaurant.webp' %}" alt="restaurant-image">
-                </span>
-            </div>
-            <div class="intro2">
-                <p class="introp2">
-                    His founder the Michelin Star Chef Alessandro Todalo is known for seeking perfection,
-                    from fish and seafood served, delivered daily to ensure freshness and quality, to the dishes that
-                    compose
-                    the menu selection,
-                    resulting with a mix of some great classics of Italian cuisine, to more globalise fusion concept
-                    suggestions. Come to visit us and discover the Mediterranean in the heart of London.
-                    Click <a href="{% url 'add-reservation' %}">here</a> to reserve your table.
-                </p>
-                <span class="intro-img2">
-                    <img src="{% static 'img/website/homepage/chef.webp' %}" alt="chef-image">
-                </span>
-            </div>
-        </div>
-        <!-- Location open times and contact informations -->
-        <div class="address">
-            <p>Sapore Di Mare Restaurant</p>
-            <hr>
-            <p>22 Queen Street, W1J 5HN, London</p>
-        </div>
-        <div class="open-map">
-            <div class="map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.338046366249!2d-0.14968082421059165!3d51.50701387181327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876052f2a0856e3%3A0xa83359d375e7b01a!2s22%20Queen%20St%2C%20London%20W1J%205HN!5e0!3m2!1sen!2suk!4v1736170597054!5m2!1sen!2suk"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade" title="restaurant-location"></iframe>
-            </div>
-            <div class="open-times">
-                <h2>Opening Times:</h2>
-                <p>Lunch: 12.00pm till 3.00pm</p>
-                <p>Dinner: 6.00pm till 11.00pm</p>
-                <hr>
-                <div class="contacts">
-                    <h2>Contacts:</h2>
-                    <div class="phone-num">
-                        <p>
-                            <i class="fa-solid fa-phone"></i> : 07435205407
-                        </p>
-                        <p>
-                            <i class="fa-solid fa-envelope"></i> : saporedm.restaurant@gmail.com
-                        </p>
-                    </div>
-                    <!-- Social Media Icons -->
-                    <div class="socials">
-                        <a href="https://en-gb.facebook.com/" target="_blank" rel="noopener" aria-label="facebook-icon"><i
-                                class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="insta-icon"><i
-                                class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- Radial gradient background to improve user experience and accessibility -->
+  <div class="home-cover">
+    <!-- User authentication message -->
+    {% if user.is_authenticated %}
+    <p id="auth"><i class="fa-regular fa-user"></i> {{ user }}</p>
+    {% else %}
+    <p id="auth">You are not logged in</p>
+    {% endif %}
+    <!-- Homepage Content -->
+    <div class="intro">
+      <h1>The Mediterranean in the heart of London</h1>
+      <div class="intro1">
+        <p class="introp1">
+          A typical italian riviera restaurant, minutes from buckingham palace
+          and piccadilly circus.
+        </p>
+        <span class="intro-img1">
+          <img
+            src="{% static 'img/website/homepage/restaurant.webp' %}"
+            alt="restaurant-image"
+          />
+        </span>
+      </div>
+      <div class="intro2">
+        <p class="introp2">
+          Located in the glamourous Mayfair district of London, Sapore Di Mare
+          has a long history of making feel his guests as dining in some of the
+          best fish-based restaurants in the mediterranean. click
+          <a href="{% url 'add-reservation' %}">here</a> to reserve your table.
+        </p>
+        <span class="intro-img2">
+          <img
+            src="{% static 'img/website/homepage/chef.webp' %}"
+            alt="chef-image"
+          />
+        </span>
+      </div>
     </div>
+    <!-- Location open times and contact informations -->
+    <div class="address">
+      <p>Sapore Di Mare Restaurant</p>
+      <hr />
+      <p>22 Queen Street, W1J 5HN, London</p>
+    </div>
+    <div class="open-map">
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.338046366249!2d-0.14968082421059165!3d51.50701387181327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876052f2a0856e3%3A0xa83359d375e7b01a!2s22%20Queen%20St%2C%20London%20W1J%205HN!5e0!3m2!1sen!2suk!4v1736170597054!5m2!1sen!2suk"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="restaurant-location"
+        ></iframe>
+      </div>
+      <div class="open-times">
+        <h2>Opening Times:</h2>
+        <p>Lunch: 12.00pm till 3.00pm</p>
+        <p>Dinner: 6.00pm till 11.00pm</p>
+        <hr />
+        <div class="contacts">
+          <h2>Contacts:</h2>
+          <div class="phone-num">
+            <p><i class="fa-solid fa-phone"></i> : 07435205407</p>
+            <p>
+              <i class="fa-solid fa-envelope"></i> :
+              saporedm.restaurant@gmail.com
+            </p>
+          </div>
+          <!-- Social Media Icons -->
+          <div class="socials">
+            <a
+              href="https://en-gb.facebook.com/"
+              target="_blank"
+              rel="noopener"
+              aria-label="facebook-icon"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener"
+              aria-label="insta-icon"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}
