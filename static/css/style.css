@@ -67,7 +67,6 @@ hr {
 main {
   background-color: #050822;
   color: #b97309;
-  overflow: auto;
 }
 
 body {
@@ -541,6 +540,10 @@ footer p {
 
 /*Mission Page */
 
+.hidden {
+  display: none;
+}
+
 .mission {
   background: url(../img/website/mission/brigata.jpeg.jpeg) no-repeat center
     center/cover;
@@ -829,16 +832,56 @@ footer p {
     margin-left: 350px;
   }
 
+  .hidden {
+    display: block;
+  }
+
+  .mission {
+    height: 350vh;
+  }
+
+  .mission-txt {
+    height: 350vh;
+  }
+
+  .mission-txt h2 {
+    font-size: 2.8rem;
+  }
+
   .mission-txt p {
     font-size: 1.5rem;
   }
 
-  .mission-img1 img {
-    width: 85%;
+  .missionp1 {
+    display: block;
+  }
+
+  .img-desktop-layout {
+    display: flex;
+  }
+
+  .missionp1 p {
+    padding-top: 0;
+  }
+
+  .missionp1 img {
+    width: 70%;
   }
 
   .missionp2 h3 {
     font-size: 1.8rem;
+  }
+
+  .mission-img2 img {
+    width: 30%;
+  }
+
+  .mission-img3 img {
+    width: 28.5%;
+  }
+
+  .mission-img4 img {
+    width: 50%;
   }
 }
 /*Media query for large devices (1200px and up)*/
