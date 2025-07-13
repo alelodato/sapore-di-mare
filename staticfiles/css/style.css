@@ -34,6 +34,7 @@ h3,
 h4,
 h5 {
   font-family: "Urbanist", sans-serif;
+  letter-spacing: 1px;
 }
 
 .intro {
@@ -66,6 +67,7 @@ hr {
 main {
   background-color: #050822;
   color: #b97309;
+  overflow: auto;
 }
 
 body {
@@ -88,6 +90,10 @@ body {
   text-decoration: none;
   color: #b97309;
   z-index: 100;
+}
+
+#menu hr {
+  width: 70%;
 }
 
 .nav-toggle-label {
@@ -538,11 +544,11 @@ footer p {
 .mission {
   background: url(../img/website/mission/brigata.jpeg.jpeg) no-repeat center
     center/cover;
-  height: 90vh;
+  height: 160vh;
 }
 
 .mission-txt {
-  height: 90vh;
+  height: 160vh;
   background: #000000ab;
   color: #fafafa;
   text-align: center;
@@ -550,8 +556,40 @@ footer p {
 }
 
 .mission-txt p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   padding: 5px;
+}
+
+.missionp1 {
+  display: flex;
+  padding-top: 10px;
+}
+
+.mission-img1 img {
+  width: 75%;
+}
+
+.review {
+  font-style: italic;
+}
+
+.missionp2 h3 {
+  font-size: 1rem;
+  padding: 10px 10px 0 10px;
+}
+
+.mission-img2 img {
+  width: 40%;
+  padding-right: 5px;
+}
+
+.mission-img3 img {
+  width: 38%;
+  padding-left: 5px;
+}
+
+.mission-img4 img {
+  width: 75%;
 }
 
 /*Media query for tablet screens (768px and up)*/
@@ -587,6 +625,14 @@ footer p {
     margin-top: 300px;
     font-size: 1.8rem;
     text-align: center;
+  }
+
+  .mission-txt {
+    padding-top: 70px;
+  }
+
+  .mission-txt h2 {
+    font-size: 1.5rem;
   }
 }
 

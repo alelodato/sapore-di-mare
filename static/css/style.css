@@ -34,6 +34,7 @@ h3,
 h4,
 h5 {
   font-family: "Urbanist", sans-serif;
+  letter-spacing: 1px;
 }
 
 .intro {
@@ -89,6 +90,10 @@ body {
   text-decoration: none;
   color: #b97309;
   z-index: 100;
+}
+
+#menu hr {
+  width: 70%;
 }
 
 .nav-toggle-label {
@@ -579,7 +584,7 @@ footer p {
 }
 
 .mission-img3 img {
-  width: 40%;
+  width: 38%;
   padding-left: 5px;
 }
 
@@ -621,6 +626,43 @@ footer p {
     font-size: 1.8rem;
     text-align: center;
   }
+
+  .mission-txt {
+    padding-top: 70px;
+  }
+
+  .mission-txt h2 {
+    font-size: 2.3rem;
+  }
+
+  .mission-txt p {
+    font-size: 1.2rem;
+  }
+
+  .missionp1 p {
+    padding-top: 100px;
+  }
+
+  .missionp2 h3 {
+    font-size: 1.5rem;
+    padding-top: 20px;
+  }
+
+  .missionp2 p {
+    padding-top: 10px;
+  }
+
+  .mission-img2 img {
+    width: 35%;
+  }
+
+  .mission-img3 img {
+    width: 33%;
+  }
+
+  .mission-img4 img {
+    width: 70%;
+  }
 }
 
 /*Media query for laptops and larger screens (992px and up)*/
@@ -642,7 +684,7 @@ footer p {
   }
 
   #menu {
-    width: 50%;
+    width: 70%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -785,6 +827,18 @@ footer p {
 
   #card-container {
     margin-left: 350px;
+  }
+
+  .mission-txt p {
+    font-size: 1.5rem;
+  }
+
+  .mission-img1 img {
+    width: 85%;
+  }
+
+  .missionp2 h3 {
+    font-size: 1.8rem;
   }
 }
 /*Media query for large devices (1200px and up)*/
