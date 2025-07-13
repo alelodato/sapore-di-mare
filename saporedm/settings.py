@@ -30,7 +30,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    '.herokuapp.com'
+    'sapore-di-mare-0503ed908911.herokuapp.com'
 ]
 
 
