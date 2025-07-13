@@ -67,7 +67,6 @@ hr {
 main {
   background-color: #050822;
   color: #b97309;
-  overflow: auto;
 }
 
 body {
@@ -541,6 +540,10 @@ footer p {
 
 /*Mission Page */
 
+.hidden {
+  display: none;
+}
+
 .mission {
   background: url(../img/website/mission/brigata.jpeg.jpeg) no-repeat center
     center/cover;
@@ -632,7 +635,36 @@ footer p {
   }
 
   .mission-txt h2 {
+    font-size: 2.3rem;
+  }
+
+  .mission-txt p {
+    font-size: 1.2rem;
+  }
+
+  .missionp1 p {
+    padding-top: 100px;
+  }
+
+  .missionp2 h3 {
     font-size: 1.5rem;
+    padding-top: 20px;
+  }
+
+  .missionp2 p {
+    padding-top: 10px;
+  }
+
+  .mission-img2 img {
+    width: 35%;
+  }
+
+  .mission-img3 img {
+    width: 33%;
+  }
+
+  .mission-img4 img {
+    width: 70%;
   }
 }
 
@@ -655,7 +687,7 @@ footer p {
   }
 
   #menu {
-    width: 50%;
+    width: 70%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -798,6 +830,58 @@ footer p {
 
   #card-container {
     margin-left: 350px;
+  }
+
+  .hidden {
+    display: block;
+  }
+
+  .mission {
+    height: 350vh;
+  }
+
+  .mission-txt {
+    height: 350vh;
+  }
+
+  .mission-txt h2 {
+    font-size: 2.8rem;
+  }
+
+  .mission-txt p {
+    font-size: 1.5rem;
+  }
+
+  .missionp1 {
+    display: block;
+  }
+
+  .img-desktop-layout {
+    display: flex;
+  }
+
+  .missionp1 p {
+    padding-top: 0;
+  }
+
+  .missionp1 img {
+    width: 70%;
+  }
+
+  .missionp2 h3 {
+    font-size: 1.8rem;
+  }
+
+  .mission-img2 img {
+    width: 30%;
+  }
+
+  .mission-img3 img {
+    width: 28.5%;
+  }
+
+  .mission-img4 img {
+    width: 50%;
   }
 }
 /*Media query for large devices (1200px and up)*/

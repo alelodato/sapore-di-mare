@@ -1,0 +1,901 @@
+.home-backg {
+  background: url("/static/img/website/homepage/mobile-home.1a11fd30fc91.webp");
+  height: 100%;
+}
+
+.home-cover {
+  background: radial-gradient(#000, #000000c3) center / cover;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+a {
+  text-decoration: none !important;
+  color: #b97309;
+}
+
+.logo {
+  font-family: "Italiana", serif;
+  font-size: 2.7rem;
+  font-style: normal;
+  padding-left: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Urbanist", sans-serif;
+  letter-spacing: 1px;
+}
+
+.intro {
+  color: #b97309;
+  text-align: center;
+  margin-top: 0;
+  padding: 5px;
+}
+
+.intro h1 {
+  margin-bottom: 20px;
+}
+
+.bg-light {
+  --bs-bg-opacity: 1;
+  background-color: rgb(3 29 53) !important;
+}
+
+nav {
+  box-shadow: 0 2px 2px;
+}
+
+hr {
+  margin: 0 auto;
+  color: #b97309;
+  opacity: initial;
+  width: 90%;
+}
+
+main {
+  background-color: #050822;
+  color: #b97309;
+}
+
+body {
+  font-family: "Raleway", serif;
+  font-style: normal;
+}
+
+/*Navbar styles with dropdown toggle*/
+#menu {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding: 0 1rem;
+  margin-bottom: 5px;
+  display: none;
+  top: 100%;
+  list-style-type: none;
+  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #b97309;
+  z-index: 100;
+}
+
+#menu hr {
+  width: 70%;
+}
+
+.nav-toggle-label {
+  margin-right: 15px;
+}
+
+#nav-toggle:checked ~ #menu {
+  display: block;
+  background-color: rgb(3 29 53);
+}
+
+#nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  font-size: 2rem;
+}
+
+.nav-toggle-label i {
+  color: #b97309;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+#auth {
+  font-size: 0.8rem;
+  color: #b97309;
+  text-align: end;
+  margin-right: 10px;
+  padding-top: 90px;
+}
+
+p.introp1 {
+  margin: 0;
+  padding: 10px;
+}
+
+p.introp2 {
+  margin: 0;
+  padding: 10px;
+}
+
+.introp2 a {
+  text-decoration: underline !important;
+}
+
+.map iframe {
+  width: 100%;
+  padding: 5px;
+}
+
+.address {
+  padding: 15px 0 15px 0;
+}
+
+.address p {
+  margin-bottom: 0;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.open-times {
+  text-align: center;
+}
+
+.open-times p {
+  margin-bottom: 0;
+  padding-bottom: 5px;
+}
+
+footer {
+  color: #b97309;
+  text-align: center;
+  min-height: 8vh;
+  background-color: rgb(3 29 53);
+}
+
+footer p {
+  font-size: 1.2rem;
+  padding: 15px 8px 15px 8px;
+  margin-bottom: 0;
+}
+
+.socials {
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.socials i {
+  font-size: 1.5rem;
+  padding-left: 25px;
+  padding-top: 2px;
+  text-align: center;
+}
+
+.phone-num i {
+  padding-right: 2px;
+}
+
+/*Authentication Pages Styles*/
+
+.cover {
+  background: radial-gradient(#000, #000000b8) center / cover;
+  height: 100%;
+}
+
+.container-lgt {
+  height: 100vh;
+  background: url("/static/img/website/authentication/logout.6fb3ff0ca7ad.webp") no-repeat
+    center center/cover;
+  padding: 0;
+  text-align: center;
+}
+
+#sign-out {
+  padding-top: 200px;
+}
+
+.container-lgn {
+  background: url("/static/img/website/authentication/login.514cbb3ee4e7.webp") no-repeat
+    center center/cover;
+  text-align: center;
+  font-size: 1.3rem;
+  height: 100vh;
+}
+
+#login-cover {
+  padding-top: 100px;
+}
+
+#login-cover p {
+  padding: 0 5px;
+}
+
+.container-snp {
+  text-align: center;
+  font-size: 0.8rem;
+  background: url("/static/img/website/authentication/register.44b79f56a9b4.webp") no-repeat
+    center center/cover;
+}
+
+.container-snp p {
+  padding: 0 15px;
+}
+
+.container-snp ul {
+  list-style-type: none;
+}
+
+/*Signup Form*/
+
+.signup {
+  width: 70%;
+  display: inline-flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.signup div {
+  display: flex;
+  align-items: center;
+}
+
+.signup input {
+  height: 35px;
+  width: 200px;
+  margin-left: 20px;
+}
+
+#signup-block {
+  padding-top: 120px;
+  height: 100vh;
+}
+
+.btn-signup {
+  background: #050822;
+  color: #b97309;
+  margin-bottom: 10px;
+  width: 100px;
+}
+
+#hint_id_password1 {
+  display: none;
+}
+
+/*Menu List Page*/
+
+#wine-cover-text {
+  background: radial-gradient(#000, #000000b8) center / cover;
+  height: 30vh;
+}
+
+#carte-cover-text {
+  background: radial-gradient(#000, #000000b8) center / cover;
+  height: 30vh;
+}
+
+#dessert-cover-text {
+  background: radial-gradient(#000, #000000b8) center / cover;
+  height: 30vh;
+}
+
+.menu-list {
+  margin-top: 30px;
+}
+
+.menu-list h2 {
+  margin-bottom: 0;
+}
+
+.menu-title {
+  margin-top: 40px;
+}
+
+#wine-list {
+  background: url("/static/img/website/menu/winelist.ef64d7729e1b.webp") no-repeat center
+    center/cover;
+  height: 30vh;
+}
+
+#carte-list {
+  background: url("/static/img/website/menu/cartelist.a82276e533a3.webp") no-repeat center
+    center/cover;
+  height: 30vh;
+}
+
+#dessert-list {
+  background: url("/static/img/website/menu/dessertlist.5fcf387f9239.webp") no-repeat center
+    center/cover;
+  height: 30vh;
+}
+
+.menu-description {
+  padding: 30px 5px 5px 0;
+  text-align: center;
+}
+
+.menu-list p {
+  margin-bottom: 0;
+}
+
+.menu-ex {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
+/* Menu Page Styles*/
+
+.menu {
+  color: #b97309;
+}
+
+.cover-menu {
+  height: 100%;
+  background: radial-gradient(black, #000000a6);
+  padding-top: 80px;
+}
+
+.wine-menu {
+  background: url("/static/img/website/menu/winemenu.23ea002a9b0a.webp") no-repeat center
+    center/cover;
+  height: 100%;
+}
+
+.carte-menu {
+  background: url("/static/img/website/menu/cartemenu.06d2a21479d6.webp") no-repeat center
+    center/cover;
+  height: 100%;
+}
+
+.dessert-menu {
+  background: url("/static/img/website/menu/dessertmenu.518812c069c8.webp") no-repeat center
+    center/cover;
+  height: 100vh;
+}
+
+.menu span {
+  color: #b97309;
+}
+
+.menu div {
+  margin-bottom: 0;
+  color: #b97309 !important;
+  font-family: "Raleway", serif !important;
+  text-align: center;
+}
+
+.menu i {
+  color: #b97309;
+}
+
+.menu-page-title {
+  text-align: center;
+}
+
+.menu hr {
+  padding-top: 2px;
+}
+
+.menu p {
+  margin-bottom: 0;
+  color: #b97309 !important;
+  font-family: "Raleway", serif !important;
+  text-align: center;
+}
+
+/*Booking Page Styles*/
+
+#bkn-img {
+  background: url("/static/img/website/booking/table.63d92605fd98.webp") no-repeat center
+    center/cover;
+  height: 100vh;
+  padding: 0;
+  overflow: hidden;
+}
+
+.res-logged-out {
+  margin-top: 300px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.res-logged-out a {
+  text-decoration: underline !important;
+}
+
+.no-reserve {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 150px;
+}
+
+.reserve-btn {
+  color: #b97309;
+  background: #050822;
+  margin: 10px 0 0 15px;
+}
+
+.book-cover-text {
+  background: radial-gradient(#000, #000000b8);
+  height: 100vh;
+  overflow: hidden;
+}
+
+#bkn-form {
+  margin-top: 150px;
+  padding: 0 10px;
+}
+
+.card {
+  margin: 0 5px 0 5px;
+  background: #050822;
+  color: #b97309;
+  border: #b97309;
+  border-style: groove;
+  text-align: center;
+}
+
+.col h1 {
+  text-align: center;
+}
+
+#active-r {
+  margin-top: 100px;
+}
+
+#res-box {
+  margin: auto;
+}
+
+#res-box a {
+  color: #b97309;
+  width: 60%;
+  margin: auto;
+}
+
+#res-box ul {
+  margin-bottom: 0;
+}
+
+#outer-active {
+  margin: auto;
+}
+
+#outer-active p {
+  padding-top: 150px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#outer-active a {
+  color: #b97309;
+}
+
+#delete-card {
+  margin: 100px 10px;
+}
+
+#delete-card a {
+  color: #b97309;
+}
+
+.limited p {
+  padding-top: 0px !important;
+  margin-bottom: 0 !important;
+  font-size: 1rem !important;
+}
+
+#submitButton {
+  background: #050822;
+  color: #b97309;
+}
+
+#validation-btn {
+  color: #b97309;
+}
+
+/*Messages*/
+
+.text {
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.btn-close {
+  color: #b97309;
+}
+
+.alert-dismissible {
+  margin-top: 80px;
+  margin-bottom: 0;
+  background: radial-gradient(#000, #000000b8);
+}
+
+/*Mission Page */
+
+.hidden {
+  display: none;
+}
+
+.mission {
+  background: url("../img/website/mission/brigata.jpeg.03a2db0b6317.jpeg") no-repeat center
+    center/cover;
+  height: 160vh;
+}
+
+.mission-txt {
+  height: 160vh;
+  background: #000000ab;
+  color: #fafafa;
+  text-align: center;
+  padding: 50px 5px 5px;
+}
+
+.mission-txt p {
+  font-size: 0.9rem;
+  padding: 5px;
+}
+
+.missionp1 {
+  display: flex;
+  padding-top: 10px;
+}
+
+.mission-img1 img {
+  width: 75%;
+}
+
+.review {
+  font-style: italic;
+}
+
+.missionp2 h3 {
+  font-size: 1rem;
+  padding: 10px 10px 0 10px;
+}
+
+.mission-img2 img {
+  width: 40%;
+  padding-right: 5px;
+}
+
+.mission-img3 img {
+  width: 38%;
+  padding-left: 5px;
+}
+
+.mission-img4 img {
+  width: 75%;
+}
+
+/*Media query for tablet screens (768px and up)*/
+@media screen and (min-width: 768px) {
+  .menu-list {
+    margin-top: 50px;
+  }
+
+  .container-snp {
+    height: 92vh;
+    font-size: 1.2rem;
+  }
+
+  #signup-block {
+    overflow: hidden;
+    padding-top: 150px;
+  }
+
+  .container-lgn {
+    font-size: 1.5rem;
+  }
+
+  #login-cover {
+    padding-top: 200px;
+  }
+
+  .reset-cover {
+    font-size: 1.5rem;
+    padding-top: 200px;
+  }
+
+  .res-logged-out {
+    margin-top: 300px;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .mission-txt {
+    padding-top: 70px;
+  }
+
+  .mission-txt h2 {
+    font-size: 2.3rem;
+  }
+
+  .mission-txt p {
+    font-size: 1.2rem;
+  }
+
+  .missionp1 p {
+    padding-top: 100px;
+  }
+
+  .missionp2 h3 {
+    font-size: 1.5rem;
+    padding-top: 20px;
+  }
+
+  .missionp2 p {
+    padding-top: 10px;
+  }
+
+  .mission-img2 img {
+    width: 35%;
+  }
+
+  .mission-img3 img {
+    width: 33%;
+  }
+
+  .mission-img4 img {
+    width: 70%;
+  }
+}
+
+/*Media query for laptops and larger screens (992px and up)*/
+@media screen and (min-width: 992px) {
+  .home-backg {
+    background: url("/static/img/website/homepage/homepage-backg.c791ebc29ea6.webp") no-repeat
+      center center/cover;
+    height: 100%;
+  }
+
+  .home-cover {
+    background: radial-gradient(#000, #000000b8) center / cover;
+    height: 100%;
+  }
+
+  #auth {
+    padding-top: 90px;
+    margin-bottom: 0px;
+  }
+
+  #menu {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    top: 100%;
+    list-style-type: none;
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #b97309;
+    z-index: 100;
+    position: relative;
+    padding-top: 24px;
+    margin-bottom: 0;
+  }
+
+  #menu hr {
+    display: none;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
+
+  #nav-toggle:checked ~ #menu {
+    display: flex;
+    background-color: rgb(6, 41, 74);
+  }
+
+  .intro {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .intro hr {
+    display: none;
+  }
+
+  .intro1 {
+    display: flex;
+  }
+
+  .intro2 {
+    display: flex;
+  }
+
+  .introp1 {
+    width: 50%;
+    font-size: 1.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0 10px 0 10px;
+  }
+
+  .intro-img1 {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .intro1 img {
+    width: 100%;
+  }
+
+  .introp2 {
+    width: 50%;
+    font-size: 1.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0 10px 0 10px;
+  }
+
+  .intro-img2 {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .intro2 img {
+    width: 100%;
+  }
+
+  .address {
+    font-size: 1.5rem;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .open-map {
+    display: flex;
+  }
+
+  .map {
+    width: 50%;
+  }
+
+  .open-times {
+    text-align: center;
+    width: 50%;
+    font-size: 1.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .socials {
+    font-size: 1.5rem;
+  }
+
+  .socials i {
+    font-size: 2rem;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+  footer p {
+    font-size: 1.5rem;
+  }
+
+  .no-reserve {
+    margin-top: 150px;
+  }
+
+  .container-snp {
+    height: 92vh;
+    font-size: 0.9rem;
+  }
+
+  #signup-block {
+    overflow: hidden;
+  }
+
+  .container-lgn {
+    font-size: 1.3rem;
+  }
+
+  #login-cover {
+    padding-top: 150px;
+    overflow: hidden;
+  }
+
+  #card-container {
+    margin-left: 350px;
+  }
+
+  .hidden {
+    display: block;
+  }
+
+  .mission {
+    height: 350vh;
+  }
+
+  .mission-txt {
+    height: 350vh;
+  }
+
+  .mission-txt h2 {
+    font-size: 2.8rem;
+  }
+
+  .mission-txt p {
+    font-size: 1.5rem;
+  }
+
+  .missionp1 {
+    display: block;
+  }
+
+  .img-desktop-layout {
+    display: flex;
+  }
+
+  .missionp1 p {
+    padding-top: 0;
+  }
+
+  .missionp1 img {
+    width: 70%;
+  }
+
+  .missionp2 h3 {
+    font-size: 1.8rem;
+  }
+
+  .mission-img2 img {
+    width: 30%;
+  }
+
+  .mission-img3 img {
+    width: 28.5%;
+  }
+
+  .mission-img4 img {
+    width: 50%;
+  }
+}
+/*Media query for large devices (1200px and up)*/
+@media screen and (min-width: 1200px) {
+  #menu {
+    width: 50%;
+  }
+
+  #signup-block {
+    overflow: hidden;
+    padding-top: 85px;
+  }
+
+  #card-container {
+    margin-left: 450px;
+  }
+}
