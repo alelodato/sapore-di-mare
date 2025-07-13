@@ -1,21 +1,58 @@
 {% extends "base.html" %} {% block content %} {% load static %}
 
 <section class="mission">
-  <div>
-    <h2>Our Mission</h2>
-    <p>
-      Since the opening in 1999, here at Sapore Di Mare we have a long history
-      of making feel our guests as dining in some of the best fish-based
-      restaurants in the Mediterranean.
-    </p>
-    <p>
-      His founder the Michelin star chef Alessandro Todalo is known for seeking
-      perfection, from fish and seafood served, delivered daily to ensure
-      freshness and quality, to the dishes that compose the menu selection,
-      resulting with a mix of some great classics of Italian cuisine, to more
-      globalised fusion concept suggestions. Come to visit us and discover the
-      Mediterranean in the heart of London.
-    </p>
+  <div class="mission-txt">
+    <h2>ABOUT US</h2>
+    <div class="missionp1">
+      <p>
+        Since the opening in 1999, here at Sapore Di Mare we have a long history
+        of making feel our guests as dining in some of the best fish-based
+        restaurants in the Mediterranean.
+      </p>
+      <span class="mission-img1">
+        <img
+          src="{% static 'img/website/mission/linguina.jpeg' %}"
+          alt="linguina-image"
+        />
+      </span>
+    </div>
+    <div class="missionp2">
+      <span class="review">
+        <h3>
+          " A MIX OF TRADITION AND INNOVATION, ALL DONE WITH SOME OF THE BEST
+          QUALITY INGREDIENTS I'VE EVER SEEN "
+        </h3>
+        <p>George Goddhart, food writer for Exelchef Journal</p>
+      </span>
+      <span class="mission-img2">
+        <img
+          src="{% static 'img/website/mission/tartare.jpeg' %}"
+          alt="chef-image"
+        />
+      </span>
+      <span class="mission-img3">
+        <img
+          src="{% static 'img/website/mission/scampi.jpeg' %}"
+          alt="chef-image"
+        />
+      </span>
+      <p>
+        The reastaurant founder the Michelin star chef Alessandro Todalo is
+        known for seeking perfection, from fish and seafood served, delivered
+        daily to ensure freshness and quality, to the dishes that compose the
+        menu selection, resulting with a mix of some great classics of Italian
+        cuisine, to more globalised fusion concept suggestions.
+      </p>
+      <span class="mission-img4">
+        <img
+          src="{% static 'img/website/homepage/chef.webp' %}"
+          alt="chef-image"
+        />
+      </span>
+      <p>
+        Come to visit us and discover the Mediterranean in the heart of London.
+      </p>
+    </div>
   </div>
 </section>
 
