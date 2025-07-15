@@ -16,7 +16,7 @@ header {
 
 a {
   text-decoration: none !important;
-  color: #b97309;
+  color: #ffffff;
 }
 
 .logo {
@@ -38,14 +38,41 @@ h5 {
 }
 
 .intro {
-  color: #b97309;
+  background: url(../img/website/homepage/restaurant.webp) no-repeat center
+    center/cover;
+  color: #ffffff;
   text-align: center;
   margin-top: 0;
-  padding: 5px;
+}
+
+.intro-cover-text {
+  background: linear-gradient(20deg, black, #0000001a);
 }
 
 .intro h1 {
-  margin-bottom: 20px;
+  padding: 10px;
+  font-style: italic;
+  font-size: 2.5rem;
+  text-align: left;
+}
+
+.menu-booking-buttons {
+  display: flex;
+}
+
+.menu-booking-buttons button {
+  background: transparent;
+  border-style: groove;
+  border-block-color: #ffffff;
+  border-radius: 5px;
+  color: #fafafa;
+  font-size: 1.2rem;
+  margin: 5px;
+  font-style: italic;
+}
+
+.menu-booking-buttons a {
+  color: #fff;
 }
 
 .bg-light {
@@ -66,7 +93,7 @@ hr {
 
 main {
   background-color: #050822;
-  color: #b97309;
+  color: #ffffff;
 }
 
 body {
@@ -87,7 +114,7 @@ body {
   text-align: center;
   font-size: 1.2rem;
   text-decoration: none;
-  color: #b97309;
+  color: #ffffff;
   z-index: 100;
 }
 
@@ -113,7 +140,7 @@ body {
 }
 
 .nav-toggle-label i {
-  color: #b97309;
+  color: #ffffff;
 }
 
 img {
@@ -122,11 +149,11 @@ img {
 }
 
 #auth {
-  font-size: 0.8rem;
-  color: #b97309;
+  font-size: 0.9rem;
+  color: #ffffff;
   text-align: end;
-  margin-right: 10px;
-  padding-top: 90px;
+  margin: 0 10px 0 0;
+  padding-top: 40px;
 }
 
 p.introp1 {
@@ -168,7 +195,7 @@ p.introp2 {
 }
 
 footer {
-  color: #b97309;
+  color: #ffffff;
   text-align: center;
   min-height: 8vh;
   background-color: rgb(3 29 53);
@@ -540,22 +567,22 @@ footer p {
 
 /*Mission Page */
 
-.hidden {
-  display: none;
-}
-
 .mission {
   background: url(../img/website/mission/brigata.jpeg) no-repeat center
     center/cover;
-  height: 160vh;
 }
 
 .mission-txt {
-  height: 160vh;
   background: #000000ab;
   color: #fafafa;
   text-align: center;
   padding: 50px 5px 5px;
+}
+
+.mission-txt h2 {
+  font-size: 2.5rem;
+  font-style: italic;
+  text-align: left;
 }
 
 .mission-txt p {
@@ -564,35 +591,36 @@ footer p {
 }
 
 .missionp1 {
-  display: flex;
   padding-top: 10px;
 }
 
-.mission-img1 img {
-  width: 75%;
+.img-layout {
+  display: flex;
 }
 
-.review {
-  font-style: italic;
+.img-layout2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-layout2 img {
+  width: 80%;
+  padding: 5px;
+}
+
+.review h3 {
+  text-align: right;
 }
 
 .missionp2 h3 {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: left;
   padding: 10px 10px 0 10px;
 }
 
-.mission-img2 img {
-  width: 40%;
-  padding-right: 5px;
-}
-
-.mission-img3 img {
-  width: 38%;
-  padding-left: 5px;
-}
-
 .mission-img4 img {
-  width: 75%;
+  width: 80%;
 }
 
 /*Media query for tablet screens (768px and up)*/

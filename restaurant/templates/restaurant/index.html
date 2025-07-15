@@ -4,37 +4,52 @@
 <div class="home-backg">
   <!-- Radial gradient background to improve user experience and accessibility -->
   <div class="home-cover">
-    <!-- User authentication message -->
-    {% if user.is_authenticated %}
-    <p id="auth"><i class="fa-regular fa-user"></i> {{ user }}</p>
-    {% else %}
-    <p id="auth">You are not logged in</p>
-    {% endif %}
-    <!-- Homepage Content -->
     <div class="intro">
-      <h1>The Mediterranean in the heart of London</h1>
-      <div class="intro1">
-        <p class="introp1">
-          A typical italian riviera restaurant, minutes from buckingham palace
-          and piccadilly circus.
-        </p>
-        <span class="intro-img1">
-          <img
-            src="{% static 'img/website/homepage/restaurant.webp' %}"
-            alt="restaurant-image"
-          />
-        </span>
-      </div>
-      <div class="intro2">
-        <p class="introp2">
-          Located in the glamourous Mayfair district of London, Sapore Di Mare
-          has a long history of making feel his guests as dining in some of the
-          best fish-based restaurants in the mediterranean. click
-          <a href="{% url 'add-reservation' %}">here</a> to reserve your table.
-        </p>
-        <span class="intro-img2">
-          <img src="{% static '' %}" alt="-image" />
-        </span>
+      <div class="intro-cover-text">
+        <!-- User authentication message -->
+        {% if user.is_authenticated %}
+        <p id="auth"><i class="fa-regular fa-user"></i> {{ user }}</p>
+        {% else %}
+        <p id="auth">You are not logged in</p>
+        {% endif %}
+        <!-- Homepage Content -->
+
+        <h1>THE MEDITERRANEAN IN THE HEART OF LONDON</h1>
+        <div class="menu-booking-buttons">
+          <button><a href="{% url 'menu' %}">Menus</a></button>
+          <button>
+            <a href="{% url 'reservations' %}" class="active"
+              >Reserve a Table</a
+            >
+          </button>
+        </div>
+        <div class="intro1">
+          <p class="introp1">
+            A typical italian riviera restaurant, minutes from buckingham palace
+            and piccadilly circus.
+          </p>
+          <span class="intro-img1">
+            <img
+              src="{% static 'img/website/homepage/restaurant2.jpeg' %}"
+              alt="restaurant-image"
+            />
+          </span>
+        </div>
+        <div class="intro2">
+          <p class="introp2">
+            Located in the glamourous Mayfair district of London, Sapore Di Mare
+            has a long history of making feel his guests as dining in some of
+            the best fish-based restaurants in the mediterranean. click
+            <a href="{% url 'add-reservation' %}">here</a> to reserve your
+            table.
+          </p>
+          <span class="intro-img2">
+            <img
+              src="{% static 'img/website/homepage/homepage-dish.jpeg' %}"
+              alt="-image"
+            />
+          </span>
+        </div>
       </div>
     </div>
     <!-- Location open times and contact informations -->
