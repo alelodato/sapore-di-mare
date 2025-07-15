@@ -25,12 +25,17 @@
         </div>
         <div class="intro1">
           <p class="introp1">
-            A typical italian riviera restaurant, minutes from buckingham palace
-            and piccadilly circus.
+            A typical italian riviera restaurant, located in the glamourous
+            Mayfair district of London, minutes from buckingham palace and
+            piccadilly circus. Your corner of Mediterranean sea awaits you in
+            one of the places to be in our wonderful city.
+            <a href="{% url 'mission' %}" class="active">
+              Discover more <i class="fa-solid fa-circle-arrow-right"></i>
+            </a>
           </p>
           <span class="intro-img1">
             <img
-              src="{% static 'img/website/homepage/restaurant2.jpeg' %}"
+              src="{% static 'img/website/homepage/homepage-dish.jpeg' %}"
               alt="restaurant-image"
             />
           </span>
@@ -38,15 +43,18 @@
       </div>
     </div>
     <div class="intro2">
+      <h2>WHERE ATMOSPHERE MEETS ELEGANCE</h2>
       <p class="introp2">
-        Located in the glamourous Mayfair district of London, Sapore Di Mare has
-        a long history of making feel his guests as dining in some of the best
-        fish-based restaurants in the mediterranean. click
-        <a href="{% url 'add-reservation' %}">here</a> to reserve your table.
+        Hospitality is at the heart of everything we do. Our dining space was
+        designed to bring to life a refined, welcoming environment where guests
+        feel truly at ease. The ambiance is intimate and warm, ideal for any
+        occasion, and especially for those moments when you simply want to enjoy
+        a great meal. Click <a href="{% url 'add-reservation' %}">here</a> to
+        reserve your table.
       </p>
       <span class="intro-img2">
         <img
-          src="{% static 'img/website/homepage/homepage-dish.jpeg' %}"
+          src="{% static 'img/website/homepage/restaurant2.jpeg' %}"
           alt="-image"
         />
       </span>

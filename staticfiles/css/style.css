@@ -34,7 +34,8 @@ h3,
 h4,
 h5 {
   font-family: "Urbanist", sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  font-weight: 600;
 }
 
 .intro {
@@ -144,7 +145,10 @@ body {
 
 img {
   max-width: 100%;
-  width: 100%;
+}
+
+.intro .intro2 img {
+  padding: 10px;
 }
 
 #auth {
@@ -153,6 +157,11 @@ img {
   text-align: end;
   margin: 0 10px 0 0;
   padding-top: 40px;
+}
+
+.intro2 h2 {
+  padding: 10px 10px 5px 10px;
+  font-size: 2rem;
 }
 
 p.introp1 {
@@ -787,6 +796,10 @@ footer p {
     margin-top: auto;
     margin-bottom: auto;
     padding: 0 10px 0 10px;
+  }
+
+  .introp2 h2 {
+    padding: 10px 10px 5px 10px;
   }
 
   .intro-img2 {
