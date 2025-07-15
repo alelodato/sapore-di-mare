@@ -147,7 +147,10 @@ img {
   max-width: 100%;
 }
 
-.intro img,
+.intro img {
+  padding: 10px;
+}
+
 .intro2 img {
   padding: 10px;
 }
