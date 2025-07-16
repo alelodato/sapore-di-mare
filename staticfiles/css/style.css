@@ -184,6 +184,7 @@ p.introp2 {
 
 .map iframe {
   width: 100%;
+  height: 400px;
   padding: 10px;
 }
 
@@ -193,8 +194,12 @@ p.introp2 {
 
 .address p {
   margin-bottom: 0;
-  padding-top: 5px;
   text-align: center;
+}
+
+.address hr,
+.contacts hr {
+  padding: 10px auto !important;
 }
 
 .open-times {
@@ -333,22 +338,18 @@ footer p {
 /*Menu List Page*/
 
 #wine-cover-text {
-  background: radial-gradient(#000, #000000b8) center / cover;
+  background: linear-gradient(15deg, black, #0000004d);
   height: 30vh;
 }
 
 #carte-cover-text {
-  background: radial-gradient(#000, #000000b8) center / cover;
+  background: linear-gradient(15deg, black, #0000004d);
   height: 30vh;
 }
 
 #dessert-cover-text {
-  background: radial-gradient(#000, #000000b8) center / cover;
+  background: linear-gradient(15deg, black, #0000004d);
   height: 30vh;
-}
-
-.menu-list {
-  margin-top: 30px;
 }
 
 .menu-list h2 {
@@ -383,7 +384,7 @@ footer p {
 }
 
 .menu-list p {
-  margin-bottom: 0;
+  padding: 5px;
 }
 
 .menu-ex {
@@ -395,12 +396,12 @@ footer p {
 
 .menu {
   color: #b97309;
+  padding: 10px;
 }
 
 .cover-menu {
   height: 100%;
   background: radial-gradient(black, #000000a6);
-  padding-top: 80px;
 }
 
 .wine-menu {
@@ -441,7 +442,7 @@ footer p {
 }
 
 .menu hr {
-  padding-top: 2px;
+  margin: 10px;
 }
 
 .menu p {
