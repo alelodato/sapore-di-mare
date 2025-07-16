@@ -273,8 +273,12 @@ footer p {
   text-align: center;
 }
 
+.logout {
+  overflow-x: hidden;
+}
+
 #sign-out {
-  padding-top: 200px;
+  padding-top: 150px;
 }
 
 .container-lgn {
@@ -296,6 +300,7 @@ footer p {
 .container-snp {
   text-align: center;
   font-size: 0.8rem;
+  overflow-x: hidden;
   background: url(/static/img/website/authentication/register.webp) no-repeat
     center center/cover;
 }
@@ -330,8 +335,7 @@ footer p {
 }
 
 #signup-block {
-  padding-top: 120px;
-  height: 100vh;
+  padding-top: 80px;
 }
 
 .btn-signup {
