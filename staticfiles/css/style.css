@@ -212,6 +212,7 @@ p.introp2 {
 
 .open-times h5 {
   padding: 5px;
+  margin-bottom: 0;
 }
 
 .open-times p {
@@ -281,7 +282,7 @@ footer p {
     center center/cover;
   text-align: center;
   font-size: 1.3rem;
-  height: 100vh;
+  overflow-x: hidden;
 }
 
 #login-cover {
@@ -335,7 +336,7 @@ footer p {
 
 .btn-signup {
   background: #050822;
-  color: #b97309;
+  color: #ffffff;
   margin-bottom: 10px;
   width: 100px;
 }
@@ -590,7 +591,7 @@ footer p {
 }
 
 .alert-dismissible {
-  margin-top: 80px;
+  margin-top: 30px;
   margin-bottom: 0;
   background: radial-gradient(#000, #000000b8);
 }
