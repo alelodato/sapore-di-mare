@@ -336,6 +336,7 @@ footer p {
 
 #signup-block {
   padding-top: 80px;
+  min-height: 100vh;
 }
 
 .btn-signup {
@@ -499,7 +500,7 @@ footer p {
 }
 
 .reserve-btn {
-  color: #b97309;
+  color: #ffffff;
   background: #050822;
   margin: 10px 0 0 15px;
 }
@@ -518,8 +519,8 @@ footer p {
 .card {
   margin: 0 5px 0 5px;
   background: #050822;
-  color: #b97309;
-  border: #b97309;
+  color: #ffffff;
+  border: #ffffff;
   border-style: groove;
   text-align: center;
 }
@@ -537,7 +538,7 @@ footer p {
 }
 
 #res-box a {
-  color: #b97309;
+  color: #ffffff;
   width: 60%;
   margin: auto;
 }
@@ -557,7 +558,7 @@ footer p {
 }
 
 #outer-active a {
-  color: #b97309;
+  color: #ffffff;
 }
 
 #delete-card {
@@ -565,7 +566,7 @@ footer p {
 }
 
 #delete-card a {
-  color: #b97309;
+  color: #ffffff;
 }
 
 .limited p {
@@ -576,11 +577,11 @@ footer p {
 
 #submitButton {
   background: #050822;
-  color: #b97309;
+  color: #ffffff;
 }
 
 #validation-btn {
-  color: #b97309;
+  color: #ffffff;
 }
 
 /*Messages*/
@@ -591,7 +592,7 @@ footer p {
 }
 
 .btn-close {
-  color: #b97309;
+  color: #ffffff;
 }
 
 .alert-dismissible {
