@@ -210,9 +210,18 @@ p.introp2 {
   padding: 5px;
 }
 
+.open-times h5 {
+  padding: 5px;
+}
+
 .open-times p {
   margin-bottom: 0;
-  padding-bottom: 5px;
+  padding: 5px;
+}
+
+.open,
+.contacts {
+  padding: 10px;
 }
 
 footer {
