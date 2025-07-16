@@ -356,10 +356,6 @@ footer p {
   margin-bottom: 0;
 }
 
-.menu-title {
-  margin-top: 40px;
-}
-
 #wine-list {
   background: url(/static/img/website/menu/winelist.webp) no-repeat center
     center/cover;
@@ -370,6 +366,10 @@ footer p {
   background: url(/static/img/website/menu/cartelist.webp) no-repeat center
     center/cover;
   height: 30vh;
+}
+
+#carte-list h2 {
+  margin-top: 40px;
 }
 
 #dessert-list {
