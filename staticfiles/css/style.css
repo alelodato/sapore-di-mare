@@ -634,6 +634,10 @@ footer p {
   padding-top: 10px;
 }
 
+.review {
+  padding-bottom: 50px;
+}
+
 .img-layout {
   display: flex;
 }
@@ -650,6 +654,7 @@ footer p {
 
 .review h3 {
   text-align: right;
+  padding: 50px 50px 0 50px;
 }
 
 .missionp2 h3 {
@@ -657,6 +662,10 @@ footer p {
   font-style: italic;
   text-align: left;
   padding: 20px 10px 0 10px;
+}
+
+.chef-p {
+  padding: 30px;
 }
 
 .mission-img4 img {
