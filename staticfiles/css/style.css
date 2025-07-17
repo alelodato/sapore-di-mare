@@ -634,6 +634,10 @@ footer p {
   padding-top: 10px;
 }
 
+.missionp1 p {
+  padding: 25px;
+}
+
 .review {
   padding-bottom: 50px;
 }
@@ -661,7 +665,6 @@ footer p {
   font-size: 1.5rem;
   font-style: italic;
   text-align: left;
-  padding: 20px 10px 0 10px;
 }
 
 .chef-p {
@@ -670,6 +673,10 @@ footer p {
 
 .mission-img4 img {
   width: 95%;
+}
+
+.visit {
+  padding: 20px 10px 0 10px;
 }
 
 /*Media query for tablet screens (768px and up)*/
