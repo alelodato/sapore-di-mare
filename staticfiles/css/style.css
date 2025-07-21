@@ -699,6 +699,14 @@ footer p {
     margin: 0 auto;
   }
 
+  .socials img {
+    width: 5%;
+  }
+
+  footer p {
+    font-size: 1.5rem;
+  }
+
   .menu-list {
     margin-top: 50px;
   }
@@ -733,24 +741,32 @@ footer p {
   }
 
   .mission-txt {
-    padding-top: 70px;
-  }
-
-  .mission-txt h2 {
-    font-size: 2.3rem;
-  }
-
-  .mission-txt p {
-    font-size: 1.2rem;
-  }
-
-  .missionp1 p {
     padding-top: 100px;
   }
 
-  .missionp2 h3 {
+  .mission-txt h2 {
+    font-size: 3.5rem;
+  }
+
+  .mission-txt p {
     font-size: 1.5rem;
+  }
+
+  .missionp1 p {
     padding-top: 20px;
+  }
+
+  .img-layout {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .review {
+    padding-top: 50px;
+  }
+
+  .missionp2 h3 {
+    font-size: 2.5rem;
   }
 
   .missionp2 p {
@@ -758,15 +774,15 @@ footer p {
   }
 
   .mission-img2 img {
-    width: 35%;
+    width: 80%;
   }
 
   .mission-img3 img {
-    width: 33%;
+    width: 80%;
   }
 
   .mission-img4 img {
-    width: 70%;
+    width: 80%;
   }
 }
 
