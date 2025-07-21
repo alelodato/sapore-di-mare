@@ -688,6 +688,11 @@ footer p {
     font-size: 3.5rem;
   }
 
+  #auth {
+    padding-top: 70px;
+    font-size: 1.2rem;
+  }
+
   .home-cover p {
     font-size: 1.2rem;
   }
@@ -704,11 +709,38 @@ footer p {
   }
 
   footer p {
+    padding-top: 25px;
     font-size: 1.5rem;
   }
 
   .menu-list {
     margin-top: 50px;
+  }
+
+  .menu-description {
+    padding-top: 50px;
+  }
+
+  .menu-list h2 {
+    font-size: 2.5rem;
+  }
+
+  .menu-list p {
+    font-size: 1.5rem;
+  }
+
+  .logout h3 {
+    font-size: 2.5rem;
+  }
+
+  .logout p {
+    font-size: 1.5rem;
+  }
+
+  .btn-signup {
+    width: 150px;
+    height: 50px;
+    font-size: 1.3rem;
   }
 
   .container-snp {
@@ -721,8 +753,17 @@ footer p {
     padding-top: 150px;
   }
 
+  .cover {
+    min-height: 100vh;
+  }
+
   .container-lgn {
     font-size: 1.5rem;
+    min-height: 100vh;
+  }
+
+  .container-lgn h3 {
+    font-size: 2.5rem;
   }
 
   #login-cover {
