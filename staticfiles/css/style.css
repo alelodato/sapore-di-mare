@@ -882,8 +882,7 @@ footer p {
     text-align: center;
   }
 
-  .introp2,
-  .intro-img2 {
+  .introp2 {
     display: flex;
   }
 
