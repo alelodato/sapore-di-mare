@@ -207,20 +207,16 @@ p.introp2 {
   padding: 10px auto !important;
 }
 
-.open-times {
-  text-align: center;
-}
-
-.open-times h2 {
+.open-map h2 {
   padding: 5px;
 }
 
-.open-times h5 {
+.open-map h5 {
   padding: 5px;
   margin-bottom: 0;
 }
 
-.open-times p {
+.open-map p {
   margin-bottom: 0;
   padding: 5px;
 }
@@ -228,6 +224,7 @@ p.introp2 {
 .open,
 .contacts {
   padding: 10px;
+  text-align: center;
 }
 
 footer {
@@ -879,7 +876,8 @@ footer p {
   }
 
   .intro1 {
-    padding: 30px 10px 30px 10px;
+    display: flex;
+    padding: 100px 10px 30px 10px;
   }
 
   .intro h1 {
@@ -906,10 +904,6 @@ footer p {
     display: none;
   }
 
-  .intro1 {
-    display: flex;
-  }
-
   .introp1 {
     width: 50%;
     font-size: 1.5rem;
@@ -932,6 +926,7 @@ footer p {
 
   .introp2 p {
     width: 50%;
+    padding: 10px;
   }
 
   .intro-img2 {
@@ -951,18 +946,27 @@ footer p {
 
   .open-map {
     display: flex;
+    padding-top: 50px;
   }
 
   .map {
     width: 50%;
+    height: 500px;
   }
 
-  .open-times {
+  .map iframe {
+    height: 500px;
+  }
+
+  .open,
+  .contacts {
     text-align: center;
     width: 50%;
     font-size: 1.5rem;
-    margin-top: auto;
-    margin-bottom: auto;
+  }
+
+  .open-map hr {
+    display: none;
   }
 
   .socials {
