@@ -1027,14 +1027,6 @@ footer p {
     display: block;
   }
 
-  .mission {
-    height: 350vh;
-  }
-
-  .mission-txt {
-    height: 350vh;
-  }
-
   .mission-txt h2 {
     font-size: 2.8rem;
   }
@@ -1047,8 +1039,8 @@ footer p {
     display: block;
   }
 
-  .img-desktop-layout {
-    display: flex;
+  .img-layout {
+    width: 70%;
   }
 
   .missionp1 p {
@@ -1056,7 +1048,7 @@ footer p {
   }
 
   .missionp1 img {
-    width: 70%;
+    width: 100%;
   }
 
   .missionp2 h3 {
