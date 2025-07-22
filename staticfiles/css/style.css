@@ -1055,12 +1055,12 @@ footer p {
     font-size: 1.8rem;
   }
 
-  .mission-img2 img {
-    width: 30%;
+  .img-layout2 {
+    display: flex;
   }
 
-  .mission-img3 img {
-    width: 28.5%;
+  .img-layout2 img {
+    width: 70%;
   }
 
   .mission-img4 img {
