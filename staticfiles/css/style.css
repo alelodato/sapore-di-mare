@@ -207,16 +207,16 @@ p.introp2 {
   padding: 10px auto !important;
 }
 
-.open-map h2 {
+.open-map-contacts h2 {
   padding: 5px;
 }
 
-.open-map h5 {
+.open-map-contacts h5 {
   padding: 5px;
   margin-bottom: 0;
 }
 
-.open-map p {
+.open-map-contacts p {
   margin-bottom: 0;
   padding: 5px;
 }
@@ -882,6 +882,7 @@ footer p {
 
   .intro h1 {
     text-align: center;
+    padding-top: 50px;
   }
 
   .introp2 {
@@ -961,11 +962,20 @@ footer p {
   .open,
   .contacts {
     text-align: center;
-    width: 50%;
     font-size: 1.5rem;
+    padding-top: 50px;
   }
 
-  .open-map hr {
+  .open {
+    width: 50%;
+  }
+
+  .contacts {
+    width: 100%;
+    padding: 50px;
+  }
+
+  .open-map-contacts hr {
     display: none;
   }
 
@@ -977,6 +987,10 @@ footer p {
     font-size: 2rem;
     padding-left: 10px;
     padding-top: 10px;
+  }
+
+  .socials img {
+    width: 4.5%;
   }
 
   footer p {
