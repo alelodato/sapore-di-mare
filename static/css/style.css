@@ -879,7 +879,8 @@ footer p {
   }
 
   .intro1 {
-    padding: 30px 10px 30px 10px;
+    display: flex;
+    padding: 100px 10px 30px 10px;
   }
 
   .intro h1 {
@@ -906,10 +907,6 @@ footer p {
     display: none;
   }
 
-  .intro1 {
-    display: flex;
-  }
-
   .introp1 {
     width: 50%;
     font-size: 1.5rem;
@@ -932,6 +929,7 @@ footer p {
 
   .introp2 p {
     width: 50%;
+    padding: 10px;
   }
 
   .intro-img2 {
@@ -955,6 +953,11 @@ footer p {
 
   .map {
     width: 50%;
+    height: 500px;
+  }
+
+  .map iframe {
+    height: 500px;
   }
 
   .open-times {
@@ -963,6 +966,10 @@ footer p {
     font-size: 1.5rem;
     margin-top: auto;
     margin-bottom: auto;
+  }
+
+  .open-times hr {
+    display: none;
   }
 
   .socials {
