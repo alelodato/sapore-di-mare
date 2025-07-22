@@ -878,12 +878,18 @@ footer p {
     margin-top: 15px;
   }
 
+  .intro1 {
+    padding: 30px 10px 30px 10px;
+  }
+
   .intro h1 {
     text-align: center;
   }
 
   .introp2 {
     display: flex;
+    font-size: 1.5rem;
+    padding: 30px 10px 30px 10px;
   }
 
   .menu-booking-buttons {
@@ -924,14 +930,6 @@ footer p {
 
   .intro1 img {
     width: 100%;
-  }
-
-  .introp2 {
-    width: 50%;
-    font-size: 1.5rem;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding: 0 10px 0 10px;
   }
 
   .introp2 h2 {
