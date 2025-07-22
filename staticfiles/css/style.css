@@ -1057,14 +1057,33 @@ footer p {
 
   .img-layout2 {
     display: flex;
+    flex-direction: row;
   }
 
   .img-layout2 img {
     width: 70%;
   }
 
-  .mission-img4 img {
+  .mission-img3 img {
+    padding-top: 30px;
+  }
+
+  .chef-p-img {
+    display: flex;
+    padding-top: 50px;
+  }
+
+  .chef-p {
     width: 50%;
+  }
+
+  .mission-img4 {
+    width: 50%;
+    padding-top: 50px;
+  }
+
+  .mission-img4 img {
+    width: 90%;
   }
 }
 /*Media query for large devices (1200px and up)*/
