@@ -910,10 +910,6 @@ footer p {
     display: flex;
   }
 
-  .intro2 {
-    display: flex;
-  }
-
   .introp1 {
     width: 50%;
     font-size: 1.5rem;
@@ -924,8 +920,6 @@ footer p {
 
   .intro-img1 {
     width: 50%;
-    display: flex;
-    justify-content: flex-end;
   }
 
   .intro1 img {
@@ -936,10 +930,12 @@ footer p {
     padding: 10px 10px 5px 10px;
   }
 
+  .introp2 p {
+    width: 50%;
+  }
+
   .intro-img2 {
     width: 50%;
-    display: flex;
-    justify-content: flex-end;
   }
 
   .intro2 img {
