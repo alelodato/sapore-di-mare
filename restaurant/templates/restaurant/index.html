@@ -14,17 +14,19 @@
         {% endif %}
         <!-- Homepage Content -->
 
-        <h1>THE MEDITERRANEAN IN THE HEART OF LONDON</h1>
+        <h1 data-aos="fade-up">THE MEDITERRANEAN IN THE HEART OF LONDON</h1>
         <div class="menu-booking-buttons">
-          <button><a href="{% url 'menu' %}">Menus</a></button>
-          <button>
+          <button data-aos="fade-left" data-aos-delay="400">
+            <a href="{% url 'menu' %}">Menus</a>
+          </button>
+          <button data-aos="fade-left" data-aos-delay="600">
             <a href="{% url 'reservations' %}" class="active"
               >Reserve a Table</a
             >
           </button>
         </div>
         <div class="intro1">
-          <p class="introp1">
+          <p class="introp1" data-aos="fade-up" data-aos-delay="200">
             An authentic Italian Riviera restaurant, nestled in the glamourous
             Mayfair district of London, just minutes from Buckingham Palace and
             Piccadilly Circus. Your corner of the Mediterranean sea awaits you
@@ -43,9 +45,11 @@
       </div>
     </div>
     <div class="intro2">
-      <h2>WHERE ATMOSPHERE MEETS ELEGANCE</h2>
+      <h2 data-aos="fade-up" data-aos-delay="0">
+        WHERE ATMOSPHERE MEETS ELEGANCE
+      </h2>
       <div class="introp2">
-        <p>
+        <p data-aos="fade-up" data-aos-delay="200">
           Hospitality is at the heart of everything we do. Our dining space was
           designed to bring to life a refined, welcoming environment where
           guests feel truly at ease. The ambiance is intimate and warm, ideal
@@ -53,7 +57,7 @@
           want to enjoy a great meal. Click
           <a href="{% url 'add-reservation' %}">here</a> to reserve your table.
         </p>
-        <span class="intro-img2">
+        <span class="intro-img2" data-aos="fade-up" data-aos-delay="400">
           <img
             src="{% static 'img/website/homepage/restaurant2.jpeg' %}"
             alt="-image"
@@ -63,7 +67,7 @@
     </div>
 
     <!-- Location open times and contact informations -->
-    <div class="address">
+    <div class="address" data-aos="fade-up" data-aos-delay="600">
       <p>Sapore Di Mare Restaurant</p>
       <hr />
       <p>22 Queen Street, W1J 5HN, London</p>
@@ -82,7 +86,7 @@
             title="restaurant-location"
           ></iframe>
         </div>
-        <span class="open">
+        <span class="open" data-aos="fade-up" data-aos-delay="800">
           <h2>OPENING TIMES:</h2>
           <h5>MON - FRI</h5>
           <p>Lunch: 12.00pm till 3.00pm</p>
@@ -96,7 +100,7 @@
         </span>
         <hr />
       </div>
-      <div class="contacts">
+      <div class="contacts" data-aos="fade-up" data-aos-delay="1000">
         <h2>CONTACTS:</h2>
         <div class="phone-num">
           <p><i class="fa-solid fa-phone"></i> : 07435205407</p>

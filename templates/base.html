@@ -54,6 +54,9 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -151,6 +154,13 @@
       src="https://kit.fontawesome.com/d2f8b724df.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
     {% block extras %} {% endblock %}
   </body>
 </html>
