@@ -678,9 +678,26 @@ footer p {
   width: 60%;
 }
 
-.mission-img4 img {
+.chef-images {
+  display: block;
+}
+
+.mission-img4 {
   width: 40%;
   padding-top: 30px;
+}
+
+.mission-img4 img {
+  height: 50%;
+}
+
+.mission-img5 {
+  width: 40%;
+  padding-top: 30px;
+}
+
+.mission-img5 img {
+  height: 50%;
 }
 
 .visit {
