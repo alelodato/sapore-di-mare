@@ -680,10 +680,11 @@ footer p {
 
 .chef-images {
   display: block;
+  width: 40%;
+  padding: 30px 10px 0 0;
 }
 
 .mission-img4 {
-  width: 40%;
   padding-top: 30px;
 }
 
@@ -692,7 +693,6 @@ footer p {
 }
 
 .mission-img5 {
-  width: 40%;
   padding-top: 30px;
 }
 
