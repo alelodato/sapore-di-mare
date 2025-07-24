@@ -528,6 +528,10 @@ footer p {
   overflow: hidden;
 }
 
+#booked {
+  margin-top: auto;
+}
+
 #bkn-form {
   margin-top: 150px;
   padding: 0 10px;
