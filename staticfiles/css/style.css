@@ -709,6 +709,26 @@ footer p {
   padding: 20px 10px 0 10px;
 }
 
+/*Media query for large or landscape phones (570px and up)*/
+@media screen and (min-width: 570px) {
+  .home-cover img {
+    padding: 10px 30px 10px 30px;
+  }
+
+  .map iframe {
+    padding: 20px;
+  }
+
+  .img-layout,
+  .img-layout2 {
+    padding: 30px;
+  }
+
+  .chef-p {
+    padding-top: 150px;
+  }
+}
+
 /*Media query for tablet screens (768px and up)*/
 @media screen and (min-width: 768px) {
   .intro h1,
