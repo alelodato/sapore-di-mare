@@ -852,7 +852,12 @@ footer p {
   }
 
   .mission-img4 img {
-    width: 80%;
+    width: 100%;
+    padding-top: 50px;
+  }
+
+  .mission-img5 {
+    display: none;
   }
 }
 
@@ -1059,7 +1064,7 @@ footer p {
   }
 
   .mission-txt h2 {
-    font-size: 2.8rem;
+    padding: 20px 30px 10px 30px;
   }
 
   .mission-txt p {
@@ -1068,6 +1073,10 @@ footer p {
 
   .missionp1 {
     display: block;
+  }
+
+  .missionp1 p {
+    padding: 0 30px 80px 30px
   }
 
   .img-layout {
@@ -1084,6 +1093,10 @@ footer p {
 
   .missionp2 h3 {
     font-size: 1.8rem;
+  }
+
+  .chef-p p {
+    padding-top: 50px;
   }
 
   .img-layout2 {
@@ -1109,18 +1122,34 @@ footer p {
   }
 
   .mission-img4 {
-    width: 50%;
     padding-top: 50px;
   }
 
   .mission-img4 img {
     width: 90%;
+    padding-left: 50px;
   }
 }
 /*Media query for large devices (1200px and up)*/
 @media screen and (min-width: 1200px) {
   #menu {
     width: 50%;
+  }
+
+  p.introp1 {
+    padding-top: 30px;
+  }
+
+  .chef-p {
+    padding: 150px 5px 30px 20px;
+  }
+
+  .visit {
+    padding: 40px 80px 10px 80px;
+  }
+
+  .visit h3 {
+    font-size: 2.2rem;
   }
 
   #signup-block {
