@@ -528,7 +528,7 @@ footer p {
   overflow: hidden;
 }
 
-#booked {
+.container-fluid {
   margin-top: 0;
 }
 
