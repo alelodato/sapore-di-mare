@@ -1,69 +1,83 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <div class="container-fluid gx-5" id="bkn-img">
-    <div class="book-cover-text">
-        {% if user.is_authenticated %}
-        <!--Reservations displayed here-->
-        <div class="row gy-5" id="outer-active">
-            <!-- Checks user is logged in-->
-            {% for reservation in user.reservation_list.all %}
-            {% if user == reservation.reservation_booked_by %}
-            <!-- Displays all reservations the user has made. -->
-            <div class=".container-fluid">
-                <div class="row" id="active-r">
-                    <div class="col">
-                        <h1>Your active reservations:</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 gx-5" id="res-box">
-                <div class="card row">
-                    <div class="card-body reservation-card">
-                        <ul class="row list-unstyled">
-                            <li class="col-sm-6 text">{{reservation.reservation_date}}</li>
-                            <li class="col-sm-6 text">{{reservation.reservation_time}}</li>
-                            <li class="col-sm-6 text">Name: {{reservation.reservation_name}}</li>
-                            <li class="col-sm-6 text">Seats: {{reservation.number_of_guests}}</li>
-                        </ul>
-                        <hr>
-                        <div class="row">
-                            <a href="../delete/{{reservation.id}}"
-                                class="btn btn-lg col-md-6 reservation-card-btn">Delete
-                                Reservation</a>
-                            <a href="../edit/{{reservation.id}}" class="btn btn-lg col-md-6 reservation-card-btn">Edit
-                                Reservation</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endif %}
-            <div class="limited">
-                <p>Please note that due to high volume of reservation requests
-                    and limited number of seats available, customers are only
-                    allowed to reserve a table at a time.</p>
-            </div>
-            {% empty %}
-            <div class="no-reserve">
-                <p>You have no reservations yet.<a href="{% url 'add-reservation' %}"
-                        class="btn btn-lg col-md-6 reserve-btn">Reserve A
-                        Table</a>
-                </p>
-            </div>
-            {% endfor %}
+  <div class="book-cover-text">
+    {% if user.is_authenticated %}
+    <!--Reservations displayed here-->
+    <div class="row gy-5" id="outer-active">
+      <!-- Checks user is logged in-->
+      {% for reservation in user.reservation_list.all %} {% if user ==
+      reservation.reservation_booked_by %}
+      <!-- Displays all reservations the user has made. -->
+      <div class=".container-fluid" id="booked">
+        <div class="row" id="active-r">
+          <div class="col">
+            <h1>Your active reservations:</h1>
+          </div>
         </div>
-        {% else %}
-                <!--This message is displayed if the user isn't logged in -->
-                <div class="res-logged-out">
-                    <p>You are not logged in.
-                        <br>
-                        Please <a rel="stylesheet" href="{% url 'account_login' %}">
-                            Login</a> or
-                        <a rel="stylesheet" href="{% url 'account_signup' %}">Sign
-                            up</a> to make a reservation or veiw existing reservations.
-                    </p>
-                </div>
-        {% endif %}
+      </div>
+      <div class="col-md-4 gx-5" id="res-box">
+        <div class="card row">
+          <div class="card-body reservation-card">
+            <ul class="row list-unstyled">
+              <li class="col-sm-6 text">{{reservation.reservation_date}}</li>
+              <li class="col-sm-6 text">{{reservation.reservation_time}}</li>
+              <li class="col-sm-6 text">
+                Name: {{reservation.reservation_name}}
+              </li>
+              <li class="col-sm-6 text">
+                Seats: {{reservation.number_of_guests}}
+              </li>
+            </ul>
+            <hr />
+            <div class="row">
+              <a
+                href="../delete/{{reservation.id}}"
+                class="btn btn-lg col-md-6 reservation-card-btn"
+                >Delete Reservation</a
+              >
+              <a
+                href="../edit/{{reservation.id}}"
+                class="btn btn-lg col-md-6 reservation-card-btn"
+                >Edit Reservation</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      <div class="limited">
+        <p>
+          Please note that due to high volume of reservation requests and
+          limited number of seats available, customers are only allowed to
+          reserve a table at a time.
+        </p>
+      </div>
+      {% empty %}
+      <div class="no-reserve">
+        <p>
+          You have no reservations yet.<a
+            href="{% url 'add-reservation' %}"
+            class="btn btn-lg col-md-6 reserve-btn"
+            >Reserve A Table</a
+          >
+        </p>
+      </div>
+      {% endfor %}
     </div>
+    {% else %}
+    <!--This message is displayed if the user isn't logged in -->
+    <div class="res-logged-out">
+      <p>
+        You are not logged in.
+        <br />
+        Please
+        <a rel="stylesheet" href="{% url 'account_login' %}"> Login</a> or
+        <a rel="stylesheet" href="{% url 'account_signup' %}">Sign up</a> to
+        make a reservation or veiw existing reservations.
+      </p>
+    </div>
+    {% endif %}
+  </div>
 </div>
 {% endblock %}
