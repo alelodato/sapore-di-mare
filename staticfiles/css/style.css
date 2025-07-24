@@ -1,3 +1,9 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 .home-backg {
   background: url(/static/img/website/homepage/mobile-home.webp) no-repeat
     center center/cover;
@@ -275,6 +281,7 @@ footer p {
     center center/cover;
   padding: 0;
   text-align: center;
+  height: auto;
 }
 
 .logout {
@@ -291,6 +298,7 @@ footer p {
   text-align: center;
   font-size: 1.3rem;
   overflow-x: hidden;
+  height: auto;
 }
 
 #login-cover {
@@ -307,6 +315,7 @@ footer p {
   overflow-x: hidden;
   background: url(/static/img/website/authentication/register.webp) no-repeat
     center center/cover;
+  height: auto;
 }
 
 .container-snp p {
