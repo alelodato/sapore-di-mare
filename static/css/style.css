@@ -277,16 +277,15 @@ footer p {
 
 .cover {
   background: radial-gradient(#000, #000000b8) center / cover;
-  height: 100%;
+  min-height: 100vh;
 }
 
 .container-lgt {
-  height: 100vh;
+  min-height: 100vh;
   background: url(/static/img/website/authentication/logout.webp) no-repeat
     center center/cover;
   padding: 0;
   text-align: center;
-  height: auto;
 }
 
 .logout {
