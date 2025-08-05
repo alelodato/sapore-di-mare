@@ -1,6 +1,6 @@
 # Sapore Di Mare
 
-![Sapore Di Mare](/static/img/readme/testing/responsive.png "Website responsive design mockup")
+![Sapore Di Mare](/static/img/readme/wireframes/responsive.png "Website responsive design mockup")
 
 Portfolio 4 project as part of the Diploma in Full Stack Software Development by Code Institute.
 ___
