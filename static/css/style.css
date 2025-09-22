@@ -708,6 +708,46 @@ footer p {
   padding: 20px 10px 0 10px;
 }
 
+/* Admin Table Map */
+
+.table-map {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  border: 2px solid #ccc;
+  background: #f9f9f9;
+  margin: 20px auto;
+  border-radius: 6px;
+}
+
+.table {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.table:hover {
+  transform: scale(1.1);
+}
+
+/* Tavoli liberi → verdi */
+.table.free {
+  background-color: #2ecc71; /* verde */
+}
+
+/* Tavoli occupati → rossi */
+.table.occupied {
+  background-color: #e74c3c; /* rosso */
+}
+
+
 /*Media query for large or landscape phones (570px and up)*/
 @media screen and (min-width: 570px) {
   .home-cover img {

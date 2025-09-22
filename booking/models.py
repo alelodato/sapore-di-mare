@@ -1,6 +1,6 @@
 
 from django.db import models
-from datetime import datetime
+from datetime import datetime, timedelta
 from django.contrib.auth.models import User
 
 
@@ -42,10 +42,29 @@ NUMBER_OF_GUESTS = (
 )
 
 
+class Table(models.Model):
+    """
+    Class for admin table map to filter table availability
+    """
+    number = models.IntegerField(unique=True)
+    seats = models.IntegerField()
+    x_position = models.IntegerField()
+    y_position = models.IntegerField()
+
+    def __str__(self):
+        return f"Table {self.number} ({self.seats} seats)"
+
+
 class Reservation(models.Model):
     """
     Class to manage reservations.
     """
+    table = models.ForeignKey(
+        "Table",
+        on_delete=models.CASCADE,
+        related_name="reservations",
+        null=True, blank=True
+    )
     reservation_name = models.CharField(max_length=60)
     reservation_email = models.EmailField(blank=True, null=True)
     reservation_date = models.DateField()
@@ -58,6 +77,14 @@ class Reservation(models.Model):
         on_delete=models.SET_NULL, related_name="reservation_list")
     reservation_created_on = models.DateTimeField(auto_now_add=True)
     reservation_updated_on = models.DateTimeField(auto_now=True)
+
+    @property
+    def start_datetime(self):
+        return datetime.combine(self.date, self.time)
+    
+    @property
+    def end_datetime(self):
+        return self.start_datetime + timedelta(hours=2)
 
     class Meta:
         """

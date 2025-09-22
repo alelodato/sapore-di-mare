@@ -1,0 +1,24 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+{% load booking_tags %}
+{% block content %}
+
+<head>
+<!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+
+<body>
+<h1>Table Map - {{ today }}</h1>
+<div class="table-map">
+    {% for table in tables %}
+    {% with reservation=reservations|get_reservation:table %}
+    <div class="table {% if reservation %}occupied{% else %}free{% endif %}"
+    style="left: {{ table.x_position }}px; top:{{ table.y_position }}px;">
+        {{ table.number }}
+    </div>
+    {% endwith %}
+    {% endfor %}
+</div>
+</body>
+{% endblock %}

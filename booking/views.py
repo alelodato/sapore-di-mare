@@ -5,6 +5,7 @@ from django.views import generic
 from django.contrib import messages
 from .models import Reservation, User
 from .forms import ReservationForm
+from .utils import get_available_tables
 from datetime import datetime
 from django.contrib.auth.decorators import login_required
 
@@ -52,16 +53,25 @@ def add_reservation(request):
                 reservation.reservation_booked_by = request.user
                 reservation.reservation_email = request.user.email
                 reservation.reservation_created_on = datetime.now()
+                available_tables = get_available_tables(
+                    reservation.date, reservation.time, reservation.guests
+                    )
+            if available_tables.exists():
+                reservation.table = available_tables.first() #assign a table automatically from the available ones
                 reservation.save()
                 messages.add_message(request, messages.SUCCESS,
                                      'Your reservation was successfully made!')
                 return HttpResponseRedirect(reverse('reservations'))
-
             else:
                 messages.add_message(
-                                    request, messages.SUCCESS,
-                                    'You entered a time in the past.\
-                                    Please enter a later time.')
+                    request, messages.error,
+                    'No table available for this time slot, try changing number of covers or time.')
+
+        else:
+            messages.add_message(
+                request, messages.error,
+                'You entered a time in the past.\
+                Please enter a later time.')
 
     return render(
         request,
