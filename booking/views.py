@@ -1,6 +1,7 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.template import loader
+from django.core.exceptions import ValidationError
 from django.views import generic
 from django.contrib import messages
 from .models import Reservation, User
@@ -34,12 +35,21 @@ def add_reservation(request):
     """
     Renders reservation form to screen.
     """
-    reservation_form = ReservationForm()
-
     if request.method == "POST":
         reservation_form = ReservationForm(data=request.POST)
         if reservation_form.is_valid():
             reservation = reservation_form.save(commit=False)
+            try:
+                reservation.save()
+                messages.success(
+                    request,
+                    f"Reservation created: {reservation.reservation_name},"
+                    f"{reservation.number_of_guests} guests at {reservation.reservation_time},"
+                    f"assigned to Table {reservation.table.number}"
+                )
+                return redirect ("reservations")
+            except ValidationError as e:
+                messages.error(request, e.message)
             """
             Check if date and time are in the future.
             """

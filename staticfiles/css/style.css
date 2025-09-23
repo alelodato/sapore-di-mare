@@ -708,6 +708,62 @@ footer p {
   padding: 20px 10px 0 10px;
 }
 
+/* Admin Table Map */
+
+.table-map-page {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  /*background: url(../img/admin/tablemap-bkg.jpeg)no-repeat center center/cover;*/
+}
+
+/*.cover-txt {
+  background: #00000076;
+}*/
+
+.map-datepicker {
+  display: inline;
+}
+
+.table-map {
+  font-family: "Raleway", serif;
+  font-style: normal;
+  position: relative;
+  width: 800px;
+  height: 500px;
+  border: 2px solid #ccc;
+  background: #f9f9f954;
+  margin: 20px auto;
+  border-radius: 6px;
+}
+
+.table {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.table:hover {
+  transform: scale(1.1);
+}
+
+/* Table is free, no reservations on selected date */
+.table.free {
+  background-color: #2ecc71; /* verde */
+}
+
+/* Table has a reservation on the date */
+.table.occupied {
+  background-color: #252322;
+}
+
+
 /*Media query for large or landscape phones (570px and up)*/
 @media screen and (min-width: 570px) {
   .home-cover img {
@@ -1156,7 +1212,8 @@ footer p {
   }
 
   p.introp1 {
-    padding-top: 30px;
+    padding: 20px 50px;
+    font-size: 1.8rem;
   }
 
   .chef-p {

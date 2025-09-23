@@ -9,16 +9,38 @@
 </head>
 
 <body>
-<h1>Table Map - {{ today }}</h1>
+<section class="table-map-page">
+<div class="cover-txt">
+<h1>
+    Table Map - {{ selected_date|date:"F j, Y" }}
+  <a href="?date={{ prev_date|date:'Y-m-d' }}">⬅️</a>
+  <form method="get" class="map-datepicker">
+  <input type="date" name="date" value="{{ today|date:'Y-m-d' }}" onchange="this.form.submit()">
+  </form>
+  <a href="?date={{ next_date|date:'Y-m-d' }}">➡️</a>
+</h1>
 <div class="table-map">
     {% for table in tables %}
     {% with reservation=reservations|get_reservation:table %}
-    <div class="table {% if reservation %}occupied{% else %}free{% endif %}"
+    <div class="table {% if table_res.exists %}occupied{% else %}free{% endif %}"
     style="left: {{ table.x_position }}px; top:{{ table.y_position }}px;">
+    <a href="{% url 'admin:table-reservations' table.id selected_date %}">
         {{ table.number }}
+    </a>
     </div>
     {% endwith %}
     {% endfor %}
 </div>
+
+<h2>Reservations for {{ selected_date }}</h2>
+<ul>
+    {% for reservation in reservations %}
+    <li>Table {{ reservation.table.number }} - {{ reservation.reservation_name }} 
+        {{ reservation.number_of_guests }} guests, 
+        ({{ reservation_time|time:"H:i" }})</li>
+    {% endfor %}
+</ul>
+</div>
+</section>
 </body>
 {% endblock %}
