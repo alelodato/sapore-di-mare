@@ -1236,4 +1236,8 @@ footer p {
   #card-container {
     margin-left: 450px;
   }
+
+  .alert-dismissible {
+    margin-top: 60px;
+  }
 }

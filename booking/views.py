@@ -35,26 +35,16 @@ def add_reservation(request):
     """
     Renders reservation form to screen.
     """
+    reservation_form = ReservationForm()
     if request.method == "POST":
         reservation_form = ReservationForm(data=request.POST)
         if reservation_form.is_valid():
             reservation = reservation_form.save(commit=False)
-            try:
-                reservation.save()
-                messages.success(
-                    request,
-                    f"Reservation created: {reservation.reservation_name},"
-                    f"{reservation.number_of_guests} guests at {reservation.reservation_time},"
-                    f"assigned to Table {reservation.table.number}"
-                )
-                return redirect ("reservations")
-            except ValidationError as e:
-                messages.error(request, e.message)
-            """
-            Check if date and time are in the future.
-            """
             date = reservation.reservation_date
             time = reservation.reservation_time
+            datetime_choice_valid = check_time(str(date), time, datetime)
+            if isinstance(reservation.reservation_time, str):
+                reservation_time = datetime.strptime(reservation.reservation_time, "%H:%M").time()
             datetime_choice_valid = check_time(str(date), time, datetime)
             if datetime_choice_valid:
                 """
@@ -64,7 +54,9 @@ def add_reservation(request):
                 reservation.reservation_email = request.user.email
                 reservation.reservation_created_on = datetime.now()
                 available_tables = get_available_tables(
-                    reservation.date, reservation.time, reservation.guests
+                    reservation.reservation_date,
+                    reservation.reservation_time,
+                    reservation.number_of_guests
                     )
             if available_tables.exists():
                 reservation.table = available_tables.first() #assign a table automatically from the available ones
@@ -74,7 +66,7 @@ def add_reservation(request):
                 return HttpResponseRedirect(reverse('reservations'))
             else:
                 messages.add_message(
-                    request, messages.error,
+                    request, messages.ERROR,
                     'No table available for this time slot, try changing number of covers or time.')
 
         else:
@@ -98,9 +90,9 @@ def delete_reservation(request, id):
     """
     reservation = get_object_or_404(Reservation, id=id)
     if request.user != reservation.reservation_booked_by:
-            messages.add_message(request, messages.ERROR,
-                                 "You can't access another user's reservation")
-            return redirect('home')
+        messages.add_message(request, messages.ERROR,
+                             "You can't access another user's reservation")
+        return redirect('home')
     context = {
         'reservation': reservation,
     }
