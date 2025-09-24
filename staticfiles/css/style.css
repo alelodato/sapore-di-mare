@@ -737,9 +737,11 @@ footer p {
 }
 
 .table {
+  font-family: "Raleway", serif;
+  font-style: normal;
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 70px;
   border-radius: 50%;
   color: white;
   font-weight: bold;
@@ -760,7 +762,7 @@ footer p {
 
 /* Table has a reservation on the date */
 .table.occupied {
-  background-color: #252322;
+  background-color: #ccc;
 }
 
 

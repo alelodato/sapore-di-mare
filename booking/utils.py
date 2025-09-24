@@ -62,9 +62,9 @@ def get_available_tables(date, time, guests):
             res_time = datetime.strptime(res_time, "%H:%M").time()
         existing_start = datetime.combine(r.reservation_date, res_time)
         existing_end = existing_start + timedelta(hours=2)
-
-    if booking_start < existing_end and booking_end > existing_start:
-        reserved_tables.append(r.table_id)
+        
+        if booking_start < existing_end and booking_end > existing_start:
+            reserved_tables.append(r.table_id)
 
     min_seats = int(guests)
     max_seats = min_seats + 2

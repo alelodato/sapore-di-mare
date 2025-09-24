@@ -45,6 +45,14 @@ class TableAdmin(admin.ModelAdmin):
         next_date = selected_date + timedelta(days=1)
 
         tables = Table.objects.all()
+
+        reservations_by_table = {
+            res.table_id: res
+            for res in Reservation.objects.filter(
+                reservation_date=selected_date
+            )
+        }
+
         reservations = (
             Reservation.objects.filter(reservation_date=selected_date,)
             .select_related("table")
@@ -57,12 +65,17 @@ class TableAdmin(admin.ModelAdmin):
             "selected_date": selected_date,
             "prev_date": prev_date,
             "next_date": next_date,
+            "reservations_by_table": reservations_by_table,
         })
+
     def table_reservations_view(self, request, table_id, date):
         from datetime import datetime
         selected_date = datetime.strptime(date, "%Y-%m-%d").date()
         table = Table.objects.get(pk=table_id)
-        reservations = Reservation.objects.filter(table=table, reservation_date=selected_date)
+        reservations = Reservation.objects.filter(
+            table=table,
+            reservation_date=selected_date
+        )
 
         return render(request, "admin/table_reservations.html", {
             "table": table,
