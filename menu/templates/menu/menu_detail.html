@@ -16,6 +16,7 @@
                 <p id="auth">You are not logged in</p>
                 {% endif %}
                 <div class="menu">
+                    <a href="{% url 'menu' %}" class="back-arrow"><i class="fa-solid fa-arrow-left"></i></a>
                     <h1 class="menu-page-title">{{ menu.title }}</h1>
                     <hr>
                     <p class="menu-text">{{ menu.content | safe }}</p>

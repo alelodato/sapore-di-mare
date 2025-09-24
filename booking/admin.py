@@ -2,7 +2,6 @@ from django.contrib import admin
 from django.urls import path, reverse
 from django.shortcuts import render
 from datetime import date, datetime, timedelta
-from django.core.exceptions import ValidationError
 from .models import Table, Reservation
 
 
@@ -29,8 +28,11 @@ class TableAdmin(admin.ModelAdmin):
     def get_urls(self):
         urls = super().get_urls()
         custom_urls = [
-            path("map/", self.admin_site.admin_view(self.table_map_view), name="table-map"),
-            path("table/<int:table_id>/<str:date>/", self.admin_site.admin_view(self.table_reservations_view), name="table-reservations"),
+            path("map/", self.admin_site.admin_view(self.table_map_view), 
+                 name="table-map"),
+            path("table/<int:table_id>/<str:date>/", 
+                 self.admin_site.admin_view(self.table_reservations_view), 
+                 name="table-reservations"),
         ]
         return custom_urls + urls
 
@@ -43,7 +45,7 @@ class TableAdmin(admin.ModelAdmin):
                 selected_date = date.today()
         else:
             selected_date = date.today()
-        
+      
         prev_date = selected_date - timedelta(days=1)
         next_date = selected_date + timedelta(days=1)
 

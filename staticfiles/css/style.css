@@ -454,6 +454,14 @@ footer p {
   height: 100vh;
 }
 
+.back-arrow {
+  font-size: 1.5rem;
+}
+
+.back-arrow i:hover {
+  text-decoration: underline;
+}
+
 .menu span {
   color: #b97309;
 }
@@ -474,7 +482,8 @@ footer p {
 }
 
 .menu hr {
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .menu p {
@@ -841,6 +850,10 @@ footer p {
     font-size: 1.5rem;
   }
 
+  .back-arrow {
+  font-size: 2rem;
+  } 
+
   .logout h3 {
     font-size: 2.5rem;
   }
@@ -962,7 +975,7 @@ footer p {
   }
 
   #auth {
-    padding-top: 60px;
+    padding-top: 70px;
     margin-bottom: 0px;
     font-size: 1.2rem;
   }
@@ -1112,6 +1125,8 @@ footer p {
 
   .socials img {
     width: 4.5%;
+    margin: 0;
+    padding: 8px;
   }
 
   footer p {
@@ -1234,6 +1249,11 @@ footer p {
   p.introp1 {
     padding: 20px 50px;
     font-size: 1.8rem;
+  }
+
+  .introp2 p {
+    padding: 40px;
+    font-size: 1.6rem;
   }
 
   .chef-p {

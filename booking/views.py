@@ -1,10 +1,8 @@
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, reverse, redirect
-from django.template import loader
-from django.core.exceptions import ValidationError
 from django.views import generic
 from django.contrib import messages
-from .models import Reservation, User
+from .models import Reservation
 from .forms import ReservationForm
 from .utils import get_available_tables
 from datetime import datetime
@@ -44,7 +42,8 @@ def add_reservation(request):
             time = reservation.reservation_time
             datetime_choice_valid = check_time(str(date), time, datetime)
             if isinstance(reservation.reservation_time, str):
-                reservation_time = datetime.strptime(reservation.reservation_time, "%H:%M").time()
+                reservation_time = datetime.strptime(
+                    reservation.reservation_time, "%H:%M").time()
             datetime_choice_valid = check_time(str(date), time, datetime)
             if datetime_choice_valid:
                 """
@@ -59,7 +58,8 @@ def add_reservation(request):
                     reservation.number_of_guests
                     )
             if available_tables.exists():
-                reservation.table = available_tables.first() #assign a table automatically from the available ones
+                # assign a table automatically from the available ones
+                reservation.table = available_tables.first()
                 reservation.save()
                 messages.add_message(request, messages.SUCCESS,
                                      'Your reservation was successfully made!')
@@ -67,7 +67,8 @@ def add_reservation(request):
             else:
                 messages.add_message(
                     request, messages.ERROR,
-                    'No table available for this time slot, try changing number of covers or time.')
+                    'No table available for this time slot, ' \
+                    'try changing number of covers or time.')
 
         else:
             messages.add_message(
@@ -115,6 +116,7 @@ def confirm_delete_reservation(request, id):
                          'Your reservation has been deleted.')
     return HttpResponseRedirect(reverse('reservations'))
 
+
 @login_required()
 def edit_reservation(request, id):
     """
@@ -122,9 +124,9 @@ def edit_reservation(request, id):
     """
     reservation = get_object_or_404(Reservation, id=id)
     if request.user != reservation.reservation_booked_by:
-            messages.add_message(request, messages.ERROR,
-                                 "You can't access another user's reservation")
-            return redirect('home')
+        messages.add_message(request, messages.ERROR,
+                             "You can't access another user's reservation")
+        return redirect('home')
     if request.method == "POST":
         reservation_form = ReservationForm(
             data=request.POST, instance=reservation)
@@ -134,7 +136,8 @@ def edit_reservation(request, id):
             time = reservation.reservation_time
             datetime_choice_valid = check_time(str(date), time, datetime)
             if isinstance(reservation.reservation_time, str):
-                reservation_time = datetime.strptime(reservation.reservation_time, "%H:%M").time()
+                reservation_time = datetime.strptime(
+                    reservation.reservation_time, "%H:%M").time()
             datetime_choice_valid = check_time(str(date), time, datetime)
             """
             Check if date and time are in the future.
@@ -152,7 +155,8 @@ def edit_reservation(request, id):
                     reservation.number_of_guests
                     )
             if available_tables.exists():
-                reservation.table = available_tables.first() #assign a table automatically from the available ones
+                # assign a table automatically from the available ones
+                reservation.table = available_tables.first()
                 reservation.save()
                 messages.add_message(request, messages.SUCCESS,
                                      'Your reservation was successfully made!')
@@ -160,12 +164,14 @@ def edit_reservation(request, id):
             else:
                 messages.add_message(
                     request, messages.ERROR,
-                    'No table available for this time slot, try changing number of covers or time.')
+                    'No table available for this time slot, '
+                    \
+                    'try changing number of covers or time.')
 
         else:
             messages.add_message(request, messages.ERROR,
-                                     'You entered a time in the past.\
-                                     Please enter a later time.')
+                                 'You entered a time in the past.\
+                                    Please enter a later time.')
     else:
         reservation_form = ReservationForm(instance=reservation)
 
@@ -200,4 +206,3 @@ def table_reservations_view(request, table_id, date):
         "selected_date": selected_date,
         "reservations": reservations,
     })
-
