@@ -71,7 +71,7 @@ def add_reservation(request):
 
         else:
             messages.add_message(
-                request, messages.error,
+                request, messages.ERROR,
                 'You entered a time in the past.\
                 Please enter a later time.')
 
@@ -130,6 +130,12 @@ def edit_reservation(request, id):
             data=request.POST, instance=reservation)
         if reservation_form.is_valid():
             reservation = reservation_form.save(commit=False)
+            date = reservation.reservation_date
+            time = reservation.reservation_time
+            datetime_choice_valid = check_time(str(date), time, datetime)
+            if isinstance(reservation.reservation_time, str):
+                reservation_time = datetime.strptime(reservation.reservation_time, "%H:%M").time()
+            datetime_choice_valid = check_time(str(date), time, datetime)
             """
             Check if date and time are in the future.
             """
@@ -139,13 +145,25 @@ def edit_reservation(request, id):
             if datetime_choice_valid:
                 reservation.reservation_booked_by = request.user
                 reservation.reservation_email = request.user.email
+                reservation.reservation_created_on = datetime.now()
+                available_tables = get_available_tables(
+                    reservation.reservation_date,
+                    reservation.reservation_time,
+                    reservation.number_of_guests
+                    )
+            if available_tables.exists():
+                reservation.table = available_tables.first() #assign a table automatically from the available ones
                 reservation.save()
                 messages.add_message(request, messages.SUCCESS,
-                                     'Your reservation has been updated!')
+                                     'Your reservation was successfully made!')
                 return HttpResponseRedirect(reverse('reservations'))
-
             else:
-                messages.add_message(request, messages.SUCCESS,
+                messages.add_message(
+                    request, messages.ERROR,
+                    'No table available for this time slot, try changing number of covers or time.')
+
+        else:
+            messages.add_message(request, messages.ERROR,
                                      'You entered a time in the past.\
                                      Please enter a later time.')
     else:

@@ -996,10 +996,6 @@ footer p {
     display: flex;
   }
 
-  .intro {
-    margin-top: 15px;
-  }
-
   .intro1 {
     display: flex;
     padding: 100px 10px 30px 10px;
@@ -1219,6 +1215,10 @@ footer p {
     padding-left: 50px;
   }
 
+  .alert-dismissible {
+    margin-top: 60px;
+  }
+
   .table {
     width: 150px;
     height: 100px;
@@ -1255,10 +1255,6 @@ footer p {
 
   #card-container {
     margin-left: 450px;
-  }
-
-  .alert-dismissible {
-    margin-top: 60px;
   }
 
   .table-map {
