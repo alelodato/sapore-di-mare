@@ -1,6 +1,6 @@
-
 from django.db import models
 from datetime import datetime, timedelta
+from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
 
 
@@ -50,6 +50,10 @@ class Table(models.Model):
     seats = models.IntegerField()
     x_position = models.IntegerField()
     y_position = models.IntegerField()
+
+    def clean(self):
+        if self.seats < 1:
+            raise ValidationError("A table must have at least 1 seat.")
 
     def __str__(self):
         return f"Table {self.number} ({self.seats} seats)"

@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, reverse
 from django.shortcuts import render
 from datetime import date, datetime, timedelta
-
+from django.core.exceptions import ValidationError
 from .models import Table, Reservation
 
 
@@ -16,6 +16,9 @@ class ReservationAdmin(admin.ModelAdmin):
 @admin.register(Table)
 class TableAdmin(admin.ModelAdmin):
     list_display = ("number", "seats", "x_position", "y_position")
+    list_editable = ("seats",)
+    search_fields = ("number",)
+    ordering = ("number",)
 
     def changelist_view(self, request, extra_context=None):
         if extra_context is None:
