@@ -170,6 +170,11 @@ img {
   padding: 10px;
 }
 
+.introimg2,
+.introimg3 {
+  display: none;
+}
+
 .intro2 img {
   padding: 10px;
 }
@@ -1251,8 +1256,45 @@ footer p {
     font-size: 1.8rem;
   }
 
+  .intro1 {
+    display: block;
+  }
+
+  .introp1 {
+    width: 100%;
+  }
+
+  .intro-img1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .intro-img1 img {
+    width: 35%;
+    padding: 0;
+  }
+
+  .introimg2,
+  .introimg3 {
+    display: inline;
+  }
+
+  .introimg2 img {
+    width: 100% !important; 
+    height: 100%;
+  }
+
+  .introimg3 img {
+    width: 100% !important;
+  }
+
+  .intro2 h2 {
+    text-align: center;
+  }
+
   .introp2 p {
-    padding: 40px;
+    padding: 20px 50px;
     font-size: 1.6rem;
   }
 
