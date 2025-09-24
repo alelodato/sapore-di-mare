@@ -728,20 +728,27 @@ footer p {
   font-family: "Raleway", serif;
   font-style: normal;
   position: relative;
-  width: 800px;
-  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+  aspect-ratio: 4 / 3;
+  width: 100%;
   border: 2px solid #ccc;
   background: #f9f9f954;
-  margin: 20px auto;
+  margin: 0 auto;
   border-radius: 6px;
 }
 
 .table {
   font-family: "Raleway", serif;
   font-style: normal;
-  position: absolute;
-  width: 100px;
-  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 30px;
+  margin: 10px;
   border-radius: 50%;
   color: white;
   font-weight: bold;
@@ -764,7 +771,6 @@ footer p {
 .table.occupied {
   background-color: #ccc;
 }
-
 
 /*Media query for large or landscape phones (570px and up)*/
 @media screen and (min-width: 570px) {
@@ -935,6 +941,12 @@ footer p {
 
   .mission-img5 {
     display: none;
+  }
+
+  .table {
+    width: 100px;
+    height: 70px;
+    margin: 20px;
   }
 }
 
@@ -1153,7 +1165,7 @@ footer p {
   }
 
   .missionp1 p {
-    padding: 0 30px 80px 30px
+    padding: 0 30px 80px 30px;
   }
 
   .img-layout {
@@ -1206,6 +1218,12 @@ footer p {
     width: 90%;
     padding-left: 50px;
   }
+
+  .table {
+    width: 150px;
+    height: 100px;
+    margin: 20px;
+  }
 }
 /*Media query for large devices (1200px and up)*/
 @media screen and (min-width: 1200px) {
@@ -1241,5 +1259,15 @@ footer p {
 
   .alert-dismissible {
     margin-top: 60px;
+  }
+
+  .table-map {
+    height: 500px;
+  }
+
+  .table {
+    width: 100px;
+    height: 70px;
+    margin: 55px;
   }
 }

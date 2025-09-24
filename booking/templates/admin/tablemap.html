@@ -23,7 +23,7 @@
     {% for table in tables %}
     {% with reservation=reservations|get_reservation:table %}
     <div class="table {% if table.id in reservations_by_table %}occupied{% else %}free{% endif %}"
-    style="left: {{ table.x_position }}px; top:{{ table.y_position }}px;">
+    style="left: {{ table.x_position }}%; top:{{ table.y_position }}%;">
     <a href="{% url 'admin:table-reservations' table.id selected_date %}">
         {{ table.number }}
     </a>
