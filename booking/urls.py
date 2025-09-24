@@ -10,4 +10,6 @@ urlpatterns = [
     path('delete/confirmdelete/<int:id>/', views.confirm_delete_reservation,
          name='confirm-delete-reservation'),
     path('edit/<int:id>/', views.edit_reservation, name='edit-reservation'),
+    path("admin/booking/table/<int:table_id>/<str:date>/",
+         views.table_reservations_view, name="table_reservations"),
 ]

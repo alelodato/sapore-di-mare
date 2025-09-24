@@ -1,0 +1,20 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+{% block content %}
+
+<h2>Reservations for Table {{ table.number }} on {{ selected_date }}</h2>
+
+{% if reservations %}
+<ul>
+    {% for reservation in reservations %}
+    <li>
+        {{ reservation.reservation_name }} - {{ reservation.number_of_guests }} guests at {{ reservation.reservation_time }}
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No reservations for this table on {{ selected_date }}</p>
+{% endif %}
+
+<a href="{% url 'admin:table-map' %}?date={{ selected_date|date:'Y-m-d' }}"><i class="fa-solid fa-arrow-left"></i> Back to table Map</a>
+{% endblock %}

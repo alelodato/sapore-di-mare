@@ -6,6 +6,12 @@
 <head>
 <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+<!--Font Awesome Kit-->
+    <script
+      src="https://kit.fontawesome.com/d2f8b724df.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
 
 <body>
@@ -13,21 +19,21 @@
 <div class="cover-txt">
 <h1>
     Table Map - {{ selected_date|date:"F j, Y" }}
-  <a href="?date={{ prev_date|date:'Y-m-d' }}">⬅️</a>
+  <a href="?date={{ prev_date|date:'Y-m-d' }}"><i class="fa-solid fa-arrow-left"></i></a>
   <form method="get" class="map-datepicker">
   <input type="date" name="date" value="{{ today|date:'Y-m-d' }}" onchange="this.form.submit()">
   </form>
-  <a href="?date={{ next_date|date:'Y-m-d' }}">➡️</a>
+  <a href="?date={{ next_date|date:'Y-m-d' }}"><i class="fa-solid fa-arrow-right"></i></a>
 </h1>
 <div class="table-map">
     {% for table in tables %}
     {% with reservation=reservations|get_reservation:table %}
+    <a href="{% url 'table_reservations' table.id selected_date|date:'Y-m-d' %}">
     <div class="table {% if table.id in reservations_by_table %}occupied{% else %}free{% endif %}"
     style="left: {{ table.x_position }}%; top:{{ table.y_position }}%;">
-    <a href="{% url 'admin:table-reservations' table.id selected_date %}">
         {{ table.number }}
-    </a>
     </div>
+    </a>
     {% endwith %}
     {% endfor %}
 </div>

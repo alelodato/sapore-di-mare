@@ -161,3 +161,25 @@ def edit_reservation(request, id):
         "reservations/make_reservation.html",
         context
     )
+
+
+def table_reservations_view(request, table_id, date):
+    from .models import Table
+    try:
+        selected_date = datetime.strptime(date, "%Y-%m-%d").date()
+    except ValueError:
+        selected_date = datetime.today().date()
+
+    table = get_object_or_404(Table, id=table_id)
+
+    reservations = Reservation.objects.filter(
+        table=table,
+        reservation_date=selected_date
+    ).order_by("reservation_time")
+
+    return render(request, "admin/table_reservations.html", {
+        "table": table,
+        "selected_date": selected_date,
+        "reservations": reservations,
+    })
+
