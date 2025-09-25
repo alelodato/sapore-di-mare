@@ -382,10 +382,3 @@ This project was based on the Code Institute's - I think therefore I blog walkth
 The wireframe mockups were created using [Mockapp](https://www.mockapp.com/en/)
 
 ___
-
-
-## Acknowledgments and Thanks
-
-
-I want to thank the code institute tutors team for helping me every time i encountered an issue that i couldn’t resolve myself in the project, providing fast response and support and patiently making sure i understood what was wrong and the issue was solved.
-Also want to thank my mentor Jubril, for providing advices and feedbacks to help me improve my project and making sure my work complied with assignment.
