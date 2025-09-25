@@ -4,7 +4,7 @@ As each section or Function/Model was built during this project, I was testing f
 
 ### Automated Testing
 
-For this project, automated tests were implemented using **Django’s built-in TestCase** framework.  
+For the "booking" app, which operates the website's booking system, automated tests were implemented using **Django’s built-in TestCase** framework.  
 The tests focus on the `Reservation` model and the `get_available_tables` utility function to ensure that the booking system behaves correctly in different scenarios.  
 
 - **ReservationModelTest**  
