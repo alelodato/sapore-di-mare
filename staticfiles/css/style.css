@@ -258,6 +258,16 @@ footer p {
   margin-bottom: 0;
 }
 
+.copyright a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.copyright a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .socials {
   font-size: 1.5rem;
   padding: 10px;
@@ -552,7 +562,7 @@ footer p {
 
 .card {
   margin: 0 5px 0 5px;
-  background: #050822;
+  background: #050822ab;
   color: #ffffff;
   border: #ffffff;
   border-style: groove;

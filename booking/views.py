@@ -33,8 +33,19 @@ def add_reservation(request):
     """
     Renders reservation form to screen.
     """
+    if Reservation.objects.filter(reservation_booked_by=request.user).exists():
+        messages.add_message(
+            request, messages.ERROR,
+            'You already have a reservation. You can edit or delete it.')
+        return redirect('reservations')
     reservation_form = ReservationForm()
     if request.method == "POST":
+        Reservation.objects.filter(reservation_booked_by=request.user)
+        if Reservation.objects.filter(reservation_booked_by=request.user).exists():
+            messages.add_message(
+                request, messages.ERROR,
+                'You already have a reservation. You can edit or delete it.')
+            return redirect('reservations')
         reservation_form = ReservationForm(data=request.POST)
         if reservation_form.is_valid():
             reservation = reservation_form.save(commit=False)
@@ -115,6 +126,16 @@ def confirm_delete_reservation(request, id):
     messages.add_message(request, messages.SUCCESS,
                          'Your reservation has been deleted.')
     return HttpResponseRedirect(reverse('reservations'))
+
+
+def delete_after_expiry(reservation):
+    """
+    Function to delete reservation after its date has passed.
+    """
+    if reservation.reservation_date < datetime.today().date():
+        reservation.delete()
+        return True
+    return False
 
 
 @login_required()
