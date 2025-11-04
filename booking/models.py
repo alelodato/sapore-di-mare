@@ -85,7 +85,7 @@ class Reservation(models.Model):
     @property
     def start_datetime(self):
         return datetime.combine(self.date, self.time)
-  
+
     @property
     def end_datetime(self):
         return self.start_datetime + timedelta(hours=2)

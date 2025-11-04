@@ -7,7 +7,8 @@ from .models import Table, Reservation
 
 @admin.register(Reservation)
 class ReservationAdmin(admin.ModelAdmin):
-    list_display = ("reservation_name", "reservation_date", "reservation_time", "number_of_guests", "reservation_email")
+    list_display = ("reservation_name", "reservation_date", "reservation_time",
+                    "number_of_guests", "reservation_email")
     list_filter = ("reservation_date", "reservation_time")
     search_fields = ("reservation_name", "reservation_email")
 
@@ -28,10 +29,10 @@ class TableAdmin(admin.ModelAdmin):
     def get_urls(self):
         urls = super().get_urls()
         custom_urls = [
-            path("map/", self.admin_site.admin_view(self.table_map_view), 
+            path("map/", self.admin_site.admin_view(self.table_map_view),
                  name="table-map"),
-            path("table/<int:table_id>/<str:date>/", 
-                 self.admin_site.admin_view(self.table_reservations_view), 
+            path("table/<int:table_id>/<str:date>/",
+                 self.admin_site.admin_view(self.table_reservations_view),
                  name="table-reservations"),
         ]
         return custom_urls + urls
