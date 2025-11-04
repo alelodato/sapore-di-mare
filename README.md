@@ -72,6 +72,10 @@ Features not essential to the functioning of the project, but will add significa
 
 - [Pop up messages should stand out more from the background](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066751&issue=alelodato%7Csapore-di-mare%7C3)
 
+- [A system for matching reservations with tables.](https://github.com/users/alelodato/projects/4?pane=issue&itemId=94317069&issue=alelodato%7Csapore-di-mare%7C12)
+
+- [A system for capping reservation numbers at any given point in time.](https://github.com/users/alelodato/projects/4?pane=issue&itemId=94317392&issue=alelodato%7Csapore-di-mare%7C14)
+
 
 #### Could have
 
@@ -80,22 +84,11 @@ Features which may be useful, but will not add as much value to the site. Due to
 
 - [Customers can submit special queries and feedbacks via the website.](https://github.com/users/alelodato/projects/4?pane=issue&itemId=94316096&issue=alelodato%7Csapore-di-mare%7C5)
 
-- [A system for matching reservations with tables.](https://github.com/users/alelodato/projects/4?pane=issue&itemId=94317069&issue=alelodato%7Csapore-di-mare%7C12)
-
 - [Restaurant staff can add pictures to the menu and homepage.](https://github.com/users/alelodato/projects/4?pane=issue&itemId=92068971&issue=alelodato%7Csapore-di-mare%7C8)
 
 - [Restaurant staff can add edit and delete content from the homepage.](https://github.com/users/alelodato/projects/4?pane=issue&itemId=92068971&issue=alelodato%7Csapore-di-mare%7C8)
 
 - [Users can recover their account password if they have forgotten it through a form and an email with a link.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=94317050&issue=alelodato%7Csapore-di-mare%7C13)
-
-
-#### Won't have
-
-Features which will not be part of the iteration of development. These have been added to the kanban board for consideration in future development cycles.
-
-
-- [A system for capping reservation numbers at any given point in time.](https://github.com/users/alelodato/projects/4?pane=issue&itemId=94317392&issue=alelodato%7Csapore-di-mare%7C14)
-
 
 In accordance with Agile development principles, development would begin with the 'must have' features. Together these would form a 'minimal viable product' (MVP). 'Should have' features would be added, prioritising (in order) making a reservation, user experience, restaurant marketing and displaying a menu. In that way a product could be developed as soon as possible and continually developed and improved while maintaining utility.
 
@@ -158,7 +151,25 @@ The menu app features two templates:
 
 #### Booking app
 
-The Reservations app contains the restaurant reservation system, and it's thought to allow users to be able to make,edit and delete a reservation.The model has been built to allow restaurant staff to have the same functions, so that they can amend, delete or make reservations on behalf of the customers.The system allows users to book one table at a time, but in future developments this might be changed adding a table number cap and also creating a table plan to associate the restaurant tables with the respective bookings. 
+The Reservations app contains the restaurant reservation system, and it's thought to allow users to be able to make,edit and delete a reservation.The model has been built to allow restaurant staff to have the same functions, so that they can amend, delete or make reservations on behalf of the customers. 
+
+![Reservation Form](static/img/readme/reservation-form.png)
+
+In a recent update, the restaurant’s booking system has been significantly enhanced to provide a smarter and more intuitive management experience.
+Each table now includes a table number and seat capacity, allowing the system to automatically verify table availability based on the number of guests and prevent overlapping reservations.
+
+![Table Seats](static/img/readme/table-plan.png)
+
+Users are shown a message saying that there's not available tables at that time and for that number of covers, if their reservation overlaps an existing one.
+
+![Reservation Error](static/img/readme/booking-message.png)
+
+On the admin panel, a visual floor plan displays all tables with real-time availability indicators, making it easy to track and manage seat distribution. Each table also has a dedicated page showing its reservations for the selected day, and administrators can navigate between dates to view upcoming or past bookings.
+
+![Admin Panel Reservations](static/img/readme/table-map.png)
+
+Additionally, a cleanup function automatically removes expired reservations once their date has passed, keeping the database organized and up to date. These improvements ensure a smooth workflow for restaurant staff and a reliable booking experience for customers.
+
 
 ##### Model
  The below Entity Relationship Diagram (ERD) shows the table fields.
