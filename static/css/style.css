@@ -61,7 +61,7 @@ h5 {
 }
 
 .intro-cover-text {
-  background: linear-gradient(20deg, black, #0000001a);
+  background: linear-gradient(20deg, black, #0000090a);
 }
 
 .intro h1 {
@@ -77,9 +77,8 @@ h5 {
 
 .menu-booking-buttons button {
   background: transparent;
-  border-style: groove;
-  border-block-color: #ffffff;
-  border-radius: 5px;
+  border:solid 1px #ffffff3e;
+  border-radius: 10px;
   color: #fafafa;
   font-size: 1.2rem;
   margin: 5px;
@@ -143,7 +142,7 @@ body {
 
 #nav-toggle:checked ~ #menu {
   display: block;
-  background-color: rgb(3 29 53);
+  background-color: rgb(3 29 53) !important;
 }
 
 #nav-toggle {
@@ -249,7 +248,7 @@ p.introp2 {
 footer {
   color: #ffffff;
   text-align: center;
-  background-color: rgb(3 29 53);
+  background-color: rgb(3 29 53) !important;
 }
 
 footer p {
