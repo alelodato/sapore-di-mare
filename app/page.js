@@ -12,7 +12,7 @@ const dishImages = [
     alt: 'Grilled branzino',
   },
   {
-    src: 'https://images.unsplash.com/photo-1563379091339-03246963d651?w=600&q=80',
+    src: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&q=80',
     alt: 'Lobster tagliatelle',
   },
   {
