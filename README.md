@@ -1,395 +1,206 @@
 # Sapore Di Mare
 
-![Sapore Di Mare](/static/img/readme/wireframes/responsive.png "Website responsive design mockup")
+A luxury modern restaurant website for **Sapore Di Mare** — a Michelin-starred Italian seafood restaurant in Mayfair, London. Built with Next.js 14, Tailwind CSS, and Supabase.
 
-Portfolio 4 project as part of the Diploma in Full Stack Software Development by Code Institute.
-___
+---
 
-In this project i created the website for a fictional restaurant called Sapore Di Mare. 
+## Tech Stack
 
-Link to live site - [https://sapore-di-mare-0503ed908911.herokuapp.com/](https://sapore-di-mare-0503ed908911.herokuapp.com/)
-
-### Strategy
-The overall approach was to build a full stack application using the Django framework linked to a PostgreSQL database. PostgreSQL is a popular and adaptable relational database management system and Django is a flexible framework which easily integrates API's, allowing for a streamlined development cycle. Both are open source and well supported allowing for easy maintenance, future development and customisation. Bootstrap 5 was to be used at the front end to speed up the design process.
-
-The site was designed using an Agile approach. Epics and user stories were collected, added to a [kanban board](https://github.com/users/alelodato/projects/4/views/1) in the project [Github repository](https://github.com/alelodato/sapore-di-mare) and prioritised according to the MOSCOW system. MOSCOW organises stories and features into 'Must have', 'Should have', 'Could have', 'Won't have' categories. This allows Agile developers to prioritise which parts of the programme to create first. After a fixed period of time the development cycle ends and the project is reviewed. features may be recategorised and additional user stories added throughout based on testing and feedback received.
-
-### Scope
-
-The below epics and user stories were collected. Epics were broken down into user stories, added to the project [kanban board](https://github.com/users/alelodato/projects/4/views/1).
-
-
-#### Epics
-
-- Creation of a full stack web application to manage restaurant reservations using Django.
-
-- Staff should have full CRUD control over all reservations via the Admin panel.
-
-- Customers should have full CRUD control over their reservations via the front end of the site.
-
-- The site should display a menu.
-
-- The site front end should support the overall marketing strategy of the business, being appealing and easy to navigate.
-
-
-#### Must have
-
-Must have features are features without which the project will not work.
-
-- [Staff can make reservations on behalf of customers](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92067107&issue=alelodato%7Csapore-di-mare%7C4)
-
-- [Staff can edit reservations on behalf of customers](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92067107&issue=alelodato%7Csapore-di-mare%7C4)
-
-- [Staff can delete reservations on behalf of customers](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92067107&issue=alelodato%7Csapore-di-mare%7C4)
-
-- [Staff should have accounts with enhanced access so they have CRUD access to reservation, user and menu databases. These accounts should be password protected for reasons of data security and to prevent malicious use.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92068608&issue=alelodato%7Csapore-di-mare%7C7)
-
-- [Customers should be able to create an account so their data is protected with a password](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066280&issue=alelodato%7Csapore-di-mare%7C2)
-
-- [Customers can make reservations online.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066751&issue=alelodato%7Csapore-di-mare%7C3)
-
-- [Customers can edit reservations online.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066751&issue=alelodato%7Csapore-di-mare%7C3)
-
-- [Customers can delete reservations online.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066751&issue=alelodato%7Csapore-di-mare%7C3)
-
-- [The site should prevent users making reservations in the past.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066751&issue=alelodato%7Csapore-di-mare%7C3)
-
-- [The front end of the programme should be designed to allow for intuitive use.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92067977&issue=alelodato%7Csapore-di-mare%7C6)
-
-#### Should have
-
-Features not essential to the functioning of the project, but will add significant value to the project.
-
-- [Restaurant staff can create, edit and delete restaurant menus.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=94316099&issue=alelodato%7Csapore-di-mare%7C11)
-
-- [The site should tell users if they are logged in. The message advising them they are not should link to the login page.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066280&issue=alelodato%7Csapore-di-mare%7C2)
-
-- [The site should be able to display the restaurant menu.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92067977&issue=alelodato%7Csapore-di-mare%7C6)
-
-- [Menu should be visible to customers without a login.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92067977&issue=alelodato%7Csapore-di-mare%7C6)
-
-- [The site should have pop up messages for the user to confirm if they logged in logged out or reserve, edit and cancel a reservation successfully](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066751&issue=alelodato%7Csapore-di-mare%7C3)
-
-- [Pop up messages should stand out more from the background](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=92066751&issue=alelodato%7Csapore-di-mare%7C3)
-
-- [A system for matching reservations with tables.](https://github.com/users/alelodato/projects/4?pane=issue&itemId=94317069&issue=alelodato%7Csapore-di-mare%7C12)
-
-- [A system for capping reservation numbers at any given point in time.](https://github.com/users/alelodato/projects/4?pane=issue&itemId=94317392&issue=alelodato%7Csapore-di-mare%7C14)
-
-
-#### Could have
-
-Features which may be useful, but will not add as much value to the site. Due to time constraints these have not been added to the project so have been marked as won't have on the kanban board.
-
-
-- [Customers can submit special queries and feedbacks via the website.](https://github.com/users/alelodato/projects/4?pane=issue&itemId=94316096&issue=alelodato%7Csapore-di-mare%7C5)
-
-- [Restaurant staff can add pictures to the menu and homepage.](https://github.com/users/alelodato/projects/4?pane=issue&itemId=92068971&issue=alelodato%7Csapore-di-mare%7C8)
-
-- [Restaurant staff can add edit and delete content from the homepage.](https://github.com/users/alelodato/projects/4?pane=issue&itemId=92068971&issue=alelodato%7Csapore-di-mare%7C8)
-
-- [Users can recover their account password if they have forgotten it through a form and an email with a link.](https://github.com/users/alelodato/projects/4/views/1?pane=issue&itemId=94317050&issue=alelodato%7Csapore-di-mare%7C13)
-
-In accordance with Agile development principles, development would begin with the 'must have' features. Together these would form a 'minimal viable product' (MVP). 'Should have' features would be added, prioritising (in order) making a reservation, user experience, restaurant marketing and displaying a menu. In that way a product could be developed as soon as possible and continually developed and improved while maintaining utility.
-
-
-### Structure
-
-Once the scope of the project for the initial cycle of Agile development had been decided it was clear how the project could be structured. An overall project (titled 'saporedm') was created and to it linked three apps (titled ‘restaurant’, ‘menu’ and 'reservations'). Data would be stored in a PostgreSQL database. Models, Views and Templates for all apps were planned in accordance with Django's Model View Template (MVT) paradigm.
-
-###### base.HTML
-Not linked to a view, the base.html template consists of the header and footer with the content of other templates rendered in the main section depending on user selection. It also contains the HTML to display pop up messages to user.
-
-##### Authentication
-
-The Django allauth package was installed to manage the user authentication process. A superuser created with access to the admin page. 
-
-Summernote, meta and string methods were used to add meta data to database entries, to add functionality and improve user experience in the admin page.
-
-
-#### Restaurant app
-
-The restaurant app features the homepage of the website, I initially wanted to add to it models and views to allow the restaurant staff to be able to manipulate the page, this feature was not implemented due to limited time availability.The homepage features the restaurant logo, a navbar, a main section with an introduction to the restaurant with some pictures, a section showing location (featuring an iframe map) and opening times of the restaurant, contacts and social networks below and a footer with a copyright message.
-
-![homepage picture 1](static/img/readme/wireframes/homep1.png "Homepage Top Picture")
-![homepage picture 2](static/img/readme/wireframes/homep2.png "Homepage Bottom Picture")
-
-##### Templates
-
-###### index.html
-Displays as the front page to a user. The user sees the logo and navbar, photographs and text which support the marketing objectives of the business.
-
-#### Menu app
-
-The menu app contains the content related to the restaurant menus.From the navigation bar users will be able to access a menu list, where the full menu can be accessed and viewed once clicked.In future developments, the member of the staff might be able to add pictures of the respective dishes to the menus.
-
-![Menu List](static/img/readme/wireframes/list.png "Menu List")
-![A La Carte Menu](static/img/readme/wireframes/readmecart.png "A La Carte Menu")
-![Dessert Menu](static/img/readme/wireframes/readmedess.png "Dessert Menu")
-![Wine Menu](static/img/readme/wireframes/readmewine.png "Wine Menu")
-
-##### Model
-The Menu model has been created to allow the restaurant staff to be able to edit cancel and add new menus.
-The concept is similar to a blog post model, with the menu that features a title, slug, excerpt shown in the menu list, and of course the content, containing all the items in the restaurant menus. Django summernote was used to allow menu text customization in the admin panel.
-The below Entity Relationship Diagram (ERD) shows the table fields.
-
-![Menu model ERD](static/img/readme/testing/menu-erd.png "Menu model ERD")
-
-##### Views
-
-The below views were created to render the menus created by the restaurant staff on the website.
-
-The "Menu List" is a class based view that displays the preview of the 3 menus in a list, and are connected to the respective html template.
-
-The "Menu detail" view is function based, and displays an individual model of a menu, rendering the respective html template.
-
-##### Templates
-
-The menu app features two templates: 
-- The menu_list template, which shows to the user a list of the three different menus available, with all three linked to the respective menu page;
-- The menu_detail template, display a full individual menu and features a background image with a radial gradient background to improve user experience and accessibility.
-
-#### Booking app
-
-The Reservations app contains the restaurant reservation system, and it's thought to allow users to be able to make,edit and delete a reservation.The model has been built to allow restaurant staff to have the same functions, so that they can amend, delete or make reservations on behalf of the customers. 
-
-![Reservation Form](static/img/readme/reservation-form.png)
-
-In a recent update, the restaurant’s booking system has been significantly enhanced to provide a smarter and more intuitive management experience.
-Each table now includes a table number and seat capacity, allowing the system to automatically verify table availability based on the number of guests and prevent overlapping reservations.
-
-![Table Seats](static/img/readme/table-plan.png)
-
-Users are shown a message saying that there's not available tables at that time and for that number of covers, if their reservation overlaps an existing one.
-
-![Reservation Error](static/img/readme/booking-message.png)
-
-On the admin panel, a visual floor plan displays all tables with real-time availability indicators, making it easy to track and manage seat distribution. Each table also has a dedicated page showing its reservations for the selected day, and administrators can navigate between dates to view upcoming or past bookings.
-
-![Admin Panel Reservations](static/img/readme/table-map.png)
-
-Additionally, a cleanup function automatically removes expired reservations once their date has passed, keeping the database organized and up to date. These improvements ensure a smooth workflow for restaurant staff and a reliable booking experience for customers.
-
-
-##### Model
- The below Entity Relationship Diagram (ERD) shows the table fields.
-
-![Reservation model ERD](static/img/readme/testing/reserv-erd.png "Reservation model ERD")
-
-The model allows for a number of fields essential or useful for managing a reservation. Note that Django adds an ID field to each model by default, adding a unique identification to each database entry.
-
-**reservation_name** allows the creator of the entry a reference separate from their username. It allows staff to add reservations on behalf of others and for customers to give guests a reference separate to the username they created the account with.
-
-**reservation_date, reservation_time** and **number_of_guests** are all essential information for a restaurant.The reservation_time and number_of_guests fields are set to choices (providing users with a fixed number of input choices) rather than TimeField or NumField inputs. This was the most straightforward way of presenting the user with limited inputs preventing them booking outside opening hours or booking for too many guests.
-
-**email_field** was added as the project scope required staff to be able to make reservations on behalf of customers unable (or unwilling) to book online and it was useful for staff to take some customer contact details. It was set to null and not linked to the User model as it isn't a mandatory field when users create an account.
-
-**reservation_booked_by** field allows tracking of the person entering the reservation into the database, either via the site front as a customer who has created an account, or by staff through the admin panel. This supports display of that customer's reservations to a logged in customer, while preventing them viewing other reservations. This has been set to ondelete=null as where reservations made by staff need to remain in the database even after deletion of the profile. Staff turnover can be high in the hospitality sector!
-
-**reservation_created_on** and **reservation_updated_on** are set to automatically add the date and time of any database entries and modifications to the database entry. This could prove useful in managing large sets of data.
-
-The Reservation Model is converted to a form in forms.py. The fields reservation_name, reservation_date, reservation_time and number_of_guests are extracted to be displayed to the user as input fields. Django's DateInput widget is added to the reservation_date field to display a datepicker, which is set to only allow users to select same day or future reservations.
-
-##### View
-The below views were created to filter data.
-
-##### ReservationList
-This renders a list of reservations already created. Note that reservations not made by the user are filtered out by the template not the view. This has no impact on the performance of a small app, but could impact performance of a larger app. It is a point of consideration for future phases of  development.
-
-##### check_time
-This function compares the time and date of a reservation against the datetime module to check if a reservation is in the past. Note that the project has been left with the default time zone settings of UTC unchanged and the function derives its time from the server running the application using the datetime.now() method.
-
-##### add_reservation
-This view renders the reservation form derived from the model to the screen. If the data entered is valid (as per the parameters of the model) it checks if the entry is not in the past using the check_time function. If this is valid it saves the data in the database and provides a validation message to the user. If not it advises the user of the error.
-
-##### delete_reservation
-This view is triggered when a user clicks on the 'delete' button of a reservation. It uses the ID of the entry the user selects to get the corresponding data from the database and display it to the user. The user is asked to confirm they want to delete the reservation. If not they are returned to the reservations page, if they select yes the confirm_delete_reservation page view is triggered.
-       
-##### confirm_delete_reservation
-If the user confirms they want to delete the reservation this function is triggered. It deletes the entry from the database, returns the user to the reservation page and displays a message confirming the reservation has been deleted.
-
-##### edit_reservation
-This view is triggered if the user selects the edit reservation button on an existing reservation. It uses the ID of the entry the user selects to get the corresponding data from the database, and renders it to the make_reservation template as context. This allows users to update database entries in a way familiar from when they made the entry. It performs the same validation checks as the add_reservation view. Users are presented with an error message if they enter invalid data, and a success message once the update has been a success.
-
-##### Templates
-
-###### reservation.html
-If a user is not logged in they are presented with a message advising them as such and linked to the page where they can sign in. Once they are logged in they can see an active reservation in case they made one, or a message redirecting them to the reservation form. Users can edit or delete an active reservation by clicking the appropriately titled buttons, but they are only allowed to do one reservation as a time, as the system doesn't have a table number cap and i thought this would be more appopriate to avoid overbooking. In future developments both this features might be implemented.
-
-##### delete_reservation.html
-This template renders the detail of a reservation to the page if the user selects the 'delete' button on a reservation. It asks the user if they are sure they want to delete the reservation.
-
-###### make_reservation.html
-This is used by both the add_reservation and edit_reservation views to render the reservation form using crispy forms.
-___
-
-# Design Choices
-
-## Colour Scheme
-
-The colour scheme used for this project was white for the logo of the restaurant, dark blue,that was chosen because recalls the color of the sea, as the website is for a fish and seafood restaurant, and also gold for the content of the website pages, to give it an elegant touch. Below a list of all the colour used in this project:
-
-- #b97309 is the color used for all the text of the website apart from the logo;
-- #fff have been used for the restaurant logo;
-- rgb(3 29 53) have been used for navbar, toggle menu and footer;
-- #050822 is the colour used for the background on mobile and tablet screens;
-- #000, #000000b8 are the colours used with a radial gradient as background cover text to make the website content more readable and improve accessibility;
-
-
-## Typography
-
-- The font used for the logo is "Italiana" serif, that is nice and elegant, appropriate in my opinion for a fine dining restaurant logo.
-- For the navabr and footer the font used is "Raleway" serif, a bit simpler and rounded but that i still find quite elegant and easy to read, to differentiate those elements to the website content.
-- For the pages content i used "Noto Sans Display" serif, still a quite simple font, but a bit havier and less     rounded than the one used for the navbar and footer which in my opinion makes it a little bit more elegant.
-
-## Wireframes
-
-- Homepage Wireframes
-
-![Mobile Homepage Wireframe](static/img/readme/wireframes/mobile-home-wireframe.jpg) ![Tablet Homepage Wireframe](static/img/readme/wireframes/tablet-home-wireframe.jpg) ![Laptop Homepage Wireframe](static/img/readme/wireframes/laptop-home-wireframe.jpg)
-
-- Menu List Wireframes
-
-![Mobile Menu List Wireframe](static/img/readme/wireframes/mobilelist-wireframe.jpg) ![Tablet Menu List Wireframe](static/img/readme/wireframes/tablet-list-wireframe.jpg) ![Laptop Menu List Wireframe](static/img/readme/wireframes/laptop-list-wireframe.jpg) 
-
-- Menu Page Wireframe
-
-![Mobile Menu Page Wireframe](static/img/readme/wireframes/mobile-menu-wireframe.jpg) ![Tablet Menu Page Wireframe](static/img/readme/wireframes/tablet-menu-wireframe.jpg) ![Laptop Menu Page Wireframe](static/img/readme/wireframes/laptop-menu-wireframe.jpg)
-
-- Reservation Page Wireframe
-
-![Mobile Reservation Page Wireframe](static/img/readme/wireframes/mobile-reserve-wireframe.jpg) ![Tablet Reservation Page Wireframe](static/img/readme/wireframes/tablet-reserve-wireframe.jpg) ![Laptop Reservation Page Wireframe](static/img/readme/wireframes/laptop-reserv-wireframe.jpg)
-
-- Authentication Forms Wireframe
-
-![Mobile Authentication Forms Wireframe](static/img/readme/wireframes/mobile-auth-wireframe.jpg) ![Tablet Authentication Forms Wireframe](static/img/readme/wireframes/tablet-auth-wireframe.jpg) ![Laptop Authentication Forms Wireframe](static/img/readme/wireframes/laptop-auth-wireframe.jpg)
-
-## Flow Diagram
-
-Here is a diagram showing the possible flow through the site. There are 2 sections shown here. On the left it shows the Admin and the right shows a site user.
-![Admin Panel Flow Diagram](static/img/readme/testing/adminflow.jpg)
-![Site Flow Diagram](static/img/readme/testing/userflow.jpg)
-___
-
-# Technologies Used
-
-Here are the technologies used to build this project:
-
-
-- [Github](https://github.com) To host and store the data for the site.
-
-- [Gitpod](https://www.gitpod.io/) the IDE where the site was built.
-
-- [PEP8 Validator](https://pep8ci.herokuapp.com/) Used to check python code for errors
-
-- CodeInstituteSQL Used to store PostgreSQL database.
-
-- [Heroku](https://id.heroku.com/) Used to deploy the project
-
-- [Image Resizer](https://imageresizer.com/) Used for resize project images
-
-- [Adobe Stock](https://stock.adobe.com/uk/) Used to get all website pictures and background images
-
-
-# Programming Languages, Frameworks and Libraries Used
-
-
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-
-- [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
-
-- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
-
-- [Django](https://www.djangoproject.com/)
-
-- [Bootstrap](https://getbootstrap.com/)
-
-
-# Testing
-
-The Website have been tested manually and automatically, all tests can be found in [Testing](TESTING.md)
-
-___
-
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 14 (App Router) |
+| Styling | Tailwind CSS |
+| Auth & Database | Supabase (`@supabase/ssr`) |
+| Icons | Lucide React |
+| Package Manager | npm |
+
+---
+
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone <your-repo-url>
+cd sapore-di-mare
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Set up environment variables
+
+Copy the example env file and fill in your Supabase credentials:
+
+```bash
+cp .env.local.example .env.local
+```
+
+Then edit `.env.local`:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=https://your-project-ref.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here
+```
+
+You can find these in your Supabase project under **Settings → API**.
+
+### 4. Set up the Supabase database
+
+In your Supabase project, go to **SQL Editor** and run the contents of `supabase-schema.sql`. This will:
+
+- Create the `reservations` table
+- Enable Row Level Security (RLS)
+- Add policies so users can only access their own reservations
+- Add an index on `user_id + date` for fast queries
+- Add an `updated_at` auto-update trigger
+
+### 5. Configure Supabase Auth
+
+In your Supabase dashboard:
+
+1. Go to **Authentication → Settings**
+2. Set your **Site URL** to `http://localhost:3000` (for development)
+3. Add `http://localhost:3000/**` to **Redirect URLs**
+4. Optionally enable **Email Confirmations** under Auth providers
+
+### 6. Run the development server
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## Project Structure
+
+```
+sapore-di-mare/
+├── app/
+│   ├── layout.js               # Root layout (Navbar, Footer, fonts)
+│   ├── globals.css             # Global styles, design tokens, scrollbar
+│   ├── page.js                 # Homepage (/)
+│   ├── about/
+│   │   └── page.js             # About page (/about)
+│   ├── menu/
+│   │   ├── page.js             # Menu list (/menu)
+│   │   ├── a-la-carte/
+│   │   │   └── page.js         # À la carte menu
+│   │   ├── dessert/
+│   │   │   └── page.js         # Dessert menu
+│   │   └── wine-list/
+│   │       └── page.js         # Wine list
+│   ├── booking/
+│   │   └── page.js             # Protected reservations page
+│   └── auth/
+│       ├── login/
+│       │   └── page.js         # Login page
+│       └── register/
+│           └── page.js         # Registration page
+├── components/
+│   ├── Navbar.jsx              # Fixed nav with scroll blur, auth state
+│   ├── Footer.jsx              # 4-column footer
+│   └── ReservationDashboard.jsx # Full CRUD reservation manager
+├── lib/
+│   └── supabase/
+│       ├── client.js           # Browser Supabase client
+│       └── server.js           # Server Supabase client (for RSCs)
+├── middleware.js               # Auth protection + session refresh
+├── supabase-schema.sql         # Database schema + RLS policies
+├── next.config.mjs             # Next.js config (image domains)
+├── tailwind.config.js          # Tailwind theme (gold, noir, cream)
+├── postcss.config.js
+├── .env.local.example
+└── package.json
+```
+
+---
+
+## Pages
+
+| Route | Description | Auth Required |
+|---|---|---|
+| `/` | Homepage with hero, intro, dish grid, press quote, map | No |
+| `/about` | Philosophy, chef bio, values grid | No |
+| `/menu` | Menu overview with 3 cards | No |
+| `/menu/a-la-carte` | Full à la carte menu (6 sections) | No |
+| `/menu/dessert` | Dessert menu | No |
+| `/menu/wine-list` | Full wine list by region | No |
+| `/booking` | Reservation dashboard with full CRUD | **Yes** |
+| `/auth/login` | Split-layout login | No |
+| `/auth/register` | Registration with email confirmation | No |
+
+---
+
+## Design System
+
+### Colours
+
+| Token | Hex | Usage |
+|---|---|---|
+| `gold` | `#C9A84C` | Accents, CTAs, prices |
+| `gold-light` | `#D4B96A` | Hover states |
+| `noir` | `#0A0A0A` | Background |
+| `noir-mid` | `#1A1A1A` | Card backgrounds |
+| `cream` | `#F5F0E8` | Primary text |
+
+### Fonts
+
+| Role | Font | Class |
+|---|---|---|
+| Display / headings | Cormorant Garamond | `font-display` |
+| Body | Outfit | `font-body` (default) |
+| Labels / mono | DM Mono | `font-mono-label` |
+
+### Components
+
+- **`.btn-gold`** — outlined gold button with fill-on-hover animation
+- **`.btn-gold-filled`** — solid gold button
+- **`.section-label`** — uppercase DM Mono label with gold colour
+- **`.gold-divider`** — gradient gold horizontal rule
+
+---
 
 ## Deployment
 
+### Vercel (recommended)
 
-### Github Deployment
+1. Push to GitHub
+2. Import the project at [vercel.com](https://vercel.com)
+3. Add the two environment variables in Vercel project settings
+4. Deploy
 
+### Environment Variables for Production
 
-The website was stored using GitHub for storage of data and version control. To do this I did the following;
+In Vercel (or your host), set:
 
-After each addition, change or removal of code, in the terminal within your IDE (I used codeanywhere for this project) type:
+```
+NEXT_PUBLIC_SUPABASE_URL=https://your-project-ref.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here
+```
 
-- git add .
+Update your Supabase **Site URL** and **Redirect URLs** to your production domain.
 
-- git commit -m "meaningful commit message"
+---
 
-- git push
+## Restaurant Details
 
-The files are now available to view within your github repository.
+| | |
+|---|---|
+| **Name** | Sapore Di Mare |
+| **Address** | 22 Queen Street, Mayfair, W1J 5HN, London |
+| **Phone** | +44 7435 205407 |
+| **Email** | saporedm.restaurant@gmail.com |
+| **Founded** | 1999 |
+| **Chef** | Mario Rossi (Michelin-starred) |
 
+---
 
-### Creating a Fork or Copying
+## License
 
-To clone/fork/copy the repository you click on the fork tab which is situated next to unwatch tab in the top right corner of the page
-
-
-### Clone
-
-To create a clone you do the following;
-
-
-1. Click on the code tab, left of the Gitpod tab
-
-2. To the right of the repository name, click the clipboard icon
-
-3. In the IED open GitBash
-
-4. Change the working directory to the location you prefer
-
-5. Add Git Clone with the copy of the repository name
-
-6. Clone has been created
-
-
-### Repository deployment via Heroku
-
-
-- On the [Heroku Dashboard](https://dashboard.heroku.com) page, click New and then select Create New App from the drop-down menu.
-
-- When the next page loads insert the App name and Choose a region. Then click 'Create app'
-
-- In the settings tab click on Reveal Config Vars and add the key Port and the value 8000. The credentials for this app were:
-
-Postgres Database URL
-Port (8000)
-
-- Below this click Add buildpack and choose python and nodejs in that order.
-
-
-### Deployment of the app
-
-
-- Click on the Deploy tab and select Github-Connect to Github.
-
-- Enter the repository name and click Search.
-
-- Choose the repository that holds the correct files and click Connect.
-
-- A choice is offered between manual or automatic deployment whereby the app is updated when changes are pushed to GitHub.
-
-- Once the deployment method has been chosen the app will be built and can be launched by clicking the Open app button which should appear below the build information window, alternatively, there is another button located in the top right of the page.
-
-___
-
-
-## Credits
-
-This project was based on the Code Institute's - I think therefore I blog walkthrough module which provided a standard setup of a django project and helped me understand how models and views work. The menu model was inspired by the blog model in the walkthrough project as they both have a similar structure. For the booking app instead i want to credit DevGenius and his tutorial on [How to create a booking system with django for a health clinic](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78), from which i took inspiration on how to build a model, with selected time slots and seats choices, and to create the views to make the reservation form display and work correctly.
-
-
-The wireframe mockups were created using [Mockapp](https://www.mockapp.com/en/)
-
-___
+Private — all rights reserved.
