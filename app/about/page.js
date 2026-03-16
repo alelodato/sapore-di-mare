@@ -31,7 +31,7 @@ const values = [
     icon: Heart,
     title: 'Italian Soul',
     description:
-      'Born from a love of Italy's coastal communities, every dish carries the warmth, generosity and passion that defines Italian hospitality at its finest.',
+      "Born from a love of Italy's coastal communities, every dish carries the warmth, generosity and passion that defines Italian hospitality at its finest.",
   },
   {
     icon: Quote,
