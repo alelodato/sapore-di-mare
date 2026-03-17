@@ -12,7 +12,7 @@ const menus = [
     title: 'À La Carte',
     subtitle: 'Our signature tasting journey',
     description:
-      'A celebration of Italy's finest coastal ingredients, from delicate raw fish preparations to masterfully sauced pasta and whole-roasted fish. Changed seasonally to honour the best of each catch.',
+      "A celebration of Italy's finest coastal ingredients, from delicate raw fish preparations to masterfully sauced pasta and whole-roasted fish. Changed seasonally to honour the best of each catch.",
     href: '/menu/a-la-carte',
     image: 'https://images.unsplash.com/photo-1559742811-822873691df8?w=1200&q=85',
     imageAlt: 'Grilled branzino with herbs',
@@ -72,15 +72,13 @@ export default function MenuPage() {
         {menus.map((menu, i) => (
           <div
             key={menu.href}
-            className={`relative grid lg:grid-cols-2 min-h-[500px] ${
-              i > 0 ? 'border-t border-white/5' : ''
-            }`}
+            className={`relative grid lg:grid-cols-2 min-h-[500px] ${i > 0 ? 'border-t border-white/5' : ''
+              }`}
           >
             {/* Image */}
             <div
-              className={`relative h-[350px] lg:h-auto overflow-hidden ${
-                menu.align === 'right' ? 'lg:order-2' : 'lg:order-1'
-              }`}
+              className={`relative h-[350px] lg:h-auto overflow-hidden ${menu.align === 'right' ? 'lg:order-2' : 'lg:order-1'
+                }`}
             >
               <Image
                 src={menu.image}
@@ -93,9 +91,8 @@ export default function MenuPage() {
 
             {/* Content */}
             <div
-              className={`flex items-center px-10 lg:px-16 py-16 bg-noir-mid ${
-                menu.align === 'right' ? 'lg:order-1' : 'lg:order-2'
-              }`}
+              className={`flex items-center px-10 lg:px-16 py-16 bg-noir-mid ${menu.align === 'right' ? 'lg:order-1' : 'lg:order-2'
+                }`}
             >
               <div className="max-w-md">
                 <p className="section-label mb-3 text-gold/60">{menu.label}</p>
