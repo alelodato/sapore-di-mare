@@ -113,7 +113,7 @@ export default function HomePage() {
       </section>
 
       {/* Dish Grid */}
-      <section className="py-16 px-6 bg-noir-mid">
+      <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
             <p className="section-label mb-4">From Our Kitchen</p>
@@ -163,7 +163,7 @@ export default function HomePage() {
       </section>
 
       {/* Opening Hours & Map */}
-      <section className="py-24 px-6 bg-noir-soft">
+      <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Hours */}

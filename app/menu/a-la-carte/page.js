@@ -140,7 +140,7 @@ export default function AlaCartePage() {
       </section>
 
       {/* Menu intro + navigation */}
-      <section className="py-12 px-6 bg-noir-mid border-b border-white/5">
+      <section className="py-12 px-6 border-b border-white/5">
         <div className="max-w-5xl mx-auto">
           <p className="text-cream/40 text-sm font-light text-center max-w-2xl mx-auto mb-8 leading-relaxed">
             All our dishes are prepared fresh daily using the finest sustainable seafood and seasonal produce. Our pasta is made by hand each morning. Please inform your server of any dietary requirements.
@@ -170,7 +170,7 @@ export default function AlaCartePage() {
       </section>
 
       {/* Footnote */}
-      <section className="py-12 px-6 bg-noir-soft border-t border-white/5">
+      <section className="py-12 px-6 border-t border-white/5">
         <div className="max-w-4xl mx-auto text-center space-y-2">
           <p className="text-cream/25 text-xs font-mono-label tracking-widest uppercase">
             All prices include VAT · Optional 12.5% service charge
