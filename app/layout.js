@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className="bg-noir text-cream font-body">
+      <body className="bg-noir-mid text-cream font-body">
         <Navbar />
         <main className="page-enter">{children}</main>
         <Footer />

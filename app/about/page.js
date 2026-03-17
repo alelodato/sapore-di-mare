@@ -47,6 +47,12 @@ const values = [
   },
 ];
 
+function GoldDivider() {
+  return (
+    <div className="w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-40" />
+  );
+}
+
 export default function AboutPage() {
   return (
     <>
@@ -68,6 +74,8 @@ export default function AboutPage() {
           </h1>
         </div>
       </section>
+
+      <GoldDivider />
 
       {/* Philosophy */}
       <section className="py-24 lg:py-32 px-6">
@@ -122,6 +130,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <GoldDivider />
+
       {/* Chef Section */}
       <section className="py-24 px-6 bg-noir-mid">
         <div className="max-w-7xl mx-auto">
@@ -157,6 +167,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <GoldDivider />
+
       {/* Press Quote */}
       <section className="py-24 px-6 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
@@ -171,6 +183,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <GoldDivider />
 
       {/* Values Grid */}
       <section className="py-24 lg:py-32 px-6 bg-noir-soft">
@@ -199,8 +213,10 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <GoldDivider />
+
       {/* CTA */}
-      <section className="py-20 px-6 text-center border-t border-white/5">
+      <section className="py-20 px-6 text-center">
         <p className="section-label mb-4">Experience It Yourself</p>
         <h2 className="font-display text-4xl font-light text-cream mb-8">
           Reserve Your <span className="italic text-gold">Table</span>

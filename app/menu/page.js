@@ -114,7 +114,7 @@ export default function MenuPage() {
       </section>
 
       {/* Reservation CTA */}
-      <section className="py-20 px-6 text-center bg-noir-soft border-t border-white/5">
+      <section className="py-20 px-6 text-center border-t border-white/5 bg-noir-mid">
         <p className="section-label mb-4">Ready to Dine?</p>
         <h2 className="font-display text-4xl font-light text-cream mb-8">
           Reserve Your <span className="italic text-gold">Table</span>

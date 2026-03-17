@@ -39,6 +39,13 @@ export const metadata = {
   title: 'Sapore Di Mare — Michelin-starred Italian Seafood, Mayfair',
 };
 
+// Divisore dorato riutilizzabile
+function GoldDivider() {
+  return (
+    <div className="w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-40" />
+  );
+}
+
 export default function HomePage() {
   return (
     <>
@@ -79,6 +86,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <GoldDivider />
+
       {/* Intro Section */}
       <section className="py-24 lg:py-32 px-6">
         <div className="max-w-7xl mx-auto">
@@ -112,8 +121,10 @@ export default function HomePage() {
         </div>
       </section>
 
+      <GoldDivider />
+
       {/* Dish Grid */}
-      <section className="py-16 px-6 bg-noir-mid">
+      <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
             <p className="section-label mb-4">From Our Kitchen</p>
@@ -134,7 +145,6 @@ export default function HomePage() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-noir/20 group-hover:bg-noir/40 transition-colors duration-300" />
               </div>
             ))}
           </div>
@@ -146,9 +156,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Michelin Press Quote */}
+      <GoldDivider />
+
+      {/* Michelin Press Quote — sfumato nel background */}
       <section className="py-24 lg:py-32 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-noir via-noir-mid to-noir" />
+        {/* Sfumatura che si fonde col background sopra e sotto */}
+        <div className="absolute inset-0 bg-gradient-to-b from-noir via-black/40 to-noir" />
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <Quote size={36} className="text-gold/30 mx-auto mb-8" />
           <blockquote className="font-display text-3xl lg:text-4xl font-light italic text-cream leading-relaxed mb-8">
@@ -161,6 +174,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <GoldDivider />
 
       {/* Opening Hours & Map */}
       <section className="py-24 px-6 bg-noir-soft">
@@ -215,6 +230,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <GoldDivider />
 
       {/* CTA Banner */}
       <section className="relative py-28 px-6 overflow-hidden">

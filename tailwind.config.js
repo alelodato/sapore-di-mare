@@ -14,9 +14,8 @@ module.exports = {
           dark: '#A8832A',
         },
         noir: {
-          DEFAULT: '#0A0A0A',
-          soft: '#111111',
-          mid: '#1A1A1A',
+          DEFAULT: '#06011c',
+          mid: '#040114',
         },
         cream: {
           DEFAULT: '#F5F0E8',
