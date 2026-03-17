@@ -91,7 +91,7 @@ export default function MenuPage() {
 
             {/* Content */}
             <div
-              className={`flex items-center px-10 lg:px-16 py-16 bg-noir-mid ${menu.align === 'right' ? 'lg:order-1' : 'lg:order-2'
+              className={`flex items-center px-10 lg:px-16 py-16 ${menu.align === 'right' ? 'lg:order-1' : 'lg:order-2'
                 }`}
             >
               <div className="max-w-md">
@@ -114,7 +114,7 @@ export default function MenuPage() {
       </section>
 
       {/* Reservation CTA */}
-      <section className="py-20 px-6 text-center bg-noir-soft border-t border-white/5">
+      <section className="py-20 px-6 text-center border-t border-white/5">
         <p className="section-label mb-4">Ready to Dine?</p>
         <h2 className="font-display text-4xl font-light text-cream mb-8">
           Reserve Your <span className="italic text-gold">Table</span>

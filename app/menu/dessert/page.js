@@ -176,7 +176,7 @@ export default function DessertPage() {
       </section>
 
       {/* Intro */}
-      <section className="py-12 px-6 bg-noir-mid border-b border-white/5">
+      <section className="py-12 px-6 border-b border-white/5">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-cream/40 text-sm font-light leading-relaxed">
             Our pastry kitchen draws on the deep traditions of Italian confectionery — from the vibrant markets of Palermo to the espresso bars of Naples. Everything is made in-house, daily, with passion.
@@ -194,7 +194,7 @@ export default function DessertPage() {
       </section>
 
       {/* Footnote */}
-      <section className="py-12 px-6 bg-noir-soft border-t border-white/5">
+      <section className="py-12 px-6 border-t border-white/5">
         <div className="max-w-4xl mx-auto text-center space-y-2">
           <p className="text-cream/25 text-xs font-mono-label tracking-widest uppercase">
             All prices include VAT · Optional 12.5% service charge

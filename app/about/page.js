@@ -123,7 +123,7 @@ export default function AboutPage() {
       </section>
 
       {/* Chef Section */}
-      <section className="py-24 px-6 bg-noir-mid">
+      <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
@@ -173,7 +173,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values Grid */}
-      <section className="py-24 lg:py-32 px-6 bg-noir-soft">
+      <section className="py-24 lg:py-32 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <p className="section-label mb-4">What We Stand For</p>
