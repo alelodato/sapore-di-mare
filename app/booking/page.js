@@ -4,6 +4,8 @@ import ReservationDashboard from '@/components/ReservationDashboard';
 import Image from 'next/image';
 import Link from 'next/link';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: 'My Reservations',
   description: 'Manage your reservations at Sapore Di Mare, Mayfair.',
@@ -45,7 +47,7 @@ export default async function BookingPage() {
       </section>
 
       {/* Contact info */}
-      <section className="py-12 px-6 bg-noir-soft border-t border-white/5">
+      <section className="py-12 px-6 border-t border-white/5">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <p className="section-label mb-2">Need Help?</p>

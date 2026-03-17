@@ -12,7 +12,7 @@ const dishImages = [
     alt: 'Grilled branzino',
   },
   {
-    src: 'https://images.unsplash.com/photo-1563379091339-03246963d651?w=600&q=80',
+    src: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&q=80',
     alt: 'Lobster tagliatelle',
   },
   {
@@ -178,7 +178,7 @@ export default function HomePage() {
       <GoldDivider />
 
       {/* Opening Hours & Map */}
-      <section className="py-24 px-6 bg-noir-soft">
+      <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Hours */}

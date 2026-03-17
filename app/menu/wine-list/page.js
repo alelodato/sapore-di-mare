@@ -202,7 +202,7 @@ export default function WineListPage() {
       </section>
 
       {/* Intro */}
-      <section className="py-12 px-6 bg-noir-mid border-b border-white/5">
+      <section className="py-12 px-6 border-b border-white/5">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-cream/40 text-sm font-light leading-relaxed mb-6">
             Our wine list is a journey through Italy's most extraordinary wine regions, curated by our sommelier to complement the flavours of our kitchen. We specialise in coastal whites and medium-bodied reds that sing alongside seafood.
@@ -232,7 +232,7 @@ export default function WineListPage() {
       </section>
 
       {/* Footnote */}
-      <section className="py-12 px-6 bg-noir-soft border-t border-white/5">
+      <section className="py-12 px-6 border-t border-white/5">
         <div className="max-w-4xl mx-auto text-center space-y-2">
           <p className="text-cream/25 text-xs font-mono-label tracking-widest uppercase">
             All prices include VAT · Sommelier available on request

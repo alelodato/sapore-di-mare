@@ -31,8 +31,8 @@ export default function Navbar() {
   const router = useRouter();
 
   const supabase = createBrowserClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+    process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co',
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key'
   );
 
   useEffect(() => {
@@ -83,7 +83,7 @@ export default function Navbar() {
             link.children ? (
               <div key={link.label} className="relative group">
                 <button
-                  className="flex items-center gap-1 font-mono-label text-xs tracking-widest uppercase text-cream/70 hover:text-gold transition-colors duration-300"
+                  className="flex items-center gap-1 font-mono-label text-xs tracking-widest uppercase text-cream/70 hover:text-sea transition-colors duration-300"
                   onMouseEnter={() => setMenuDropdown(true)}
                   onMouseLeave={() => setMenuDropdown(false)}
                 >
@@ -105,7 +105,7 @@ export default function Navbar() {
                         href={child.href}
                         className={clsx(
                           'block px-5 py-2.5 font-mono-label text-xs tracking-widest uppercase transition-colors duration-200',
-                          pathname === child.href ? 'text-gold' : 'text-cream/60 hover:text-gold hover:bg-white/5'
+                          pathname === child.href ? 'text-gold' : 'text-cream/60 hover:text-sea hover:bg-white/5'
                         )}
                       >
                         {child.label}
@@ -120,7 +120,7 @@ export default function Navbar() {
                 href={link.href}
                 className={clsx(
                   'font-mono-label text-xs tracking-widest uppercase transition-colors duration-300',
-                  pathname === link.href ? 'text-gold' : 'text-cream/70 hover:text-gold'
+                  pathname === link.href ? 'text-gold' : 'text-cream/70 hover:text-sea'
                 )}
               >
                 {link.label}
@@ -134,14 +134,14 @@ export default function Navbar() {
           {user ? (
             <button
               onClick={handleSignOut}
-              className="font-mono-label text-xs tracking-widest uppercase text-cream/50 hover:text-gold transition-colors duration-300"
+              className="font-mono-label text-xs tracking-widest uppercase text-cream/50 hover:text-sea transition-colors duration-300"
             >
               Sign Out
             </button>
           ) : (
             <Link
               href="/auth/login"
-              className="font-mono-label text-xs tracking-widest uppercase text-cream/50 hover:text-gold transition-colors duration-300"
+              className="font-mono-label text-xs tracking-widest uppercase text-cream/50 hover:text-sea transition-colors duration-300"
             >
               Sign In
             </Link>
@@ -153,7 +153,7 @@ export default function Navbar() {
 
         {/* Mobile Hamburger */}
         <button
-          className="lg:hidden text-cream/70 hover:text-gold transition-colors"
+          className="lg:hidden text-cream/70 hover:text-sea transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -208,11 +208,11 @@ export default function Navbar() {
           font-size: 11px;
           letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: rgba(245, 240, 232, 0.7);
+          color: rgba(244, 241, 236, 0.7);
           transition: color 0.2s;
         }
         .mobile-nav-link:hover {
-          color: #C9A84C;
+          color: #5F8FA6;
         }
       `}</style>
     </header>

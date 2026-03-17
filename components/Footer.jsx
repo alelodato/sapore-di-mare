@@ -45,7 +45,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-cream/50 hover:text-gold text-sm font-light transition-colors duration-200"
+                    className="text-cream/50 hover:text-sea text-sm font-light transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -86,7 +86,7 @@ export default function Footer() {
                 <Phone size={14} className="text-gold shrink-0" />
                 <a
                   href="tel:+447435205407"
-                  className="text-cream/50 hover:text-gold text-sm font-light transition-colors duration-200"
+                  className="text-cream/50 hover:text-sea text-sm font-light transition-colors duration-200"
                 >
                   +44 7435 205407
                 </a>
@@ -95,7 +95,7 @@ export default function Footer() {
                 <Mail size={14} className="text-gold shrink-0" />
                 <a
                   href="mailto:saporedm.restaurant@gmail.com"
-                  className="text-cream/50 hover:text-gold text-sm font-light transition-colors duration-200 break-all"
+                  className="text-cream/50 hover:text-sea text-sm font-light transition-colors duration-200 break-all"
                 >
                   saporedm.restaurant@gmail.com
                 </a>

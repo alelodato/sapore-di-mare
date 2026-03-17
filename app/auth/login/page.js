@@ -125,7 +125,7 @@ export default function LoginPage() {
       </div>
 
       {/* Right — Form */}
-      <div className="flex items-center justify-center px-6 py-20 bg-noir-mid">
+      <div className="flex items-center justify-center px-6 py-20">
         <div className="w-full max-w-md">
           <div className="mb-10">
             <Link href="/" className="font-display text-2xl font-light tracking-widest text-cream hover:text-gold transition-colors">
