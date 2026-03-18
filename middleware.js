@@ -27,26 +27,9 @@ export async function middleware(request) {
 
   const { data: { user } } = await supabase.auth.getUser();
 
-  // Proteggi /booking
+  // Proteggi solo /booking
   if (request.nextUrl.pathname.startsWith('/booking') && !user) {
     return NextResponse.redirect(new URL('/auth/login?next=/booking', request.url));
-  }
-
-  // Proteggi /admin
-  if (request.nextUrl.pathname.startsWith('/admin')) {
-    if (!user) {
-      return NextResponse.redirect(new URL('/auth/login?next=/admin', request.url));
-    }
-
-    const { data: profile } = await supabase
-      .from('profiles')
-      .select('role, active')
-      .eq('id', user.id)
-      .single();
-
-    if (!profile || !profile.active || !['owner', 'manager', 'staff'].includes(profile.role)) {
-      return NextResponse.redirect(new URL('/', request.url));
-    }
   }
 
   return supabaseResponse;
