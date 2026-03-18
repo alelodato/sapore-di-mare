@@ -9,14 +9,8 @@ export async function middleware(request) {
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
     {
       cookies: {
-        getAll() {
-          return request.cookies.getAll();
-        },
+        getAll() { return request.cookies.getAll(); },
         setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value }) =>
-            request.cookies.set(name, value)
-          );
-          supabaseResponse = NextResponse.next({ request });
           cookiesToSet.forEach(({ name, value, options }) =>
             supabaseResponse.cookies.set(name, value, options)
           );
@@ -25,32 +19,33 @@ export async function middleware(request) {
     }
   );
 
-  // Refresh the session — required for Server Components
   const { data: { user } } = await supabase.auth.getUser();
 
-  // Protect /booking — redirect unauthenticated users to login
-  if (!user && request.nextUrl.pathname.startsWith('/booking')) {
-    const url = request.nextUrl.clone();
-    url.pathname = '/auth/login';
-    url.searchParams.set('next', request.nextUrl.pathname);
-    return NextResponse.redirect(url);
+  // Proteggi /booking
+  if (request.nextUrl.pathname.startsWith('/booking') && !user) {
+    return NextResponse.redirect(new URL('/auth/login?next=/booking', request.url));
   }
 
-  // Redirect authenticated users away from auth pages
-  if (user && (
-    request.nextUrl.pathname.startsWith('/auth/login') ||
-    request.nextUrl.pathname.startsWith('/auth/register')
-  )) {
-    const url = request.nextUrl.clone();
-    url.pathname = '/booking';
-    return NextResponse.redirect(url);
+  // Proteggi /admin
+  if (request.nextUrl.pathname.startsWith('/admin')) {
+    if (!user) {
+      return NextResponse.redirect(new URL('/auth/login?next=/admin', request.url));
+    }
+    // Controlla ruolo
+    const { data: profile } = await supabase
+      .from('profiles')
+      .select('role, active')
+      .eq('id', user.id)
+      .single();
+
+    if (!profile || !profile.active || !['owner','manager','staff'].includes(profile.role)) {
+      return NextResponse.redirect(new URL('/', request.url));
+    }
   }
 
   return supabaseResponse;
 }
 
 export const config = {
-  matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
-  ],
+  matcher: ['/booking/:path*', '/admin/:path*'],
 };
