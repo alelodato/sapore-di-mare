@@ -9,11 +9,17 @@ export async function middleware(request) {
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
     {
       cookies: {
-        getAll() { return request.cookies.getAll(); },
+        getAll() {
+          return request.cookies.getAll();
+        },
         setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value, options }) =>
-            supabaseResponse.cookies.set(name, value, options)
-          );
+          cookiesToSet.forEach(({ name, value, options }) => {
+            request.cookies.set(name, value, options);
+          });
+          supabaseResponse = NextResponse.next({ request });
+          cookiesToSet.forEach(({ name, value, options }) => {
+            supabaseResponse.cookies.set(name, value, options);
+          });
         },
       },
     }
@@ -31,14 +37,14 @@ export async function middleware(request) {
     if (!user) {
       return NextResponse.redirect(new URL('/auth/login?next=/admin', request.url));
     }
-    // Controlla ruolo
+
     const { data: profile } = await supabase
       .from('profiles')
       .select('role, active')
       .eq('id', user.id)
       .single();
 
-    if (!profile || !profile.active || !['owner','manager','staff'].includes(profile.role)) {
+    if (!profile || !profile.active || !['owner', 'manager', 'staff'].includes(profile.role)) {
       return NextResponse.redirect(new URL('/', request.url));
     }
   }
