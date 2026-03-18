@@ -7,7 +7,8 @@ export const metadata = { title: 'Admin — Sapore Di Mare' };
 export default async function AdminLayout({ children }) {
   const supabase = createClient();
   const { data: { user } } = await supabase.auth.getUser();
-  if (!user) redirect('/auth/login');
+  
+  if (!user) redirect('/admin/login');  // ← cambia questa riga
 
   const { data: profile } = await supabase
     .from('profiles')
@@ -15,7 +16,7 @@ export default async function AdminLayout({ children }) {
     .eq('id', user.id)
     .single();
 
-  if (!profile || !profile.active) redirect('/');
+  if (!profile || !profile.active) redirect('/admin/login');  // ← e questa
 
   return (
     <div className="min-h-screen bg-noir flex">
