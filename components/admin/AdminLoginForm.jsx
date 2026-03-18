@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { createClient } from '@/lib/supabase/client';
 
-export default function AdminLoginPage() {
+export default function AdminLoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -13,21 +13,23 @@ export default function AdminLoginPage() {
   const supabase = createClient();
 
   const handleLogin = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setError('');
+  e.preventDefault();
+  setLoading(true);
+  setError('');
 
-    const { error: authError } = await supabase.auth.signInWithPassword({ email, password });
+  const { error: authError } = await supabase.auth.signInWithPassword({
+    email,
+    password,
+  });
 
-    if (authError) {
-      setError('Invalid credentials.');
-      setLoading(false);
-      return;
-    }
+  if (authError) {
+    setError('Invalid credentials.');
+    setLoading(false);
+    return;
+  }
 
-    router.push('/admin');
-    router.refresh();
-  };
+  router.push('/admin/dashboard');
+};
 
   return (
     <div className="min-h-screen bg-noir flex items-center justify-center px-6">
