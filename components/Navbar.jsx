@@ -164,7 +164,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={clsx(
-          'lg:hidden overflow-hidden transition-all duration-500 bg-noir/98 backdrop-blur-md border-t border-white/5',
+          'lg:hidden overflow-hidden transition-all duration-500 bg-noir/98 backdrop-blur-md',
           mobileOpen ? 'max-h-screen py-6' : 'max-h-0'
         )}
       >
