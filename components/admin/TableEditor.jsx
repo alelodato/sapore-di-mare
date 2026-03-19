@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback } from 'react';
 import { createClient } from '@/lib/supabase/client';
-import { Plus, Trash2, Save, RotateCcw } from 'lucide-react';
+import { Plus, Trash2, Save } from 'lucide-react';
 import clsx from 'clsx';
 
 const FLOOR_W = 900;
@@ -10,9 +10,14 @@ const FLOOR_H = 600;
 
 export default function TableEditor({ initialTables }) {
   const [tables, setTables] = useState(initialTables);
+  // Tiene traccia dei tavoli da eliminare al salvataggio
+  const [pendingDeletes, setPendingDeletes] = useState([]);
+  // Tiene traccia dei tavoli nuovi non ancora salvati
+  const [unsavedIds, setUnsavedIds] = useState(new Set());
   const [selected, setSelected] = useState(null);
   const [dragging, setDragging] = useState(null);
   const [saved, setSaved] = useState(false);
+  const [hasChanges, setHasChanges] = useState(false);
   const floorRef = useRef(null);
   const dragOffset = useRef({ x: 0, y: 0 });
   const supabase = createClient();
@@ -36,48 +41,106 @@ export default function TableEditor({ initialTables }) {
     const x = Math.max(0, Math.min(e.clientX - floor.left - dragOffset.current.x, FLOOR_W - t.width));
     const y = Math.max(0, Math.min(e.clientY - floor.top - dragOffset.current.y, FLOOR_H - t.height));
     setTables(prev => prev.map(t => t.id === dragging ? { ...t, pos_x: x, pos_y: y } : t));
+    setHasChanges(true);
   }, [dragging, tables]);
 
   const onMouseUp = useCallback(() => setDragging(null), []);
 
-  // ─── ADD TABLE ───
-  const addTable = async (shape) => {
+  // ─── ADD TABLE — solo in memoria, non su DB ───
+  const addTable = (shape) => {
+    const tempId = `temp-${Date.now()}`;
     const number = tables.length > 0 ? Math.max(...tables.map(t => t.number)) + 1 : 1;
     const newTable = {
+      id: tempId,
       number,
       shape,
       seats: 4,
-      pos_x: 100 + (tables.length % 5) * 100,
-      pos_y: 100 + Math.floor(tables.length / 5) * 120,
+      pos_x: 100 + (tables.length % 5) * 110,
+      pos_y: 100 + Math.floor(tables.length / 5) * 130,
       width: shape === 'round' ? 80 : 100,
       height: shape === 'round' ? 80 : 70,
       active: true,
     };
-    const { data } = await supabase.from('tables').insert([newTable]).select().single();
-    if (data) { setTables(prev => [...prev, data]); setSelected(data.id); }
+    setTables(prev => [...prev, newTable]);
+    setUnsavedIds(prev => new Set([...prev, tempId]));
+    setSelected(tempId);
+    setHasChanges(true);
   };
 
-  // ─── DELETE TABLE ───
-  const deleteTable = async (id) => {
-    await supabase.from('tables').delete().eq('id', id);
+  // ─── DELETE TABLE — solo in memoria finché non si salva ───
+  const deleteTable = (id) => {
+    // Se è un tavolo già salvato nel DB, aggiungilo ai pending deletes
+    if (!unsavedIds.has(id)) {
+      setPendingDeletes(prev => [...prev, id]);
+    }
+    // Sempre rimuovilo dalla vista
     setTables(prev => prev.filter(t => t.id !== id));
+    setUnsavedIds(prev => {
+      const next = new Set(prev);
+      next.delete(id);
+      return next;
+    });
     if (selected === id) setSelected(null);
+    setHasChanges(true);
   };
 
   // ─── UPDATE PROP ───
   const updateProp = (id, key, value) => {
     setTables(prev => prev.map(t => t.id === id ? { ...t, [key]: value } : t));
+    setHasChanges(true);
   };
 
-  // ─── SAVE ALL ───
+  // ─── SAVE ALL — ora salva davvero tutto ───
   const saveAll = async () => {
-    for (const t of tables) {
-      await supabase.from('tables').update({
-        pos_x: t.pos_x, pos_y: t.pos_y,
-        seats: t.seats, number: t.number,
-        width: t.width, height: t.height,
-      }).eq('id', t.id);
+    // 1. Elimina i tavoli marcati per l'eliminazione
+    for (const id of pendingDeletes) {
+      await supabase.from('tables').delete().eq('id', id);
     }
+
+    const newIdMap = {};
+
+    // 2. Inserisci i tavoli nuovi (temp id)
+    for (const t of tables) {
+      if (unsavedIds.has(t.id)) {
+        const { data } = await supabase.from('tables').insert([{
+          number: t.number,
+          shape: t.shape,
+          seats: t.seats,
+          pos_x: t.pos_x,
+          pos_y: t.pos_y,
+          width: t.width,
+          height: t.height,
+          active: t.active,
+        }]).select().single();
+        if (data) newIdMap[t.id] = data.id;
+      }
+    }
+
+    // 3. Aggiorna posizioni dei tavoli esistenti
+    for (const t of tables) {
+      if (!unsavedIds.has(t.id)) {
+        await supabase.from('tables').update({
+          pos_x: t.pos_x,
+          pos_y: t.pos_y,
+          seats: t.seats,
+          number: t.number,
+          width: t.width,
+          height: t.height,
+          shape: t.shape,
+        }).eq('id', t.id);
+      }
+    }
+
+    // 4. Aggiorna gli id temporanei con quelli reali
+    setTables(prev => prev.map(t => {
+      if (newIdMap[t.id]) return { ...t, id: newIdMap[t.id] };
+      return t;
+    }));
+
+    // 5. Reset stato
+    setUnsavedIds(new Set());
+    setPendingDeletes([]);
+    setHasChanges(false);
     setSaved(true);
     setTimeout(() => setSaved(false), 2000);
   };
@@ -88,6 +151,11 @@ export default function TableEditor({ initialTables }) {
         <div>
           <p className="section-label mb-2">Configure</p>
           <h1 className="font-display text-4xl font-light text-cream">Floor Plan</h1>
+          {hasChanges && (
+            <p className="font-mono-label text-[9px] text-gold/60 tracking-wider uppercase mt-1">
+              ● Unsaved changes
+            </p>
+          )}
         </div>
         <div className="flex gap-3">
           <button onClick={() => addTable('round')}
@@ -100,9 +168,16 @@ export default function TableEditor({ initialTables }) {
           >
             <Plus size={12} /> Rect Table
           </button>
-          <button onClick={saveAll}
-            className={clsx('flex items-center gap-2 font-mono-label text-[10px] tracking-widest uppercase px-4 py-2.5 transition-all',
-              saved ? 'bg-green-900/40 border border-green-700/50 text-green-400' : 'btn-gold-filled'
+          <button
+            onClick={saveAll}
+            disabled={!hasChanges}
+            className={clsx(
+              'flex items-center gap-2 font-mono-label text-[10px] tracking-widest uppercase px-4 py-2.5 transition-all',
+              saved
+                ? 'bg-green-900/40 border border-green-700/50 text-green-400'
+                : hasChanges
+                  ? 'btn-gold-filled'
+                  : 'border border-white/10 text-cream/20 cursor-not-allowed'
             )}
           >
             <Save size={12} /> {saved ? 'Saved!' : 'Save Layout'}
@@ -130,12 +205,10 @@ export default function TableEditor({ initialTables }) {
             <rect width="100%" height="100%" fill="url(#grid)" />
           </svg>
 
-          {/* Label */}
           <p className="absolute top-3 left-4 font-mono-label text-[9px] text-cream/15 tracking-widest uppercase">
             Dining Room — drag to position
           </p>
 
-          {/* Tables */}
           {tables.map(table => (
             <div
               key={table.id}
@@ -143,6 +216,7 @@ export default function TableEditor({ initialTables }) {
               className={clsx(
                 'absolute flex flex-col items-center justify-center cursor-grab active:cursor-grabbing transition-shadow',
                 table.shape === 'round' ? 'rounded-full' : 'rounded-sm',
+                unsavedIds.has(table.id) && 'opacity-70 border-dashed',
                 selected === table.id
                   ? 'bg-gold/25 border-2 border-gold shadow-lg shadow-gold/20'
                   : 'bg-gold/10 border border-gold/30 hover:bg-gold/20'
@@ -151,6 +225,9 @@ export default function TableEditor({ initialTables }) {
             >
               <span className="font-mono-label text-xs text-gold font-medium">{table.number}</span>
               <span className="font-mono-label text-[8px] text-cream/40">{table.seats}p</span>
+              {unsavedIds.has(table.id) && (
+                <span className="font-mono-label text-[7px] text-gold/40 uppercase">new</span>
+              )}
             </div>
           ))}
 
@@ -180,13 +257,16 @@ export default function TableEditor({ initialTables }) {
               </div>
               <div>
                 <label className="block section-label text-[9px] mb-2">Seats</label>
-                <input
-                  type="number"
-                  min={1} max={20}
+                <select
                   value={selectedTable.seats}
                   onChange={e => updateProp(selectedTable.id, 'seats', parseInt(e.target.value))}
                   className="w-full bg-noir-mid border border-white/10 text-cream text-sm px-3 py-2 focus:outline-none focus:border-gold/50"
-                />
+                >
+                  <option value={2}>2 seats</option>
+                  <option value={4}>4 seats</option>
+                  <option value={6}>6 seats</option>
+                  <option value={8}>8 seats</option>
+                </select>
               </div>
               <div className="grid grid-cols-2 gap-3">
                 <div>
@@ -211,10 +291,11 @@ export default function TableEditor({ initialTables }) {
               <div>
                 <label className="block section-label text-[9px] mb-2">Shape</label>
                 <div className="grid grid-cols-2 gap-2">
-                  {['round','rect'].map(s => (
+                  {['round', 'rect'].map(s => (
                     <button key={s}
                       onClick={() => updateProp(selectedTable.id, 'shape', s)}
-                      className={clsx('py-2 border font-mono-label text-[9px] tracking-widest uppercase transition-colors',
+                      className={clsx(
+                        'py-2 border font-mono-label text-[9px] tracking-widest uppercase transition-colors',
                         selectedTable.shape === s ? 'border-gold/40 text-gold bg-gold/5' : 'border-white/10 text-cream/40'
                       )}
                     >
@@ -224,7 +305,7 @@ export default function TableEditor({ initialTables }) {
                 </div>
               </div>
               <div className="pt-2">
-                <p className="section-label text-[9px] mb-2">Position</p>
+                <p className="section-label text-[9px] mb-1">Position</p>
                 <p className="font-mono-label text-[10px] text-cream/30">
                   X: {Math.round(selectedTable.pos_x)} · Y: {Math.round(selectedTable.pos_y)}
                 </p>

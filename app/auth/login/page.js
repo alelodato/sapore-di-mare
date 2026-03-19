@@ -55,7 +55,7 @@ function LoginForm() {
           value={form.email}
           onChange={set('email')}
           placeholder="your@email.com"
-          className="w-full bg-noir-soft border border-white/10 text-cream text-sm px-4 py-3 placeholder:text-cream/20 focus:outline-none focus:border-gold/50 transition-colors"
+          className="w-full bg-noir-soft border border-white/10 text-black text-sm px-4 py-3 placeholder:text-black/20 focus:outline-none focus:border-gold/50 transition-colors"
         />
       </div>
 
@@ -69,7 +69,7 @@ function LoginForm() {
             value={form.password}
             onChange={set('password')}
             placeholder="••••••••"
-            className="w-full bg-noir-soft border border-white/10 text-cream text-sm px-4 py-3 pr-12 placeholder:text-cream/20 focus:outline-none focus:border-gold/50 transition-colors"
+            className="w-full bg-noir-soft border border-white/10 text-black text-sm px-4 py-3 pr-12 placeholder:text-black/20 focus:outline-none focus:border-gold/50 transition-colors"
           />
           <button
             type="button"
