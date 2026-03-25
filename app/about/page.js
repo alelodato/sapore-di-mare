@@ -59,11 +59,11 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative h-[70vh] min-h-[500px] flex items-end overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=1600&q=85"
+          src="/crudi.png"
           alt="Sapore Di Mare kitchen"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-bottom"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-noir via-noir/50 to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-16 w-full">
@@ -101,7 +101,7 @@ export default function AboutPage() {
             <div className="space-y-6">
               <div className="relative h-[420px] overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1555244162-803834f70033?w=900&q=80"
+                  src="/gourmet2.png"
                   alt="Fresh seafood ingredients"
                   fill
                   className="object-cover"
@@ -110,7 +110,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative h-52 overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600&q=80"
+                    src="/carpaccio.png"
                     alt="Tuna tartare"
                     fill
                     className="object-cover"
@@ -118,7 +118,7 @@ export default function AboutPage() {
                 </div>
                 <div className="relative h-52 overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1559742811-822873691df8?w=600&q=80"
+                    src="/lobster.png"
                     alt="Grilled fish"
                     fill
                     className="object-cover"
@@ -156,7 +156,7 @@ export default function AboutPage() {
             </div>
             <div className="order-1 lg:order-2 relative h-[500px] lg:h-[600px]">
               <Image
-                src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=900&q=80"
+                src="/chef.png"
                 alt="Chef Mario Rossi"
                 fill
                 className="object-cover object-top"

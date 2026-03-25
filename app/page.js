@@ -4,27 +4,27 @@ import { Quote } from 'lucide-react';
 
 const dishImages = [
   {
-    src: 'https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80',
+    src: '/ostriche.png',
     alt: 'Fresh oysters on ice',
   },
   {
-    src: 'https://images.unsplash.com/photo-1559742811-822873691df8?w=600&q=80',
+    src: '/pesce.png',
     alt: 'Grilled branzino',
   },
   {
-    src: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&q=80',
+    src: '/risotto.png',
     alt: 'Lobster tagliatelle',
   },
   {
-    src: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600&q=80',
+    src: '/tartare.png',
     alt: 'Tuna tartare',
   },
   {
-    src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80',
+    src: '/vongole.png',
     alt: 'Risotto al nero di seppia',
   },
   {
-    src: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&q=80',
+    src: '/gourmet.png',
     alt: 'Burrata with anchovies',
   },
 ];
@@ -52,7 +52,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1800&q=90"
+          src="/sala4.png"
           alt="Sapore Di Mare restaurant interior"
           fill
           priority
@@ -110,7 +110,7 @@ export default function HomePage() {
             </div>
             <div className="relative h-[500px] lg:h-[600px]">
               <Image
-                src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=900&q=80"
+                src="/chef.png"
                 alt="Chef Mario Rossi at work"
                 fill
                 className="object-cover"
@@ -236,7 +236,7 @@ export default function HomePage() {
       {/* CTA Banner */}
       <section className="relative py-28 px-6 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1800&q=80"
+          src="/sala.webp"
           alt="Restaurant ambience"
           fill
           className="object-cover"
