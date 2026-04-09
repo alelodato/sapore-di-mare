@@ -25,7 +25,7 @@ export default async function DessertPage() {
       <section className="relative h-[50vh] flex items-end pb-14">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=1800&q=85"
+            src="/pannacotta.jpg"
             alt="Desserts"
             fill
             className="object-cover object-center"

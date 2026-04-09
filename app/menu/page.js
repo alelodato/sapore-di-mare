@@ -14,7 +14,7 @@ const menus = [
     description:
       "A celebration of Italy's finest coastal ingredients, from delicate raw fish preparations to masterfully sauced pasta and whole-roasted fish. Changed seasonally to honour the best of each catch.",
     href: '/menu/a-la-carte',
-    image: 'https://images.unsplash.com/photo-1559742811-822873691df8?w=1200&q=85',
+    image: '/carpaccio.png',
     imageAlt: 'Grilled branzino with herbs',
     cta: 'View À La Carte',
     label: '01 / Cuisine',
@@ -26,7 +26,7 @@ const menus = [
     description:
       'Our pastry kitchen honours the great traditions of Italian confectionery — from the lightest tiramisù to hand-rolled cannoli and seasonal sorbetti that capture summer in a spoon.',
     href: '/menu/dessert',
-    image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=1200&q=85',
+    image: '/tiramisu.jpg',
     imageAlt: 'Italian tiramisu dessert',
     cta: 'View Dessert Menu',
     label: '02 / Dolci',
@@ -38,7 +38,7 @@ const menus = [
     description:
       'Curated by our sommelier, the wine list journeys from the Alpine foothills of Trentino to the volcanic soils of Etna — with a particular focus on coastal whites and medium-bodied reds that complement our seafood.',
     href: '/menu/wine-list',
-    image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&q=85',
+    image: '/vino.jpg',
     imageAlt: 'Italian wine bottles',
     cta: 'View Wine List',
     label: '03 / Vini',
@@ -52,7 +52,7 @@ export default function MenuPage() {
       {/* Hero */}
       <section className="relative h-[55vh] min-h-[400px] flex items-end overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=85"
+          src="/lobster2.png"
           alt="Sapore Di Mare menu experience"
           fill
           priority
@@ -68,7 +68,7 @@ export default function MenuPage() {
       </section>
 
       {/* Menu Cards — alternating layout */}
-      <section className="py-12">
+      <section className="pt-12">
         {menus.map((menu, i) => (
           <div
             key={menu.href}
@@ -114,15 +114,24 @@ export default function MenuPage() {
       </section>
 
       {/* Reservation CTA */}
-      <section className="py-20 px-6 text-center border-t border-white/5 bg-noir-mid">
-        <p className="section-label mb-4">Ready to Dine?</p>
-        <h2 className="font-display text-4xl font-light text-cream mb-8">
-          Reserve Your <span className="italic text-gold">Table</span>
-        </h2>
-        <Link href="/booking" className="btn-gold-filled">
-          Book a Table
-        </Link>
-      </section>
+      <section className="relative py-20 px-6 text-center overflow-hidden">
+  <Image
+    src="/sala2.webp"
+    alt="Sapore Di Mare dining room"
+    fill
+    className="object-cover object-center"
+  />
+  <div className="absolute inset-0 bg-noir/70" />
+  <div className="relative z-10">
+    <p className="section-label mb-4">Ready to Dine?</p>
+    <h2 className="font-display text-4xl font-light text-cream mb-8">
+      Reserve Your <span className="italic text-gold">Table</span>
+    </h2>
+    <Link href="/booking" className="btn-gold-filled">
+      Book a Table
+    </Link>
+  </div>
+</section>
     </>
   );
 }

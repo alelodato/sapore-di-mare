@@ -59,7 +59,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative h-[70vh] min-h-[500px] flex items-end overflow-hidden">
         <Image
-          src="/crudi.png"
+          src="/lobster.png"
           alt="Sapore Di Mare kitchen"
           fill
           priority

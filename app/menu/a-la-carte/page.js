@@ -32,7 +32,7 @@ export default async function AlaCartePage() {
       <section className="relative h-[50vh] flex items-end pb-14">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=1800&q=85"
+            src="/gourmet.png"
             alt="À La Carte"
             fill
             className="object-cover"

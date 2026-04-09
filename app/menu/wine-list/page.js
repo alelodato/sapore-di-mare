@@ -35,7 +35,7 @@ export default async function WineListPage() {
       <section className="relative h-[50vh] flex items-end pb-14">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1800&q=85"
+            src="/vino2.jpg"
             alt="Wine List"
             fill
             className="object-cover object-center"

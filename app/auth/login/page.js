@@ -105,13 +105,13 @@ export default function LoginPage() {
       {/* Left — Image */}
       <div className="hidden lg:block relative">
         <Image
-          src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=85"
+          src="/guests.png"
           alt="Sapore Di Mare dining experience"
           fill
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-noir/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-noir/50 to-noir/80" />
         <div className="absolute inset-0 flex flex-col justify-end p-12">
           <p className="section-label mb-4 text-gold/70">Members Area</p>
           <h2 className="font-display text-5xl font-light text-cream leading-tight mb-4">
@@ -128,9 +128,6 @@ export default function LoginPage() {
       <div className="flex items-center justify-center px-6 py-20">
         <div className="w-full max-w-md">
           <div className="mb-10">
-            <Link href="/" className="font-display text-2xl font-light tracking-widest text-cream hover:text-gold transition-colors">
-              Sapore Di Mare
-            </Link>
             <h1 className="font-display text-4xl font-light text-cream mt-8 mb-2">Welcome Back</h1>
             <p className="text-cream/40 font-light text-sm">Sign in to your account</p>
           </div>

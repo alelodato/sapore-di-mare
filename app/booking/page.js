@@ -24,7 +24,7 @@ export default async function BookingPage() {
       {/* Hero */}
       <section className="relative h-[40vh] min-h-[300px] flex items-end overflow-hidden">
         <Image
-          src="/sala2.webp"
+          src="/esterno.png"
           alt="Sapore Di Mare dining room"
           fill
           priority

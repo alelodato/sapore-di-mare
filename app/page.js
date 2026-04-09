@@ -110,7 +110,7 @@ export default function HomePage() {
             </div>
             <div className="relative h-[500px] lg:h-[600px]">
               <Image
-                src="/chef.png"
+                src="/cucina2.png"
                 alt="Chef Mario Rossi at work"
                 fill
                 className="object-cover"
